@@ -1,0 +1,13 @@
+/* ==========================================================================
+   JOB ASSIGNMENT: NARENDRA
+   TASK: CSS Styling - Video Playlist (video.css)
+   ==========================================================================
+   INSTRUCTIONS FOR NARENDRA:
+   1. Buat layout responsif untuk halaman playlist video.
+   2. Desain pembungkus video player (.video-container) agar memiliki aspek rasio widescreen 16:9 yang tepat, bersudut membulat (border-radius), berlatar belakang hitam (#000) untuk meminimalkan flicker saat memuat, serta memiliki bayangan lembut.
+   3. Desain panel list item playlist agar memiliki gaya interaktif (efek hover transisi warna dan skala kecil).
+   4. Terapkan kelas glassmorphism pada info card video dan playlist container untuk mempertahankan harmoni visual dengan logo QOMAR.
+   5. Sediakan gaya responsif di perangkat mobile agar daftar putar video tersusun secara vertikal di bawah pemutar video utama.
+   ========================================================================== */
+
+/* Tulis kode CSS Anda di sini */

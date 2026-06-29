@@ -1,0 +1,272 @@
+/* ==========================================================================
+   Core Design System & Shared Styles (common.css) - QOMAR Project
+   ========================================================================== */
+
+:root {
+  /* ===== Color Palette: Extracted from QOMAR Logo ===== */
+  --color-cream-50: #FFFDF2;
+  --color-cream-100: #FFF9D4;
+  --color-cream-200: #FFEAA2;
+  --color-cream-300: #FAD15B;
+  --color-cream-400: #E6B525;
+
+  --color-blue-50: #F0F4FF;
+  --color-blue-100: #E5EEFF;
+  --color-blue-200: #C1D5FE;
+  --color-blue-300: #8EB3FD;
+  --color-blue-400: #00A8E8;
+  --color-blue-500: #1C75FF;
+  --color-blue-600: #1256E0;
+  --color-blue-700: #093CB3;
+  --color-blue-800: #022680; /* Logo Deep Blue */
+  --color-blue-900: #011E62; /* Very Dark Blue for text */
+
+  /* Logo accents */
+  --color-pink-500: #E2528C; /* Hijab Pink */
+  --color-teal-500: #139C80; /* Shirt Teal */
+  --color-purple-500: #7A22A8; /* Ornate Purple */
+  --color-gold-400: #FFCF27; /* Title Yellow */
+
+  --color-green-400: #4CAF50;
+  --color-green-500: #388E3C;
+  --color-red-400: #EF5350;
+  --color-red-500: #D32F2F;
+
+  /* ===== Fonts ===== */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-arabic: 'Amiri', "Traditional Arabic", serif;
+  --font-dyslexia: "OpenDyslexic", "Comic Sans MS", sans-serif;
+
+  /* ===== Shadows & Spacing ===== */
+  --shadow-soft: 0 2px 15px rgba(2, 38, 128, 0.08);
+  --shadow-card: 0 4px 24px rgba(2, 38, 128, 0.12);
+  --shadow-elevated: 0 8px 40px rgba(2, 38, 128, 0.16);
+  --shadow-glow: 0 0 20px rgba(255, 207, 39, 0.4);
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.5rem;
+  
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* @font-face for OpenDyslexic (copied to Public/fonts/) */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('../Public/fonts/OpenDyslexic-Regular.woff2') format('woff2'),
+       url('../Public/fonts/OpenDyslexic-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===== Base Styles ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, var(--color-cream-50) 0%, var(--color-cream-100) 50%, var(--color-blue-50) 100%);
+  color: var(--color-blue-900);
+  min-height: 100vh;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base class for decorative pattern in background */
+.bg-pattern {
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(18, 86, 224, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 207, 39, 0.06) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== Glassmorphism Cards ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2.5px solid rgba(2, 38, 128, 0.15);
+  box-shadow: var(--shadow-card);
+}
+
+.glass-card-strong {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 2.5px solid rgba(2, 38, 128, 0.25);
+  box-shadow: var(--shadow-elevated);
+}
+
+/* ===== Accessibility Font Zoom Helpers ===== */
+.font-scale-100 .slide-card-container { font-size: 100% !important; }
+.font-scale-110 .slide-card-container { font-size: 110% !important; }
+.font-scale-120 .slide-card-container { font-size: 120% !important; }
+.font-scale-130 .slide-card-container { font-size: 130% !important; }
+.font-scale-140 .slide-card-container { font-size: 140% !important; }
+.font-scale-150 .slide-card-container { font-size: 150% !important; }
+.font-scale-160 .slide-card-container { font-size: 160% !important; }
+
+/* Font size overrides for arabic text when scaled */
+.font-scale-100 .block-arabic { font-size: 1.5em; }
+.font-scale-110 .block-arabic { font-size: 1.55em; }
+.font-scale-120 .block-arabic { font-size: 1.6em; }
+.font-scale-130 .block-arabic { font-size: 1.65em; }
+.font-scale-140 .block-arabic { font-size: 1.7em; }
+.font-scale-150 .block-arabic { font-size: 1.75em; }
+.font-scale-160 .block-arabic { font-size: 1.8em; }
+
+/* ===== Dyslexia Mode Overrides ===== */
+body.dyslexia-mode {
+  font-family: var(--font-dyslexia) !important;
+  letter-spacing: 0.05em;
+  word-spacing: 0.12em;
+}
+
+body.dyslexia-mode * {
+  font-family: inherit !important;
+  line-height: 1.8 !important;
+}
+
+body.dyslexia-mode [lang="ar"],
+body.dyslexia-mode .arabic-text {
+  font-family: var(--font-arabic) !important;
+}
+
+/* ===== CSS Keyframes Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(2, 38, 128, 0.3); }
+  70% { box-shadow: 0 0 0 10px rgba(2, 38, 128, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(2, 38, 128, 0); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popoverShow {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out both;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.4s ease-out both;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.4s ease-out both;
+}
+
+.animate-float {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite;
+}
+
+/* ===== Shared Navigation Elements ===== */
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--color-blue-500);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.back-link:hover {
+  color: var(--color-blue-700);
+  transform: translateX(-2px);
+}
+
+.chevron-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   JOB ASSIGNMENT: ATNAN
+   TASK: CSS Styling - Kosa Kata (kosa_kata.css)
+   ==========================================================================
+   INSTRUCTIONS FOR ATNAN:
+   1. Buat layout responsif untuk halaman kosa kata yang terintegrasi dengan common.css.
+   2. Desain slide card utama menggunakan gaya Glassmorphism premium (.glass-card-strong) yang memiliki bayangan lembut dan sudut membulat.
+   3. Pastikan teks bahasa arab berukuran besar dan memakai Google Font Amiri.
+   4. Desain layout progress bar dengan gradasi warna menarik agar siswa termotivasi melihat progres belajarnya.
+   5. Posisikan kontrol navigasi bawah secara 'fixed' di dasar layar (mobile-first full-width bottom bar) dengan background putih transparan/blur, serta atur max-width '.nav-control-inner' sebesar 560px agar sejajar lurus dengan batas sisi kartu materi.
+   ========================================================================== */
+
+/* Tulis kode CSS Anda di sini */

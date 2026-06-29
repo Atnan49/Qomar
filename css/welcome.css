@@ -1,0 +1,286 @@
+/* ==========================================================================
+   Welcome Screen Styles (welcome.css) - QOMAR Project
+   ========================================================================== */
+
+.welcome-body {
+  background: linear-gradient(135deg, var(--color-cream-50) 0%, var(--color-cream-100) 30%, var(--color-blue-50) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background Animated Blobs for Premium Depth */
+.welcome-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+  opacity: 0.5;
+  animation: blob-float 10s ease-in-out infinite alternate;
+}
+
+.welcome-blob-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--color-blue-200);
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.welcome-blob-2 {
+  width: 250px;
+  height: 250px;
+  background: var(--color-cream-200);
+  bottom: 15%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.welcome-blob-3 {
+  width: 200px;
+  height: 200px;
+  background: var(--color-pink-50);
+  top: 60%;
+  left: 75%;
+  animation-delay: 4s;
+}
+
+@keyframes blob-float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(30px, -40px) scale(1.15);
+  }
+}
+
+/* Main Container */
+.welcome-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 540px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Glassmorphic Welcome Card */
+.welcome-card {
+  padding: 3rem 2.25rem;
+  border-radius: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  border: 2px solid rgba(2, 38, 128, 0.15);
+  box-shadow: 0 16px 40px rgba(2, 38, 128, 0.12);
+  transition: transform 0.4s var(--ease-spring), box-shadow 0.4s;
+}
+
+.welcome-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(2, 38, 128, 0.16);
+  border-color: rgba(2, 38, 128, 0.25);
+}
+
+/* Floating Logo Ring */
+.welcome-logo-outer {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--color-gold-400) 0%, var(--color-blue-400) 100%);
+  padding: 3px;
+  box-shadow: 0 8px 24px rgba(2, 38, 128, 0.15), var(--shadow-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: logo-wiggle 6s ease-in-out infinite alternate;
+}
+
+.welcome-logo-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  background: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.welcome-logo-img {
+  width: 105%;
+  height: 105%;
+  object-fit: cover;
+}
+
+@keyframes logo-wiggle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(2px) rotate(-3deg);
+  }
+}
+
+/* Header Text */
+.welcome-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.welcome-title-large {
+  font-size: 3.75rem;
+  font-weight: 850;
+  color: var(--color-blue-800);
+  letter-spacing: -1.5px;
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(135deg, var(--color-blue-800) 30%, var(--color-blue-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(2, 38, 128, 0.05));
+}
+
+.welcome-subtitle-large {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-blue-600);
+  font-style: italic;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.welcome-desc-large {
+  font-size: 0.95rem;
+  color: var(--color-blue-900);
+  font-weight: 500;
+  margin: 0;
+  max-width: 360px;
+}
+
+.welcome-desc-large span {
+  font-weight: 700;
+  color: var(--color-purple-500);
+}
+
+/* Motto / Quote */
+.welcome-motto {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 207, 39, 0.4);
+}
+
+.welcome-arabic-quote {
+  font-family: var(--font-arabic);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-blue-800);
+  direction: rtl;
+  line-height: 1.3;
+}
+
+/* CTA Button */
+.welcome-action-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 280px;
+  padding: 1.1rem 2.25rem;
+  background: linear-gradient(135deg, var(--color-blue-500) 0%, var(--color-blue-700) 100%);
+  color: white;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 800;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(28, 117, 255, 0.35);
+  transition: all 0.3s var(--ease-spring);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+.welcome-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.welcome-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(28, 117, 255, 0.5), var(--shadow-glow);
+}
+
+.welcome-btn:hover::before {
+  transform: translateX(100%);
+}
+
+.welcome-btn:active {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 6px 16px rgba(28, 117, 255, 0.35);
+}
+
+.welcome-btn-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.welcome-btn:hover .welcome-btn-icon {
+  transform: translateX(5px);
+}
+
+/* Footer Section inside welcome container */
+.welcome-footer-info {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: rgba(2, 38, 128, 0.5);
+  font-weight: 600;
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+  .welcome-card {
+    padding: 2.5rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .welcome-title-large {
+    font-size: 3rem;
+  }
+  .welcome-subtitle-large {
+    font-size: 1.15rem;
+  }
+  .welcome-arabic-quote {
+    font-size: 1.5rem;
+  }
+}

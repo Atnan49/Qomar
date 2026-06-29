@@ -1,0 +1,20 @@
+/* ==========================================================================
+   JOB ASSIGNMENT: RIFKI
+   TASK: CSS Styling - Kuis Interaktif (kuis.css)
+   ==========================================================================
+   INSTRUCTIONS FOR RIFKI:
+   1. Buat layout responsif untuk halaman kuis interaktif dengan 3 tab.
+   2. Desain tab switcher button yang interaktif (.tab-btn) dengan highlight tab aktif menggunakan warna biru logo QOMAR.
+   3. Desain bulatan nomor navigasi kuis PG dengan warna-warna penanda dinamis:
+      - Warna biru muda untuk nomor kuis yang aktif.
+      - Warna krem/kuning muda untuk kuis yang sudah terisi.
+      - Warna hijau untuk kuis yang bernilai benar (setelah disubmit).
+      - Warna merah untuk kuis yang bernilai salah (setelah disubmit).
+   4. Desain opsi pilihan ganda (.option-item) agar memiliki badge huruf (A, B, C) bulat, serta dukung indikator warna hijau terang jika benar dan merah muda jika salah/dipilih salah saat kuis dinilai.
+   5. Desain overlay modal popup hasil kuis (.results-overlay) dengan latar belakang blur premium dan kartu skor (.results-card) berbingkai emas (#FFC107).
+   6. Desain kartu essay dan text area input yang responsif, serta berikan garis tepi (border) hijau pada kunci jawaban essay (.essay-key-wrap).
+   7. Desain tombol kirim WhatsApp tugas praktik yang berwarna hijau khas WhatsApp (#25D366) dengan efek hover spring.
+   8. Posisikan kontrol navigasi bawah Pilihan Ganda secara 'fixed' di dasar layar (mobile-first full-width bottom bar) dengan background putih transparan/blur, serta atur max-width '.quiz-nav-inner' sebesar 560px agar sejajar lurus dengan batas sisi kartu soal.
+   ========================================================================== */
+
+/* Tulis kode CSS Anda di sini */

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QOMAR - Pembelajaran Bahasa Arab Berbasis Komik Digital</title>
+    <meta name="description" content="QOMAR (Qira'atu-l-Komik Lughatul Arabiyah) adalah platform pembelajaran Bahasa Arab berbasis komik digital interaktif untuk siswa kelas IV Madrasah Ibtidaiyah (MI) dengan pendekatan Universal Design for Learning (UDL).">
+    
+    <!-- Google Fonts: Inter (Latin) & Amiri (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Link CSS Utama -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/welcome.css">
+</head>
+<body class="bg-pattern welcome-body">
+
+    <!-- Animated Background Blobs -->
+    <div class="welcome-blob welcome-blob-1" aria-hidden="true"></div>
+    <div class="welcome-blob welcome-blob-2" aria-hidden="true"></div>
+    <div class="welcome-blob welcome-blob-3" aria-hidden="true"></div>
+
+    <main class="welcome-container">
+        <header id="welcome-card" class="welcome-card glass-card-strong animate-fade-in-up">
+            
+            <!-- Top Badge -->
+            <div class="top-badge-container animate-fade-in">
+                <span class="top-badge">Kelas IV MI • Bahasa Arab</span>
+            </div>
+
+            <!-- Floating Logo Ring -->
+            <div id="logo-outer" class="welcome-logo-outer">
+                <div class="welcome-logo-inner">
+                    <img src="Public/Image/logo.webp" alt="Logo QOMAR" class="welcome-logo-img">
+                </div>
+            </div>
+
+            <!-- Welcome Header Info -->
+            <div class="welcome-header">
+                <h1 class="welcome-title-large">QOMAR</h1>
+                <h2 class="welcome-subtitle-large">Qira'atu-l-Komik Lughatul Arabiyah</h2>
+                <p class="welcome-desc-large">Platform Pembelajaran Bahasa Arab Berbasis <span>Komik Digital & UDL</span></p>
+            </div>
+
+            <!-- Arabic Motto Card -->
+            <div class="welcome-motto">
+                <div class="welcome-arabic-quote" lang="ar">اَلْقِرَاءَةُ مِفْتَاحُ الْعِلْمِ</div>
+            </div>
+
+            <!-- Enter CTA Button -->
+            <div class="welcome-action-area">
+                <a href="Public/Page/dashboard.html" id="btn-start-learning" class="welcome-btn">
+                    <span>Mulai Belajar</span>
+                    <svg class="welcome-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Footer Badge -->
+            <footer class="welcome-footer-info">
+                &copy; 2026 Smart Web QOMAR — Ocktavia Annisa / UNIDA
+            </footer>
+        </header>
+    </main>
+
+    <!-- UDL Settings persistence synchronizer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sinkronisasi UDL preference secara global agar halaman pembuka menyesuaikan pilihan user
+            const scale = localStorage.getItem('fontScale') || '100';
+            const savedDyslexia = localStorage.getItem('dyslexiaMode');
+            
+            document.documentElement.className = `font-scale-${scale}`;
+            if (savedDyslexia === 'true') {
+                document.body.classList.add('dyslexia-mode');
+            }
+        });
+    </script>
+</body>
+</html>
