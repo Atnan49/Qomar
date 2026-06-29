@@ -9,10 +9,10 @@ Proyek pengembangan platform QOMAR dikelompokkan ke dalam 4 Fase Utama selama ma
 
 | Fase | Kegiatan Utama | Durasi | Target Output |
 | :--- | :--- | :--- | :--- |
-| **Fase 1** | Perencanaan & Desain Base System | Minggu 1 | Dokumen SRS/PRD disetujui, inisialisasi Git, pembuatan halaman pembuka (index), stylesheet common.css, dan welcome.css. |
-| **Fase 2** | Pengembangan Modul Independen | Minggu 2 | Penyusunan data.js, penyelesaian kerangka HTML/CSS kosa kata, video, dan kuis secara terpisah. |
-| **Fase 3** | Integrasi Logika & UDL Sync | Minggu 3 | Penggabungan preferensi UDL (Zoom text & Dyslexia mode) ke localStorage di seluruh halaman, fungsionalitas slider, playlist, dan skor kuis. |
-| **Fase 4** | Pengujian, UAT & Peluncuran | Minggu 4 | Pengujian bug bersama, sesi User Acceptance Testing (UAT) oleh Klien/Guru, perbaikan minor, dan deployment ke Vercel/GitHub Pages. |
+| **Fase 1** | Perencanaan & Desain Base System | - | Dokumen SRS/PRD disetujui, inisialisasi Git, pembuatan halaman pembuka (index), stylesheet common.css, dan welcome.css. |
+| **Fase 2** | Pengembangan Modul Independen | - | Penyusunan data.js, penyelesaian kerangka HTML/CSS kosa kata, video, dan kuis secara terpisah. |
+| **Fase 3** | Integrasi Logika & UDL Sync | - | Penggabungan preferensi UDL (Zoom text & Dyslexia mode) ke localStorage di seluruh halaman, fungsionalitas slider, playlist, dan skor kuis. |
+| **Fase 4** | Pengujian, UAT & Peluncuran | - | Pengujian bug bersama, sesi User Acceptance Testing (UAT) oleh Klien/Guru, perbaikan minor, dan deployment ke Vercel/GitHub Pages. |
 
 ---
 
