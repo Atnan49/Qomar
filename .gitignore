@@ -18,3 +18,5 @@ Thumbs.db
 # Microsoft Office temp files
 ~$*
 *~$*
+
+.vercel
