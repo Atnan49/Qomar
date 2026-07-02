@@ -1,31 +1,300 @@
-<!-- 
-   ==========================================================================
-   JOB ASSIGNMENT: ATNAN
-   TASK: HTML Structure - Dashboard Pembelajaran (dashboard.html)
-   ==========================================================================
-   INSTRUCTIONS FOR ATNAN:
-   1. Buat kerangka halaman dashboard pembelajaran utama.
-   2. Sertakan UDL Toolbar di bagian atas (Header):
-      - Tombol Zoom In / Zoom Out beserta indikator persentase skala font.
-      - Tombol Toggle Dyslexia Font.
-      - Tombol Kembali ke Halaman Utama (index.html).
-   3. Hubungkan stylesheet: common.css dan index.css (sesuaikan path relatif karena letak folder baru).
-   4. Tampilkan menu navigasi ke materi lainnya (Kosa Kata, Video, Kuis).
-   5. Sediakan sinopsis pembelajaran QOMAR.
-   6. Hubungkan script pendukung jika diperlukan.
-   ========================================================================== 
--->
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOMAR - Dashboard Pembelajaran</title>
-    <!-- Hubungkan berkas CSS Anda di sini -->
+    <meta name="description"
+        content="Dashboard utama platform pembelajaran Bahasa Arab berbasis komik digital QOMAR untuk siswa kelas IV MI.">
+
+    <!-- Google Fonts: Inter (Latin) & Amiri (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/index.css">
 </head>
-<body class="bg-pattern pages-body">
 
-    <!-- Tulis struktur halaman Anda di sini -->
+<body class="bg-pattern landing-body">
 
+    <!-- Header & UDL Toolbar -->
+    <header class="main-header glass-card">
+        <div class="header-container container">
+            <div class="header-left">
+                <a href="../../index.html" class="back-link" id="btn-back">
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Keluar</span>
+                </a>
+            </div>
+
+            <div class="header-center">
+                <span class="header-title">Dashboard</span>
+            </div>
+
+            <div class="header-right">
+                <!-- UDL Toolbar -->
+                <div class="udl-toolbar" role="toolbar" aria-label="Toolbar Aksesibilitas UDL">
+                    <button id="btn-zoom-out" class="udl-btn" aria-label="Perkecil Ukuran Teks">A-</button>
+                    <span id="zoom-indicator" class="zoom-indicator">100%</span>
+                    <button id="btn-zoom-in" class="udl-btn" aria-label="Perbesar Ukuran Teks">A+</button>
+                    <div class="udl-divider"></div>
+                    <button id="btn-dyslexia-toggle" class="udl-btn dyslexia-toggle"
+                        aria-label="Toggle Font Disleksia">Dyslexia</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="landing-container">
+
+        <!-- Top Badge -->
+        <div class="top-badge-container">
+            <span class="top-badge">Kelas IV MI • Hub Utama</span>
+        </div>
+
+        <!-- Hero Header -->
+        <div class="hero-header">
+            <h1 class="landing-title">QOMAR</h1>
+            <p class="landing-subtitle-main">Qira'atu-l-Komik Lughatul Arabiyah</p>
+            <p class="landing-subtext">Mari belajar Bahasa Arab dengan cara yang menyenangkan melalui <span>Komik
+                    Digital</span>!</p>
+        </div>
+
+        <!-- Motto Section -->
+        <div class="motto-section">
+            <div class="motto-card glass-card">
+                <div class="motto-arabic" lang="ar">اَلْقِرَاءَةُ مِفْتَاحُ الْعِلْمِ، وَالْعَرَبِيَّةُ مِفْتَاحُ
+                    الْفَهْمِ</div>
+                <div class="motto-translation">"Membaca adalah kunci ilmu, dan Bahasa Arab adalah kunci pemahaman."
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Menu Section -->
+        <div class="menu-vertical-section">
+            <div class="menu-vertical-list">
+
+                <a href="kosa_kata.html" class="menu-vertical-item glass-card">
+                    <div class="item-left-icon icon-teal">
+                        <span class="menu-icon-emoji">📖</span>
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Kosa Kata</h3>
+                        <p class="item-desc">Pelajari kosakata Bahasa Arab dengan kartu kata interaktif.</p>
+                    </div>
+                    <div class="item-chevron">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="video.html" class="menu-vertical-item glass-card">
+                    <div class="item-left-icon icon-pink">
+                        <span class="menu-icon-emoji">🎬</span>
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Tonton Video</h3>
+                        <p class="item-desc">Tonton video pembelajaran cerita komik Bahasa Arab.</p>
+                    </div>
+                    <div class="item-chevron">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="Kuis.html" class="menu-vertical-item glass-card">
+                    <div class="item-left-icon icon-yellow">
+                        <span class="menu-icon-emoji">📝</span>
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Uji Kemampuan</h3>
+                        <p class="item-desc">Uji pemahamanmu lewat kuis seru Pilihan Ganda, Essay, dan Praktik.</p>
+                    </div>
+                    <div class="item-chevron">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Synopsis Section -->
+        <div class="synopsis-single-section">
+            <div class="synopsis-card glass-card">
+                <div class="synopsis-header">
+                    <div class="synopsis-avatar">
+                        <img src="../Image/logo.webp" alt="Avatar QOMAR" class="synopsis-avatar-img">
+                    </div>
+                    <div class="synopsis-header-text">
+                        <h3 class="synopsis-main-title">Tentang QOMAR</h3>
+                        <p class="synopsis-subtitle-main">Media Pembelajaran Inklusif</p>
+                    </div>
+                </div>
+                <div class="synopsis-body">
+                    <p><strong>QOMAR</strong> (Qira'atu-l-Komik Lughatul Arabiyah) dirancang khusus untuk membantu siswa
+                        Kelas IV Madrasah Ibtidaiyah memahami materi Bahasa Arab dengan lebih mudah dan menyenangkan.
+                        Menggabungkan komik bergambar, media video pembelajaran, serta latihan interaktif.</p>
+                    <p>Platform ini menerapkan prinsip <strong>Universal Design for Learning (UDL)</strong> untuk
+                        memastikan aksesibilitas bagi semua siswa, termasuk yang memerlukan pembesaran teks atau jenis
+                        font ramah disleksia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-card-section">
+            <h3 class="contact-section-title">Hubungi Kami</h3>
+            <div class="contact-card-grid">
+
+                <a href="https://wa.me/6285707602967" target="_blank" class="contact-info-card val-wa glass-card">
+                    <div class="contact-info-icon bg-wa">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="contact-info-label">WhatsApp</span>
+                    <span class="contact-info-value">0857-0760-2967</span>
+                </a>
+
+                <a href="mailto:ocktaviaannisa@gmail.com" class="contact-info-card val-email glass-card">
+                    <div class="contact-info-icon bg-email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <span class="contact-info-label">Email</span>
+                    <span class="contact-info-value">ocktaviaannisa@gmail.com</span>
+                </a>
+
+                <a href="https://instagram.com/ocktavianisa" target="_blank"
+                    class="contact-info-card val-ig glass-card">
+                    <div class="contact-info-icon bg-ig">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </div>
+                    <span class="contact-info-label">Instagram</span>
+                    <span class="contact-info-value">@ocktavianisa</span>
+                </a>
+
+                <a href="https://t.me/ordinaryperson2410" target="_blank" class="contact-info-card val-tg glass-card">
+                    <div class="contact-info-icon bg-tg">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.16 2.72-2.5 2.77-2.7.01-.03.01-.14-.05-.2-.06-.06-.16-.04-.23-.02-.1.02-1.69 1.07-4.78 3.16-.45.3-.87.46-1.25.45-.42-.01-1.23-.24-1.83-.43-.74-.24-1.33-.37-1.28-.79.03-.22.33-.45.9-.69 3.52-1.53 5.87-2.54 7.05-3.03 3.36-1.39 4.06-1.63 4.52-1.64.1 0 .33.02.48.15.12.1.16.24.18.34.02.09.02.26.01.38z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="contact-info-label">Telegram</span>
+                    <span class="contact-info-value">@ordinaryperson2410</span>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Footer inside Card -->
+        <footer class="ebook-footer">
+            <div class="ebook-footer-card glass-card">
+                <p class="ebook-footer-quote"><span lang="ar" class="arabic-text"
+                        style="font-size: 1.25rem; font-style: normal; font-weight: bold; margin-right: 0.25rem; display: inline-block;">"اَلْقِرَاءَةُ
+                        مِفْتَاحُ الْعِلْمِ، وَالْعَرَبِيَّةُ مِفْتَاحُ الْفَهْمِ"</span>
+                    <br> • Membaca adalah Kunci Ilmu, dan Bahasa Arab adalah Kunci Pemahaman
+                </p>
+                <div class="ebook-footer-divider"></div>
+                <p class="ebook-footer-copyright">© 2026 QOMAR Project. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- UDL Toolbar JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlEl = document.documentElement;
+            const bodyEl = document.body;
+            const btnZoomIn = document.getElementById('btn-zoom-in');
+            const btnZoomOut = document.getElementById('btn-zoom-out');
+            const zoomIndicator = document.getElementById('zoom-indicator');
+            const btnDyslexia = document.getElementById('btn-dyslexia-toggle');
+
+            // Load Preferences
+            let currentScale = parseInt(localStorage.getItem('fontScale')) || 100;
+            let isDyslexia = localStorage.getItem('dyslexiaMode') === 'true';
+
+            function applyPreferences() {
+                // Remove existing font scale classes
+                htmlEl.className = htmlEl.className.replace(/\bfont-scale-\d+\b/g, '');
+                htmlEl.classList.add(`font-scale-${currentScale}`);
+                if (zoomIndicator) {
+                    zoomIndicator.textContent = `${currentScale}%`;
+                }
+
+                // Apply Dyslexia Mode
+                if (isDyslexia) {
+                    bodyEl.classList.add('dyslexia-mode');
+                    if (btnDyslexia) btnDyslexia.classList.add('active');
+                } else {
+                    bodyEl.classList.remove('dyslexia-mode');
+                    if (btnDyslexia) btnDyslexia.classList.remove('active');
+                }
+            }
+
+            // Initial apply
+            applyPreferences();
+
+            // Event Listeners
+            if (btnZoomIn) {
+                btnZoomIn.addEventListener('click', () => {
+                    if (currentScale < 160) {
+                        currentScale += 10;
+                        localStorage.setItem('fontScale', currentScale);
+                        applyPreferences();
+                    }
+                });
+            }
+
+            if (btnZoomOut) {
+                btnZoomOut.addEventListener('click', () => {
+                    if (currentScale > 100) {
+                        currentScale -= 10;
+                        localStorage.setItem('fontScale', currentScale);
+                        applyPreferences();
+                    }
+                });
+            }
+
+            if (btnDyslexia) {
+                btnDyslexia.addEventListener('click', () => {
+                    isDyslexia = !isDyslexia;
+                    localStorage.setItem('dyslexiaMode', isDyslexia);
+                    applyPreferences();
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>
