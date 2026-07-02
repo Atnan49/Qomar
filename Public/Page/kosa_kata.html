@@ -1,31 +1,109 @@
-<!-- 
-   ==========================================================================
-   JOB ASSIGNMENT: ATNAN
-   TASK: HTML Structure - Kosa Kata (kosa_kata.html)
-   ==========================================================================
-   INSTRUCTIONS FOR ATNAN:
-   1. Buat kerangka halaman slider kartu kosakata.
-   2. Sertakan UDL Toolbar di bagian atas (Header):
-      - Tombol Zoom In / Zoom Out beserta indikator persentase skala font.
-      - Tombol Toggle Dyslexia Font.
-      - Tombol Kembali ke Halaman Utama.
-   3. Hubungkan stylesheet: common.css dan kosa_kata.css.
-   4. Buat area pembungkus slider kartu (#slide-card) yang akan diisi secara dinamis oleh kosa_kata.js.
-   5. Sediakan tombol navigasi bawah (Sebelumnya, dots-container, Berikutnya) yang dibungkus dengan kelas '.nav-control-inner' di dalam '.nav-control-section'.
-   6. Hubungkan script pendukung: data.js dan kosa_kata.js di bagian akhir body.
-   ========================================================================== 
--->
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOMAR - Belajar Kosa Kata</title>
-    <!-- Hubungkan berkas CSS Anda di sini -->
+    <meta name="description" content="Modul kartu kosakata (flashcards) interaktif Bahasa Arab QOMAR dengan gambar ilustrasi dan transliterasi untuk siswa kelas IV MI.">
+
+    <!-- Google Fonts: Inter (Latin) & Amiri (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/kosa_kata.css">
 </head>
+
 <body class="bg-pattern pages-body">
 
-    <!-- Tulis struktur halaman Anda di sini -->
+    <!-- Header & UDL Toolbar -->
+    <header class="main-header glass-card">
+        <div class="header-container container">
+            <div class="header-left">
+                <a href="dashboard.html" class="back-link" id="btn-back">
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Kembali</span>
+                </a>
+            </div>
 
+            <div class="header-center">
+                <span class="header-title">Kosa Kata</span>
+            </div>
+
+            <div class="header-right">
+                <!-- UDL Toolbar -->
+                <div class="udl-toolbar" role="toolbar" aria-label="Toolbar Aksesibilitas UDL">
+                    <button id="btn-zoom-out" class="udl-btn" aria-label="Perkecil Ukuran Teks">A-</button>
+                    <span id="zoom-indicator" class="zoom-indicator">100%</span>
+                    <button id="btn-zoom-in" class="udl-btn" aria-label="Perbesar Ukuran Teks">A+</button>
+                    <div class="udl-divider"></div>
+                    <button id="btn-dyslexia-toggle" class="udl-btn dyslexia-toggle" aria-label="Toggle Font Disleksia">Dyslexia</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="vocab-container container">
+        
+        <!-- Flashcard Wrapper -->
+        <div class="vocab-card-outer">
+            <div id="slide-card" class="vocab-card glass-card-strong">
+                <div class="vocab-image-container">
+                    <img id="vocab-image" src="" alt="Ilustrasi Kosakata" class="vocab-image">
+                </div>
+                <div class="vocab-content">
+                    <div id="vocab-arabic" class="vocab-arabic" lang="ar"></div>
+                    <div id="vocab-transliteration" class="vocab-transliteration"></div>
+                    <div id="vocab-translation" class="vocab-translation"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracker Bar -->
+        <div class="vocab-progress-section">
+            <div class="progress-info">
+                <span id="progress-text" class="progress-text">Kosakata 1 dari 6</span>
+            </div>
+            <div class="progress-track">
+                <div id="progress-bar" class="progress-bar" style="width: 16.66%;"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bottom Navigation controls (Fixed) -->
+    <div class="nav-control-section">
+        <div class="nav-control-inner">
+            <button id="btn-prev" class="nav-btn prev-btn" aria-label="Kosakata Sebelumnya">
+                <svg class="nav-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <span>Sebelumnya</span>
+            </button>
+            
+            <div id="dots-container" class="dots-container">
+                <!-- Dot indicators generated dynamically -->
+            </div>
+            
+            <button id="btn-next" class="nav-btn next-btn" aria-label="Kosakata Berikutnya">
+                <span>Berikutnya</span>
+                <svg class="nav-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../js/data.js"></script>
+    <script src="../../js/kosa_kata.js"></script>
 </body>
+
 </html>

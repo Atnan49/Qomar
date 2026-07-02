@@ -1,20 +1,85 @@
 /* ==========================================================================
-   JOB ASSIGNMENT: ATNAN
-   TASK: Centralized Data Store (data.js) - E-Book QOMAR
-   ==========================================================================
-   INSTRUCTIONS FOR ATNAN:
-   1. Buat struktur data JSON/Array/Object untuk menyimpan materi pembelajaran:
-      - kosaKataMateri (Array): Kosakata Arab (Amiri font), transliterasi Latin, arti Indonesia, dan path gambar ilustrasi.
-      - videoMateri (Array): Judul video, deskripsi singkat, dan path file video lokal (.mp4).
-      - kuisPG (Array): Kumpulan soal pilihan ganda, pilihan jawaban (A, B, C), dan index jawaban benar (correctIndex).
-      - kuisEssay (Array): Daftar soal essay dan teks kunci jawaban resmi.
-      - praktikInfo (Object): Instruksi pengiriman rekaman video praktik ke WhatsApp Guru beserta nomor tujuan WA.
-   2. Pastikan variabel-variabel ini dideklarasikan secara global (atau diekspor secara standar) agar dapat langsung diakses oleh file JS lain (kosa_kata.js, video.js, quiz.js).
+   Centralized Data Store (data.js) - E-Book QOMAR
    ========================================================================== */
 
-// Deklarasikan variabel data Anda di bawah ini:
-// const kosaKataMateri = [...];
-// const videoMateri = [...];
-// const kuisPG = [...];
-// const kuisEssay = [...];
-// const praktikInfo = {...};
+// 1. Data Flashcards Kosakata
+const kosaKataMateri = [
+  {
+    id: 1,
+    arab: "مَدْرَسَةٌ",
+    transliterasi: "Madrasatun",
+    arti: "Sekolah",
+    gambar: "../Image/sekolah.png"
+  },
+  {
+    id: 2,
+    arab: "فَصْلٌ",
+    transliterasi: "Fashlun",
+    arti: "Kelas",
+    gambar: "../Image/kelas.png"
+  },
+  {
+    id: 3,
+    arab: "كِتَابٌ",
+    transliterasi: "Kitabun",
+    arti: "Buku",
+    gambar: "../Image/kitab.png"
+  },
+  {
+    id: 4,
+    arab: "قَلَمٌ",
+    transliterasi: "Qalamun",
+    arti: "Pena",
+    gambar: "../Image/qalam.png"
+  },
+  {
+    id: 5,
+    arab: "مَكْتَبٌ",
+    transliterasi: "Maktabun",
+    arti: "Meja",
+    gambar: "../Image/meja.png"
+  },
+  {
+    id: 6,
+    arab: "كُرْسِيٌّ",
+    transliterasi: "Kursiyyun",
+    arti: "Kursi",
+    gambar: "../Image/kursi.png"
+  }
+];
+
+// 2. Data Playlist Video
+const videoMateri = [
+  {
+    id: 1,
+    judul: "Perkenalan di Sekolah",
+    deskripsi: "Tonton cerita komik perkenalan Bahasa Arab di sekolah bersama Ahmad dan Fatimah.",
+    videoUrl: "../Video/perkenalan.mp4"
+  }
+];
+
+// 3. Soal Kuis Pilihan Ganda (PG)
+const kuisPG = [
+  {
+    id: 1,
+    soal: "Apa arti dari kosakata 'مَدْرَسَةٌ'?",
+    opsi: ["Masjid", "Rumah", "Sekolah"],
+    correctIndex: 2
+  }
+];
+
+// 4. Soal Kuis Essay
+const kuisEssay = [
+  {
+    id: 1,
+    soal: "Sebutkan 3 kosakata yang berhubungan dengan ruang kelas beserta artinya!",
+    kunciJawaban: "Kunci: 1. مَكْتَبٌ (Meja), 2. كُرْسِيٌّ (Kursi), 3. سَبُّوْرَةٌ (Papan Tulis)."
+  }
+];
+
+// 5. Informasi Kontak & Pengiriman Tugas Praktik
+const praktikInfo = {
+  nomorWA: "6285707602967",
+  pesanDefault: "Assalamu'alaikum Wr. Wb. Pak/Bu Guru, berikut adalah rekaman tugas praktik membaca komik Bahasa Arab QOMAR saya.",
+  instruksi: "Bacalah komik bab I dengan lantang. Rekam video berdurasi maksimal 2 menit, lalu klik tombol kirim di bawah ini untuk mengirimkannya langsung ke WhatsApp Guru."
+};

@@ -1,13 +1,341 @@
 /* ==========================================================================
-   JOB ASSIGNMENT: ATNAN
-   TASK: CSS Styling - Kosa Kata (kosa_kata.css)
-   ==========================================================================
-   INSTRUCTIONS FOR ATNAN:
-   1. Buat layout responsif untuk halaman kosa kata yang terintegrasi dengan common.css.
-   2. Desain slide card utama menggunakan gaya Glassmorphism premium (.glass-card-strong) yang memiliki bayangan lembut dan sudut membulat.
-   3. Pastikan teks bahasa arab berukuran besar dan memakai Google Font Amiri.
-   4. Desain layout progress bar dengan gradasi warna menarik agar siswa termotivasi melihat progres belajarnya.
-   5. Posisikan kontrol navigasi bawah secara 'fixed' di dasar layar (mobile-first full-width bottom bar) dengan background putih transparan/blur, serta atur max-width '.nav-control-inner' sebesar 560px agar sejajar lurus dengan batas sisi kartu materi.
+   Kosa Kata Styling (kosa_kata.css) - QOMAR Project
    ========================================================================== */
 
-/* Tulis kode CSS Anda di sini */
+/* Main Page layout */
+.pages-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 90px; /* Space for fixed bottom navigation */
+}
+
+/* Page Container */
+.vocab-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  max-width: 540px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin-top: 1.5rem;
+}
+
+/* Flashcard Styles */
+.vocab-card-outer {
+  width: 100%;
+  perspective: 1000px;
+  margin-bottom: 2rem;
+}
+
+.vocab-card {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  transform-origin: center;
+  transition: transform 0.4s var(--ease-spring), box-shadow 0.4s;
+}
+
+.vocab-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Image container */
+.vocab-image-container {
+  width: 100%;
+  max-width: 280px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(2, 38, 128, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.vocab-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.vocab-card:hover .vocab-image {
+  transform: scale(1.05);
+}
+
+/* Typography contents */
+.vocab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.vocab-arabic {
+  font-family: var(--font-arabic);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-blue-800);
+  line-height: 1.2;
+  margin: 0;
+  direction: rtl;
+  text-shadow: 0 2px 4px rgba(2, 38, 128, 0.06);
+}
+
+.vocab-transliteration {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-pink-500);
+  font-style: italic;
+  margin: 0;
+}
+
+.vocab-translation {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-blue-900);
+  margin: 0;
+}
+
+/* Progress Tracker Section */
+.vocab-progress-section {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-blue-800);
+  letter-spacing: 0.5px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 50px;
+  background: rgba(2, 38, 128, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(2, 38, 128, 0.05);
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(90deg, var(--color-blue-500) 0%, var(--color-blue-600) 100%);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(25, 103, 222, 0.4);
+}
+
+/* Bottom Navigation Controls */
+.nav-control-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(2, 38, 128, 0.1);
+  padding: 0.85rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-control-inner {
+  width: 100%;
+  max-width: 540px; /* Aligns with card container width */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Nav Buttons styling */
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 750;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-spring);
+  outline: none;
+}
+
+/* Prev Button (Transparent / Muted) */
+.prev-btn {
+  background: transparent;
+  color: var(--color-blue-800);
+}
+
+.prev-btn:hover:not(:disabled) {
+  transform: translateX(-4px);
+  color: var(--color-blue-600);
+}
+
+.prev-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Next Button (Solid Brand Blue) */
+.next-btn {
+  background: var(--color-blue-500);
+  color: white;
+  box-shadow: 0 4px 12px rgba(25, 103, 222, 0.25);
+}
+
+.next-btn:hover {
+  background: var(--color-blue-600);
+  transform: translateX(4px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(25, 103, 222, 0.35);
+}
+
+.next-btn:active {
+  transform: translateY(1px);
+}
+
+/* Special styling when changing to 'Tonton Video' */
+.next-btn.watch-video-state {
+  background: var(--color-pink-500);
+  box-shadow: 0 4px 12px rgba(226, 82, 140, 0.25);
+}
+
+.next-btn.watch-video-state:hover {
+  background: #ce3d75;
+  box-shadow: 0 6px 16px rgba(226, 82, 140, 0.35);
+}
+
+.nav-btn-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+/* Dots Indicator style */
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(2, 38, 128, 0.15);
+  transition: all 0.3s var(--ease-spring);
+  cursor: pointer;
+}
+
+.dot:hover {
+  background: rgba(2, 38, 128, 0.3);
+}
+
+.dot.active {
+  width: 18px;
+  border-radius: 50px;
+  background: var(--color-blue-500);
+}
+
+/* Animation utilities for slider updates */
+.vocab-card.slide-in-right {
+  animation: slideInRight 0.4s var(--ease-spring) forwards;
+}
+
+.vocab-card.slide-in-left {
+  animation: slideInLeft 0.4s var(--ease-spring) forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px) rotate(1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px) rotate(-1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* Responsive adjustment for Mobile-first views */
+@media (max-width: 480px) {
+  .vocab-container {
+    padding: 1rem;
+  }
+  
+  .vocab-card {
+    padding: 1.5rem 1rem;
+    gap: 1.25rem;
+  }
+  
+  .vocab-image-container {
+    height: 160px;
+  }
+  
+  .vocab-arabic {
+    font-size: 2.75rem;
+  }
+  
+  .vocab-transliteration {
+    font-size: 1.15rem;
+  }
+  
+  .vocab-translation {
+    font-size: 1rem;
+  }
+  
+  .nav-btn span {
+    display: none; /* Hide button text on extra-small screens to preserve space */
+  }
+  
+  .nav-btn {
+    padding: 0.75rem 1.15rem;
+  }
+}
