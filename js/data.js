@@ -9,42 +9,42 @@ const kosaKataMateri = [
     arab: "مَدْرَسَةٌ",
     transliterasi: "Madrasatun",
     arti: "Sekolah",
-    gambar: "../Image/sekolah.png"
+    gambar: "../Image/sekolah.webp"
   },
   {
     id: 2,
     arab: "فَصْلٌ",
     transliterasi: "Fashlun",
     arti: "Kelas",
-    gambar: "../Image/kelas.png"
+    gambar: "../Image/kelas.webp"
   },
   {
     id: 3,
     arab: "كِتَابٌ",
     transliterasi: "Kitabun",
     arti: "Buku",
-    gambar: "../Image/kitab.png"
+    gambar: "../Image/kitab.webp"
   },
   {
     id: 4,
     arab: "قَلَمٌ",
     transliterasi: "Qalamun",
     arti: "Pena",
-    gambar: "../Image/qalam.png"
+    gambar: "../Image/qalam.webp"
   },
   {
     id: 5,
     arab: "مَكْتَبٌ",
     transliterasi: "Maktabun",
     arti: "Meja",
-    gambar: "../Image/meja.png"
+    gambar: "../Image/meja.webp"
   },
   {
     id: 6,
     arab: "كُرْسِيٌّ",
     transliterasi: "Kursiyyun",
     arti: "Kursi",
-    gambar: "../Image/kursi.png"
+    gambar: "../Image/kursi.webp"
   }
 ];
 
