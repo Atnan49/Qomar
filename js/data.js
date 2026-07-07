@@ -52,9 +52,21 @@ const kosaKataMateri = [
 const videoMateri = [
   {
     id: 1,
-    judul: "Perkenalan di Sekolah",
-    deskripsi: "Tonton cerita komik perkenalan Bahasa Arab di sekolah bersama Ahmad dan Fatimah.",
-    videoUrl: "../Video/perkenalan.mp4"
+    judul: "Peralatan Sekolah (الأدوات المدرسية)",
+    deskripsi: "Tonton cerita komik tentang peralatan sekolah dalam Bahasa Arab bersama Ahmad dan Fatimah.",
+    videoUrl: "../Video/peralatan_sekolah.mp4"
+  },
+  {
+    id: 2,
+    judul: "Di dalam Kelas (في الفصل)",
+    deskripsi: "Pelajari benda-benda di dalam kelas seperti meja, kursi, dan papan tulis melalui visualisasi cerita komik interaktif.",
+    videoUrl: "../Video/di_dalam_kelas.mp4"
+  },
+  {
+    id: 3,
+    judul: "Warga Sekolah (أفراد المدرسة)",
+    deskripsi: "Kenali sebutan warga sekolah seperti guru, murid, dan satpam dalam Bahasa Arab melalui video komik menarik.",
+    videoUrl: "../Video/warga_sekolah.mp4"
   }
 ];
 

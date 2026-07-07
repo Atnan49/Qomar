@@ -1,22 +1,3 @@
-<!-- 
-   ==========================================================================
-   JOB ASSIGNMENT: NARENDRA
-   TASK: HTML Structure - Video Playlist (video.html)
-   ==========================================================================
-   INSTRUCTIONS FOR NARENDRA:
-   1. Buat kerangka halaman pemutar video pembelajaran interaktif.
-   2. Sertakan UDL Toolbar di bagian atas (Header):
-      - Tombol Zoom In / Zoom Out beserta indikator persentase skala font.
-      - Tombol Toggle Dyslexia Font.
-      - Tombol Kembali ke Halaman Utama.
-   3. Hubungkan stylesheet: common.css dan video.css.
-   4. Susun struktur pemutar video utama menggunakan tag lokal HTML5 <video controls id="video-player"> di dalam wadah '.video-container'.
-   5. Sediakan kartu informasi untuk judul dan deskripsi video yang sedang aktif.
-   6. Sediakan daftar putar (Playlist Panel) yang memuat list item tombol navigasi video pembelajaran lainnya.
-   7. Sediakan tombol navigasi redirect di bagian bawah untuk melanjutkan ke Halaman Kuis (Kuis.html).
-   8. Hubungkan script pendukung: data.js dan video.js di bagian akhir body.
-   ========================================================================== 
--->
 <!DOCTYPE html>
 <html lang="id">
 
@@ -24,13 +5,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOMAR - Video Pembelajaran</title>
-    <!-- Hubungkan berkas CSS Anda di sini -->
+    <meta name="description" content="Tonton video cerita komik interaktif Bahasa Arab QOMAR dengan playlist yang mudah dinavigasi dan toolbar aksesibilitas UDL untuk siswa kelas IV MI.">
+
+    <!-- Google Fonts: Inter (Latin) & Amiri (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/video.css">
 </head>
 
 <body class="bg-pattern pages-body">
 
-    <!-- Tulis struktur halaman Anda di sini -->
+    <!-- Header & UDL Toolbar -->
+    <header class="main-header glass-card">
+        <div class="header-container container">
+            <div class="header-left">
+                <a href="dashboard.html" class="back-link" id="btn-back">
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Kembali</span>
+                </a>
+            </div>
 
+            <div class="header-center">
+                <span class="header-title">Tonton Video</span>
+            </div>
+
+            <div class="header-right">
+                <!-- UDL Toolbar -->
+                <div class="udl-toolbar" role="toolbar" aria-label="Toolbar Aksesibilitas UDL">
+                    <button id="btn-zoom-out" class="udl-btn" aria-label="Perkecil Ukuran Teks">A-</button>
+                    <span id="zoom-indicator" class="zoom-indicator">100%</span>
+                    <button id="btn-zoom-in" class="udl-btn" aria-label="Perbesar Ukuran Teks">A+</button>
+                    <div class="udl-divider"></div>
+                    <button id="btn-dyslexia-toggle" class="udl-btn dyslexia-toggle" aria-label="Toggle Font Disleksia">Dyslexia</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="video-container container">
+        <div class="video-layout-grid">
+            
+            <!-- Left Side: Video Player & Metadata -->
+            <div class="video-main-section">
+                <!-- Video Player Container with 16:9 widescreen ratio -->
+                <div class="video-player-wrapper glass-card-strong">
+                    <video id="video-player" controls preload="metadata">
+                        <source id="video-source" src="" type="video/mp4">
+                        Browser Anda tidak mendukung pemutar video HTML5. Silakan perbarui browser Anda.
+                    </video>
+                </div>
+
+                <!-- Active Video Details Card -->
+                <div class="video-info-card glass-card-strong">
+                    <div class="video-info-header">
+                        <span class="video-badge">Materi Aktif</span>
+                        <h2 id="video-title" class="video-title">Memuat judul video...</h2>
+                    </div>
+                    <p id="video-desc" class="video-desc">Memuat deskripsi cerita komik...</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Playlist Panel -->
+            <div class="video-sidebar-section">
+                <div class="playlist-panel glass-card-strong">
+                    <div class="playlist-header">
+                        <span class="playlist-header-emoji">🎬</span>
+                        <h3 class="playlist-header-title">Daftar Cerita
+                            
+                        </h3>
+                    </div>
+                    <div id="playlist-list" class="playlist-list" role="listbox" aria-label="Daftar putar video materi">
+                        <!-- Playlist items generated dynamically by video.js -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bottom Navigation controls (Fixed) -->
+    <div class="nav-control-section">
+        <div class="nav-control-inner">
+            <a href="kosa_kata.html" class="nav-btn prev-btn" id="btn-prev-page" aria-label="Kembali ke Kosa Kata">
+                <svg class="nav-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <span>Sebelumnya</span>
+            </a>
+            
+            <a href="Kuis.html" class="nav-btn next-btn" id="btn-next-page" aria-label="Mulai Uji Kemampuan">
+                <span>Mulai Kuis</span>
+                <svg class="nav-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../js/data.js"></script>
+    <script src="../../js/video.js"></script>
 </body>
 
 </html>

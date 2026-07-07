@@ -1,13 +1,376 @@
 /* ==========================================================================
-   JOB ASSIGNMENT: NARENDRA
-   TASK: CSS Styling - Video Playlist (video.css)
-   ==========================================================================
-   INSTRUCTIONS FOR NARENDRA:
-   1. Buat layout responsif untuk halaman playlist video.
-   2. Desain pembungkus video player (.video-container) agar memiliki aspek rasio widescreen 16:9 yang tepat, bersudut membulat (border-radius), berlatar belakang hitam (#000) untuk meminimalkan flicker saat memuat, serta memiliki bayangan lembut.
-   3. Desain panel list item playlist agar memiliki gaya interaktif (efek hover transisi warna dan skala kecil).
-   4. Terapkan kelas glassmorphism pada info card video dan playlist container untuk mempertahankan harmoni visual dengan logo QOMAR.
-   5. Sediakan gaya responsif di perangkat mobile agar daftar putar video tersusun secara vertikal di bawah pemutar video utama.
+   CSS Styling - Video Playlist (video.css) - E-Book QOMAR
    ========================================================================== */
 
-/* Tulis kode CSS Anda di sini */
+/* 1. Main Page Layout */
+.pages-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px; /* Space for fixed bottom navigation */
+}
+
+/* 2. Main Page Container */
+.video-container {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    margin-top: 1.5rem;
+    transition: font-size 0.3s ease;
+}
+
+/* 3. Layout Grid: Responsive 2-Column Columns */
+.video-layout-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 1.75rem;
+    align-items: start;
+    width: 100%;
+}
+
+/* Left Section - Video Player & Meta Card */
+.video-main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Right Section - Playlist Panel */
+.video-sidebar-section {
+    width: 100%;
+}
+
+/* 4. Video Player Wrapper (16:9 Aspect Ratio) */
+.video-player-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    border: 2.5px solid rgba(2, 38, 128, 0.2);
+}
+
+.video-player-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 21px; /* Slight inset border radius */
+}
+
+/* 5. Active Video Info Card */
+.video-info-card {
+    padding: 1.75rem;
+    border-radius: 24px;
+    box-sizing: border-box;
+}
+
+.video-info-header {
+    margin-bottom: 0.75rem;
+}
+
+.video-badge {
+    display: inline-block;
+    background: rgba(226, 82, 140, 0.12);
+    color: var(--color-pink-500);
+    padding: 0.3rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.video-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-blue-800);
+    margin-top: 0.5rem;
+    line-height: 1.3;
+}
+
+.video-desc {
+    font-size: 1rem;
+    color: var(--color-blue-900);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* 6. Playlist Panel Sidebar */
+.playlist-panel {
+    padding: 1.75rem;
+    border-radius: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    border-bottom: 2px dashed rgba(2, 38, 128, 0.12);
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.playlist-header-emoji {
+    font-size: 1.5rem;
+}
+
+.playlist-header-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-blue-800);
+    margin: 0;
+}
+
+.playlist-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
+
+/* Custom Scrollbar for Playlist list */
+.playlist-list::-webkit-scrollbar {
+    width: 6px;
+}
+.playlist-list::-webkit-scrollbar-track {
+    background: rgba(2, 38, 128, 0.03);
+    border-radius: 10px;
+}
+.playlist-list::-webkit-scrollbar-thumb {
+    background: rgba(2, 38, 128, 0.15);
+    border-radius: 10px;
+}
+.playlist-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(2, 38, 128, 0.25);
+}
+
+/* 7. Playlist Item card button */
+.playlist-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 1rem 1.25rem;
+    border-radius: 18px;
+    border: 2px solid rgba(2, 38, 128, 0.08);
+    background: rgba(255, 255, 255, 0.55);
+    cursor: pointer;
+    transition: all 0.3s var(--ease-spring);
+    text-align: left;
+    width: 100%;
+    outline: none;
+    box-shadow: var(--shadow-soft);
+}
+
+.playlist-item:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(2, 38, 128, 0.2);
+    box-shadow: var(--shadow-card);
+}
+
+.playlist-item.active {
+    background: var(--color-blue-500);
+    color: white !important;
+    border-color: var(--color-blue-600);
+    box-shadow: 0 6px 16px rgba(25, 103, 222, 0.3);
+}
+
+.playlist-item-number {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(2, 38, 128, 0.06);
+    font-size: 0.9rem;
+    font-weight: 750;
+    color: var(--color-blue-800);
+    flex-shrink: 0;
+    transition: all 0.3s;
+}
+
+.playlist-item.active .playlist-item-number {
+    background: rgba(255, 255, 255, 0.22);
+    color: white;
+}
+
+.playlist-item-title {
+    font-size: 1rem;
+    font-weight: 650;
+    line-height: 1.35;
+    color: inherit;
+}
+
+/* 8. Bottom Sticky Navigation controls styling */
+.nav-control-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 95;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1.5px solid rgba(2, 38, 128, 0.12);
+    padding: 0.95rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-control-inner {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 0.8rem 1.65rem;
+    font-size: 1rem;
+    font-weight: 750;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-spring);
+    outline: none;
+    text-decoration: none;
+}
+
+.prev-btn {
+    background: transparent;
+    color: var(--color-blue-800);
+}
+
+.prev-btn:hover {
+    transform: translateX(-4px);
+    color: var(--color-blue-600);
+}
+
+.next-btn {
+    background: var(--color-blue-500);
+    color: white;
+    box-shadow: 0 4px 12px rgba(25, 103, 222, 0.22);
+}
+
+.next-btn:hover {
+    transform: translateX(4px);
+    background: var(--color-blue-600);
+    box-shadow: 0 6px 16px rgba(25, 103, 222, 0.32);
+}
+
+.nav-btn-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* 9. Accessibility Font Scale helpers */
+.font-scale-100 .video-container { font-size: 100%; }
+.font-scale-110 .video-container { font-size: 110%; }
+.font-scale-120 .video-container { font-size: 120%; }
+.font-scale-130 .video-container { font-size: 130%; }
+.font-scale-140 .video-container { font-size: 140%; }
+.font-scale-150 .video-container { font-size: 150%; }
+.font-scale-160 .video-container { font-size: 160%; }
+
+.font-scale-100 .video-title { font-size: 1.6rem; }
+.font-scale-110 .video-title { font-size: 1.7rem; }
+.font-scale-120 .video-title { font-size: 1.8rem; }
+.font-scale-130 .video-title { font-size: 1.9rem; }
+.font-scale-140 .video-title { font-size: 2.0rem; }
+.font-scale-150 .video-title { font-size: 2.1rem; }
+.font-scale-160 .video-title { font-size: 2.2rem; }
+
+/* 10. Animations */
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s var(--ease-spring) forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 11. Responsive Breakpoints */
+@media (max-width: 768px) {
+    .video-container {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .video-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .video-player-wrapper {
+        border-radius: 20px;
+    }
+
+    .video-info-card, .playlist-panel {
+        padding: 1.25rem;
+        border-radius: 20px;
+    }
+
+    .video-title {
+        font-size: 1.35rem;
+    }
+
+    .playlist-list {
+        max-height: 250px;
+    }
+
+    .playlist-item {
+        padding: 0.8rem 1rem;
+        border-radius: 14px;
+    }
+
+    .playlist-item-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+    }
+
+    .playlist-item-title {
+        font-size: 0.9rem;
+    }
+
+    .nav-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-title {
+        font-size: 1.2rem;
+    }
+
+    .video-desc {
+        font-size: 0.9rem;
+    }
+}
