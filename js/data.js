@@ -52,21 +52,21 @@ const kosaKataMateri = [
 const videoMateri = [
   {
     id: 1,
-    judul: "Peralatan Sekolah (الأدوات المدرسية)",
-    deskripsi: "Tonton cerita komik tentang peralatan sekolah dalam Bahasa Arab bersama Ahmad dan Fatimah.",
-    videoUrl: "../Video/peralatan_sekolah.mp4"
+    judul: "Bab 1 : الْعُنْوَانُ",
+    deskripsi: "Pelajari cara menyebutkan alamat rumah, nomor telepon, dan nama jalan dalam Bahasa Arab melalui cerita komik interaktif Ahmad dan Fatimah.",
+    videoUrl: "../Video/video_komik_bab1.mp4"
   },
   {
     id: 2,
-    judul: "Di dalam Kelas (في الفصل)",
-    deskripsi: "Pelajari benda-benda di dalam kelas seperti meja, kursi, dan papan tulis melalui visualisasi cerita komik interaktif.",
-    videoUrl: "../Video/di_dalam_kelas.mp4"
+    judul: "Bab 2 : الْمِهْنَةُ",
+    deskripsi: "Tonton cerita komik menarik tentang pengenalan berbagai jenis profesi dan pekerjaan dalam Bahasa Arab.",
+    videoUrl: "../Video/video_komik_bab2.mp4"
   },
   {
     id: 3,
-    judul: "Warga Sekolah (أفراد المدرسة)",
-    deskripsi: "Kenali sebutan warga sekolah seperti guru, murid, dan satpam dalam Bahasa Arab melalui video komik menarik.",
-    videoUrl: "../Video/warga_sekolah.mp4"
+    judul: "Bab 3 : أَمَلِيْ",
+    deskripsi: "Temukan cara mengungkapkan impian, harapan, dan cita-cita masa depan dalam Bahasa Arab.",
+    videoUrl: "../Video/video_komik_bab3.mp4"
   }
 ];
 
