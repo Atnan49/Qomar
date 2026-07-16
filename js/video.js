@@ -87,7 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update Info Card Metadata
         videoTitle.textContent = currentVideo.judul;
-        videoDesc.textContent = currentVideo.deskripsi;
+        if (videoDesc) {
+            videoDesc.textContent = currentVideo.deskripsi;
+        }
 
         // Highlight Active Playlist Item
         const playlistItems = playlistList.querySelectorAll('.playlist-item');
@@ -117,7 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (totalVideos === 0) {
             playlistList.innerHTML = `<div class="playlist-empty">Tidak ada video materi.</div>`;
             videoTitle.textContent = "Tidak ada video";
-            videoDesc.textContent = "";
+            if (videoDesc) {
+                videoDesc.textContent = "";
+            }
             return;
         }
 
