@@ -1,31 +1,3 @@
-<!-- 
-   ==========================================================================
-   JOB ASSIGNMENT: RIFKI
-   TASK: HTML Structure - Kuis Interaktif (Kuis.html)
-   ==========================================================================
-   INSTRUCTIONS FOR RIFKI:
-   1. Buat struktur halaman kuis interaktif dengan 3 tab pembelajaran utama:
-      - Tab 1: Pilihan Ganda (PG).
-      - Tab 2: Soal Essay.
-      - Tab 3: Tugas Praktik (Pengiriman tugas lewat WhatsApp Guru).
-   2. Sertakan UDL Toolbar di bagian atas (Header):
-      - Tombol Zoom In / Zoom Out beserta indikator persentase skala font.
-      - Tombol Toggle Dyslexia Font.
-      - Tombol Kembali ke Halaman Utama.
-   3. Hubungkan stylesheet: common.css dan kuis.css.
-   4. Susun pembungkus tab switcher button (#tab-pilihan-ganda, #tab-essay, #tab-praktik).
-   5. Tab 1 (Pilihan Ganda):
-      - Sediakan grid bulatan nomor navigasi kuis untuk berpindah soal.
-      - Sediakan kartu soal kuis (#pg-card) dan daftar opsi jawaban vertikal (A, B, C).
-      - Sediakan bilah navigasi bawah (Sebelumnya, Kirim Jawaban, Berikutnya) yang dibungkus kelas '.quiz-nav-inner' di dalam '.quiz-nav-section'.
-      - Sediakan modal dialog overlay untuk menampilkan hasil skor kuis akhir (pop-up) berserta statistik dan emoji.
-   6. Tab 2 (Essay):
-      - Sediakan list container untuk kartu soal essay yang berisi textarea input jawaban murid dan tombol 'Buka Kunci Jawaban' secara dinamis.
-   7. Tab 3 (Praktik):
-      - Sediakan instruksi tugas praktik rekaman video membaca teks komik, lengkap dengan tombol direct WhatsApp yang besar dan berlatar hijau.
-   8. Hubungkan script pendukung: data.js dan quiz.js di bagian akhir body.
-   ========================================================================== 
--->
 <!DOCTYPE html>
 <html lang="id">
 
@@ -33,13 +5,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOMAR - Kuis Interaktif</title>
-    <!-- Hubungkan berkas CSS Anda di sini -->
+    <meta name="description" content="Kuis interaktif pembelajaran Bahasa Arab QOMAR: Pilihan Ganda, Essay, dan Tugas Praktik untuk siswa Kelas IV MI.">
+
+    <!-- Google Fonts: Inter (Latin) & Amiri (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/kuis.css">
 </head>
 
 <body class="bg-pattern pages-body">
 
-    <!-- Tulis struktur halaman Anda di sini -->
+    <!-- ============================================================
+         UDL TOOLBAR HEADER
+         ============================================================ -->
+    <header class="udl-toolbar" id="udl-header">
+        <div class="udl-toolbar-inner">
+            <!-- Back Button -->
+            <a href="dashboard.html" class="back-link" id="btn-back-dashboard" title="Kembali ke Dashboard">
+                <span>&lt; Kembali</span>
+            </a>
 
+            <!-- Header Title -->
+            <div class="udl-header-title">
+                <span>✏️ Kuis Interaktif</span>
+            </div>
+
+            <!-- UDL Controls -->
+            <div class="udl-right-controls">
+                <!-- Zoom Controls -->
+                <div class="udl-zoom-controls">
+                    <button id="btn-zoom-out" class="udl-btn" title="Perkecil Teks" aria-label="Perkecil ukuran teks">A−</button>
+                    <span id="zoom-level-display" class="udl-zoom-badge">100%</span>
+                    <button id="btn-zoom-in" class="udl-btn" title="Perbesar Teks" aria-label="Perbesar ukuran teks">A+</button>
+                </div>
+
+                <!-- Dyslexia Toggle -->
+                <button id="btn-dyslexia-toggle" class="udl-btn udl-btn-dyslexia" title="Mode Disleksia" aria-label="Toggle mode font disleksia">
+                    Disleksia
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         TAB SWITCHER
+         ============================================================ -->
+    <nav class="tab-switcher-container" id="tab-switcher">
+        <div class="tab-switcher-inner">
+            <button class="tab-btn active" id="tab-pilihan-ganda" data-tab="pg" aria-selected="true">
+                Pilihan Ganda
+            </button>
+            <button class="tab-btn" id="tab-essay" data-tab="essay" aria-selected="false">
+                Soal Essay
+            </button>
+            <button class="tab-btn" id="tab-praktik" data-tab="praktik" aria-selected="false">
+                Tugas Praktik
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         MAIN QUIZ CONTENT AREA
+         ============================================================ -->
+    <main class="quiz-main-content" id="quiz-main-content">
+
+        <!-- ======== TAB 1: PILIHAN GANDA ======== -->
+        <section class="tab-panel active" id="panel-pg" role="tabpanel" aria-labelledby="tab-pilihan-ganda">
+
+            <!-- Grid Nomor Navigasi Soal -->
+            <div class="pg-number-grid-container" id="pg-number-container">
+                <div class="pg-number-grid" id="pg-number-grid">
+                    <!-- Rendered dynamically by quiz.js -->
+                </div>
+            </div>
+
+            <!-- Kartu Soal PG -->
+            <div class="pg-card-container">
+                <div class="pg-card glass-card-strong" id="pg-card">
+                    <div class="pg-soal-header">
+                        <span class="pg-soal-number" id="pg-soal-number">Soal 1</span>
+                        <span class="pg-soal-of" id="pg-soal-of">dari 5</span>
+                    </div>
+                    <div class="pg-context-box" id="pg-context-box" style="display: none;"></div>
+                    <p class="pg-soal-text" id="pg-soal-text"></p>
+                    <div class="pg-image-container" id="pg-image-container" style="display: none;">
+                        <img src="" alt="Gambar Soal" class="pg-soal-image" id="pg-soal-image">
+                    </div>
+                    <div class="pg-options-list" id="pg-options-list">
+                        <!-- Options A, B, C, D rendered dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Overlay Hasil Kuis PG -->
+            <div class="results-overlay" id="results-overlay" aria-hidden="true">
+                <div class="results-card glass-card-strong" id="results-card">
+                    <button class="results-close-btn" id="results-close-btn" title="Tutup" aria-label="Tutup hasil kuis">&times;</button>
+                    <div class="results-emoji" id="results-emoji">🌟</div>
+                    <h2 class="results-title">Hasil Kuis</h2>
+                    <div class="results-score-ring" id="results-score-ring">
+                        <span class="results-score-number" id="results-score-number">0</span>
+                        <span class="results-score-label">Benar</span>
+                    </div>
+                    <p class="results-message" id="results-message"></p>
+                    <div class="results-stats" id="results-stats">
+                        <div class="stat-item stat-correct">
+                            <span class="stat-value" id="stat-correct-val">0</span>
+                            <span class="stat-label">Benar</span>
+                        </div>
+                        <div class="stat-item stat-wrong">
+                            <span class="stat-value" id="stat-wrong-val">0</span>
+                            <span class="stat-label">Salah</span>
+                        </div>
+                        <div class="stat-item stat-total">
+                            <span class="stat-value" id="stat-total-val">0</span>
+                            <span class="stat-label">Total</span>
+                        </div>
+                    </div>
+                    <div class="results-actions">
+                        <button class="results-review-btn" id="results-review-btn">Lihat Koreksi Jawaban</button>
+                        <button class="results-retry-btn" id="results-retry-btn">🔄 Ulangi Kuis</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== TAB 2: ESSAY ======== -->
+        <section class="tab-panel" id="panel-essay" role="tabpanel" aria-labelledby="tab-essay" hidden>
+            <h2 class="essay-panel-title">Jawablah Pertanyaan Essay Berikut!</h2>
+            
+            <!-- Grid Nomor Navigasi Essay -->
+            <div class="essay-number-grid-container" id="essay-number-container">
+                <div class="essay-number-grid" id="essay-number-grid">
+                    <!-- Rendered dynamically by quiz.js -->
+                </div>
+            </div>
+
+            <!-- Kartu Soal Essay -->
+            <div class="essay-card-container" id="essay-card-container">
+                <div class="essay-card glass-card-strong" id="essay-card">
+                    <div class="essay-soal-header">
+                        <span class="essay-soal-number" id="essay-soal-number">PERTANYAAN 1 DARI 5</span>
+                    </div>
+                    <p class="essay-soal-text" id="essay-soal-text"></p>
+                    <textarea 
+                        class="essay-textarea" 
+                        id="essay-input" 
+                        placeholder="Ketik jawabanmu di sini..." 
+                        rows="4"
+                    ></textarea>
+                    
+                    <div class="essay-actions">
+                        <button class="essay-reveal-btn" id="btn-essay-reveal">Lihat Kunci Jawaban</button>
+                    </div>
+                    
+                    <div class="essay-key-wrap" id="essay-key-container">
+                        <p class="essay-key-label">🔑 Kunci Jawaban:</p>
+                        <p class="essay-key-text" id="essay-key-text"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== TAB 3: PRAKTIK ======== -->
+        <section class="tab-panel" id="panel-praktik" role="tabpanel" aria-labelledby="tab-praktik" hidden>
+            <div class="praktik-container">
+                <div class="praktik-card glass-card-strong">
+                    <div class="praktik-icon-wrap">
+                        <svg class="praktik-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2" ry="2"/>
+                        </svg>
+                    </div>
+                    <h2 class="praktik-title">🎬 Tugas Praktik</h2>
+                    <p class="praktik-instruksi" id="praktik-instruksi"></p>
+                    <div class="praktik-teacher-info" id="praktik-teacher-info">
+                        <!-- Teacher info rendered dynamically -->
+                    </div>
+                    <a href="#" class="wa-send-btn" id="wa-send-btn" target="_blank" rel="noopener noreferrer">
+                        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span>Kirim ke WhatsApp Guru</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================
+         FIXED BOTTOM NAVIGATION (PG Only)
+         ============================================================ -->
+    <nav class="quiz-nav-section" id="quiz-nav-section">
+        <div class="quiz-nav-inner">
+            <button class="quiz-nav-btn btn-prev" id="btn-pg-prev" disabled>Sebelumnya</button>
+            <button class="quiz-nav-btn btn-submit" id="btn-pg-submit" style="display:none;">Kirim Jawaban</button>
+            <button class="quiz-nav-btn btn-next" id="btn-pg-next">Berikutnya</button>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="../../js/data.js"></script>
+    <script src="../../js/quiz.js"></script>
 </body>
 
 </html>
