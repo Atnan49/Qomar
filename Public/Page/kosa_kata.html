@@ -49,55 +49,182 @@
         </div>
     </header>
 
-    <!-- Main Container -->
-    <main class="vocab-container container">
+    <!-- 1. Screen: Menu Pilihan Tema Komik -->
+    <div id="theme-select-screen" class="container screen-container active-screen">
+        <div class="screen-header text-center">
+            <h1 class="theme-title">Pilih Tema Komik</h1>
+            <p class="theme-subtitle">Pilih tema komik terlebih dahulu untuk dibaca sebelum belajar kosakata.</p>
+        </div>
         
-        <!-- Flashcard Wrapper -->
-        <div class="vocab-card-outer">
-            <div id="slide-card" class="vocab-card glass-card-strong">
-                <div class="vocab-image-container">
-                    <img id="vocab-image" src="" alt="Ilustrasi Kosakata" class="vocab-image">
+        <div class="theme-grid">
+            <!-- Tema 1 Card -->
+            <div class="theme-card glass-card" onclick="selectTheme('tema1')">
+                <div class="theme-card-icon-container bg-blue">
+                    <span class="theme-num">1</span>
                 </div>
-                <div class="vocab-content">
-                    <div id="vocab-arabic" class="vocab-arabic" lang="ar"></div>
-                    <div id="vocab-transliteration" class="vocab-transliteration"></div>
-                    <div id="vocab-translation" class="vocab-translation"></div>
+                <div class="theme-card-content">
+                    <div class="theme-card-arabic" lang="ar">عُنْوَانُ بَيْتِ طَاهِرٍ</div>
+                    <h3 class="theme-card-title">Alamat Rumah Tahir</h3>
+                    <p class="theme-card-desc">Pelajari nama jalan, desa, dan cara menanyakan alamat rumah dalam Bahasa Arab.</p>
                 </div>
-            </div>
-        </div>
-
-        <!-- Progress Tracker Bar -->
-        <div class="vocab-progress-section">
-            <div class="progress-info">
-                <span id="progress-text" class="progress-text">Kosakata 1 dari 6</span>
-            </div>
-            <div class="progress-track">
-                <div id="progress-bar" class="progress-bar" style="width: 16.66%;"></div>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Bottom Navigation controls (Fixed) -->
-    <div class="nav-control-section">
-        <div class="nav-control-inner">
-            <button id="btn-prev" class="nav-btn prev-btn" aria-label="Kosakata Sebelumnya">
-                <svg class="nav-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-                <span>Sebelumnya</span>
-            </button>
-            
-            <div id="dots-container" class="dots-container">
-                <!-- Dot indicators generated dynamically -->
+                <button class="theme-card-btn">Baca Komik & Belajar</button>
             </div>
             
-            <button id="btn-next" class="nav-btn next-btn" aria-label="Kosakata Berikutnya">
-                <span>Berikutnya</span>
-                <svg class="nav-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
+            <!-- Tema 2 Card -->
+            <div class="theme-card glass-card" onclick="selectTheme('tema2')">
+                <div class="theme-card-icon-container bg-pink">
+                    <span class="theme-num">2</span>
+                </div>
+                <div class="theme-card-content">
+                    <div class="theme-card-arabic" lang="ar">اَلْمِهْنَةُ</div>
+                    <h3 class="theme-card-title">Profesi / Pekerjaan</h3>
+                    <p class="theme-card-desc">Kenali berbagai pekerjaan seperti polisi, dokter gigi, dan ibu rumah tangga dalam Bahasa Arab.</p>
+                </div>
+                <button class="theme-card-btn">Baca Komik & Belajar</button>
+            </div>
+            
+            <!-- Tema 3 Card -->
+            <div class="theme-card glass-card" onclick="selectTheme('tema3')">
+                <div class="theme-card-icon-container bg-teal">
+                    <span class="theme-num">3</span>
+                </div>
+                <div class="theme-card-content">
+                    <div class="theme-card-arabic" lang="ar">الْأَمَلُ فِيْ الْمُسْتَقْبَلِ</div>
+                    <h3 class="theme-card-title">Cita-Cita Masa Depan</h3>
+                    <p class="theme-card-desc">Pelajari cara mengungkapkan cita-cita masa depan seperti guru, koki, atau petani.</p>
+                </div>
+                <button class="theme-card-btn">Baca Komik & Belajar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Screen: Pembaca Komik -->
+    <div id="comic-reading-screen" class="container screen-container" style="display: none;">
+        <div class="comic-header text-center">
+            <h2 id="comic-title-arab" class="comic-title-arab" lang="ar">عُنْوَانُ بَيْتِ طَاهِرٍ</h2>
+            <h3 id="comic-title-indo" class="comic-title-indo">Alamat Rumah Tahir</h3>
+        </div>
+        
+        <div class="comic-viewer-card glass-card-strong">
+            <!-- Image Panel -->
+            <div class="comic-image-wrapper">
+                <img id="comic-img" src="" alt="Gambar Komik" class="comic-img">
+                
+                <!-- Page navigation (only shown for Tema 2) -->
+                <div id="comic-page-controls" class="comic-page-controls" style="display: none;">
+                    <button id="btn-comic-prev-page" class="comic-page-btn" aria-label="Halaman Sebelumnya">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <span id="comic-page-indicator" class="comic-page-indicator">Halaman 1 dari 2</span>
+                    <button id="btn-comic-next-page" class="comic-page-btn" aria-label="Halaman Berikutnya">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Dialogue Panel (UDL Transcript) -->
+            <div class="comic-dialogue-section">
+                <div class="section-divider">
+                    <span>Transkrip Percakapan Komik</span>
+                </div>
+                <div id="comic-dialogue-list" class="comic-dialogue-list">
+                    <!-- Dynamic bubbles generated dynamically -->
+                </div>
+            </div>
+            
+            <!-- Aksi Selesai Membaca -->
+            <div class="comic-actions">
+                <button id="btn-finish-reading" class="finish-reading-btn">
+                    <span>Selesai Membaca & Lanjut ke Kosakata</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="finish-icon">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Back to Menu button inside reading screen -->
+        <div class="comic-back-nav">
+            <button id="btn-back-to-menu-1" class="back-to-menu-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="back-menu-icon">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
                 </svg>
+                <span>Kembali ke Pilihan Tema</span>
             </button>
+        </div>
+    </div>
+
+    <!-- 3. Screen: Flashcards Kosakata -->
+    <div id="vocab-flashcard-screen" class="screen-container" style="display: none; width: 100%;">
+        <!-- Main Container -->
+        <main class="vocab-container container">
+            
+            <!-- Flashcard Wrapper -->
+            <div class="vocab-card-outer">
+                <div id="slide-card" class="vocab-card glass-card-strong">
+                    <div class="vocab-image-container">
+                        <img id="vocab-image" src="" alt="Ilustrasi Kosakata" class="vocab-image">
+                    </div>
+                    <div class="vocab-content">
+                        <div id="vocab-arabic" class="vocab-arabic" lang="ar"></div>
+                        <div id="vocab-transliteration" class="vocab-transliteration"></div>
+                        <div id="vocab-translation" class="vocab-translation"></div>
+                        
+                        <!-- Audio player button -->
+                        <div class="audio-player-wrapper">
+                            <button id="btn-play-audio" class="audio-btn" aria-label="Putar Audio Pelafalan">
+                                <svg class="audio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                    <path class="audio-wave-1" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                                    <path class="audio-wave-2" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                                </svg>
+                                <span>Dengarkan Audio</span>
+                            </button>
+                            <span id="audio-unavailable-msg" class="audio-unavailable" style="display: none;">Audio tidak tersedia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracker Bar -->
+            <div class="vocab-progress-section">
+                <div class="progress-info">
+                    <span id="progress-text" class="progress-text">Kosakata 1 dari 6</span>
+                </div>
+                <div class="progress-track">
+                    <div id="progress-bar" class="progress-bar" style="width: 16.66%;"></div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Bottom Navigation controls (Fixed) -->
+        <div class="nav-control-section">
+            <div class="nav-control-inner">
+                <button id="btn-prev" class="nav-btn prev-btn" aria-label="Kosakata Sebelumnya">
+                    <svg class="nav-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Sebelumnya</span>
+                </button>
+                
+                <div id="dots-container" class="dots-container">
+                    <!-- Dot indicators generated dynamically -->
+                </div>
+                
+                <button id="btn-next" class="nav-btn next-btn" aria-label="Kosakata Berikutnya">
+                    <span>Berikutnya</span>
+                    <svg class="nav-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 
