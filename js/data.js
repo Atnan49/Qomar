@@ -302,39 +302,11 @@ const kuisPG = [
     }
 ];
 
-// ==================== KUIS ESSAY ====================
-const kuisEssay = [
-    {
-        id: 1,
-        soal: "Tuliskan arti dari kata berikut dalam Bahasa Indonesia: مَكْتَبَةٌ (Maktabatun).",
-        kpiJawaban: "Perpustakaan"
-    },
-    {
-        id: 2,
-        soal: "Sebutkan 3 kosakata Bahasa Arab tentang benda-benda di dalam kelas beserta artinya!",
-        kpiJawaban: "Contoh jawaban: 1) كِتَابٌ (Kitābun) = Buku, 2) قَلَمٌ (Qalamun) = Pena, 3) كُرْسِيٌّ (Kursi) = Kursi."
-    },
-    {
-        id: 3,
-        soal: "Buatlah satu kalimat sederhana dalam Bahasa Arab menggunakan kata  مُعَلِّمٌ  (Mu'allimun)!",
-        kpiJawaban: "Contoh jawaban: اَلْمُعَلِّمُ فِي الْمَدْرَسَةِ (Al-Mu'allimu fī al-Madrasati) = Guru di sekolah."
-    },
-    {
-        id: 4,
-        soal: "Sebutkan nama-nama hari dalam Bahasa Arab yang kamu ketahui!",
-        kpiJawaban: "Ahad (Minggu), Al-Itsnain (Senin), Ats-Tsulatsa (Selasa), Al-Arbi'a (Rabu), Al-Khamis (Kamis), Al-Jumu'ah (Jumat), As-Sabt (Sabtu)."
-    },
-    {
-        id: 5,
-        soal: "Kapan iqamah dikumandangkan?",
-        kpiJawaban: "Iqamah dikumandangkan ketika shalat berjamaah akan segera dimulai (sebagai tanda untuk merapatkan barisan)."
-    }
-];
 
 // ==================== PRAKTIK (Tugas Kirim WhatsApp) ====================
 const praktikInfo = {
     instruksi: "Rekam video dirimu sedang membaca teks komik Bahasa Arab dari buku QOMAR dengan suara lantang dan jelas. Pastikan wajahmu terlihat dalam video dan durasi minimal 1 menit. Kirim video rekaman melalui WhatsApp ke Guru dengan menekan tombol di bawah ini.",
-    nomorWA: "6281234567890",
-    namaGuru: "Ustadzah Ocktavia Annisa",
+    nomorWA: "6285707602967",
+    namaGuru: "Ustadzah Annisa Ocktavia",
     templatePesan: "Assalamu'alaikum, Ustadzah. Saya kirim tugas praktik membaca komik Bahasa Arab QOMAR. Berikut video rekaman saya. Terima kasih. 🙏"
 };

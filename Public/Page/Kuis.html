@@ -57,9 +57,6 @@
             <button class="tab-btn active" id="tab-pilihan-ganda" data-tab="pg" aria-selected="true">
                 Pilihan Ganda
             </button>
-            <button class="tab-btn" id="tab-essay" data-tab="essay" aria-selected="false">
-                Soal Essay
-            </button>
             <button class="tab-btn" id="tab-praktik" data-tab="praktik" aria-selected="false">
                 Tugas Praktik
             </button>
@@ -132,44 +129,7 @@
             </div>
         </section>
 
-        <!-- ======== TAB 2: ESSAY ======== -->
-        <section class="tab-panel" id="panel-essay" role="tabpanel" aria-labelledby="tab-essay" hidden>
-            <h2 class="essay-panel-title">Jawablah Pertanyaan Essay Berikut!</h2>
-            
-            <!-- Grid Nomor Navigasi Essay -->
-            <div class="essay-number-grid-container" id="essay-number-container">
-                <div class="essay-number-grid" id="essay-number-grid">
-                    <!-- Rendered dynamically by quiz.js -->
-                </div>
-            </div>
-
-            <!-- Kartu Soal Essay -->
-            <div class="essay-card-container" id="essay-card-container">
-                <div class="essay-card glass-card-strong" id="essay-card">
-                    <div class="essay-soal-header">
-                        <span class="essay-soal-number" id="essay-soal-number">PERTANYAAN 1 DARI 5</span>
-                    </div>
-                    <p class="essay-soal-text" id="essay-soal-text"></p>
-                    <textarea 
-                        class="essay-textarea" 
-                        id="essay-input" 
-                        placeholder="Ketik jawabanmu di sini..." 
-                        rows="4"
-                    ></textarea>
-                    
-                    <div class="essay-actions">
-                        <button class="essay-reveal-btn" id="btn-essay-reveal">Lihat Kunci Jawaban</button>
-                    </div>
-                    
-                    <div class="essay-key-wrap" id="essay-key-container">
-                        <p class="essay-key-label">🔑 Kunci Jawaban:</p>
-                        <p class="essay-key-text" id="essay-key-text"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======== TAB 3: PRAKTIK ======== -->
+        <!-- ======== TAB 2: PRAKTIK ======== -->
         <section class="tab-panel" id="panel-praktik" role="tabpanel" aria-labelledby="tab-praktik" hidden>
             <div class="praktik-container">
                 <div class="praktik-card glass-card-strong">
@@ -201,6 +161,7 @@
         <div class="quiz-nav-inner">
             <button class="quiz-nav-btn btn-prev" id="btn-pg-prev" disabled>Sebelumnya</button>
             <button class="quiz-nav-btn btn-submit" id="btn-pg-submit" style="display:none;">Kirim Jawaban</button>
+            <button class="quiz-nav-btn btn-back-results" id="btn-back-results" style="display:none;" title="Kembali ke halaman nilai">📊 Nilai</button>
             <button class="quiz-nav-btn btn-next" id="btn-pg-next">Berikutnya</button>
         </div>
     </nav>

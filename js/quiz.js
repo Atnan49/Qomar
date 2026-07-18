@@ -73,8 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
             panel.hidden = !isTarget;
         });
 
-        // Show bottom nav for PG and Essay tabs
-        quizNavSection.style.display = (targetTab === 'pg' || targetTab === 'essay') ? '' : 'none';
+        // Show bottom nav for PG tab only
+        quizNavSection.style.display = targetTab === 'pg' ? '' : 'none';
 
         // Update nav buttons states for the current active tab
         updateNavButtons();
@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnPrev = document.getElementById('btn-pg-prev');
     const btnNext = document.getElementById('btn-pg-next');
     const btnSubmit = document.getElementById('btn-pg-submit');
+    const btnBackResults = document.getElementById('btn-back-results');
     const resultsOverlay = document.getElementById('results-overlay');
 
     // Build PG number grid
@@ -232,47 +233,38 @@ document.addEventListener('DOMContentLoaded', () => {
         renderSoal();
     };
 
-    // Global update for navigation buttons (Sebelumnya / Berikutnya)
     const updateNavButtons = () => {
-        const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
-
-        if (activeTab === 'pg') {
-            btnPrev.disabled = currentSoalIndex === 0;
+        btnPrev.disabled = currentSoalIndex === 0;
+        if (isSubmitted) {
+            // Review mode: tampilkan tombol Kembali ke Nilai di tengah
+            btnSubmit.style.display = 'none';
+            btnBackResults.style.display = '';
+            btnNext.style.display = currentSoalIndex === totalSoal - 1 ? 'none' : '';
+        } else {
+            btnBackResults.style.display = 'none';
             if (currentSoalIndex === totalSoal - 1) {
                 btnNext.style.display = 'none';
-                btnSubmit.style.display = isSubmitted ? 'none' : '';
+                btnSubmit.style.display = '';
             } else {
                 btnNext.style.display = '';
                 btnSubmit.style.display = 'none';
-            }
-        } else if (activeTab === 'essay') {
-            btnPrev.disabled = currentEssayIndex === 0;
-            btnSubmit.style.display = 'none';
-            if (currentEssayIndex === totalEssay - 1) {
-                btnNext.style.display = 'none';
-            } else {
-                btnNext.style.display = '';
             }
         }
     };
 
     // Navigation events for bottom buttons
     btnPrev.addEventListener('click', () => {
-        const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
-        if (activeTab === 'pg') {
-            navigateToSoal(currentSoalIndex - 1);
-        } else if (activeTab === 'essay') {
-            navigateToEssaySoal(currentEssayIndex - 1);
-        }
+        navigateToSoal(currentSoalIndex - 1);
     });
 
     btnNext.addEventListener('click', () => {
-        const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
-        if (activeTab === 'pg') {
-            navigateToSoal(currentSoalIndex + 1);
-        } else if (activeTab === 'essay') {
-            navigateToEssaySoal(currentEssayIndex + 1);
-        }
+        navigateToSoal(currentSoalIndex + 1);
+    });
+
+    // Kembali ke Nilai — buka kembali overlay hasil
+    btnBackResults.addEventListener('click', () => {
+        resultsOverlay.classList.add('visible');
+        resultsOverlay.setAttribute('aria-hidden', 'false');
     });
 
     // Submit kuis PG
@@ -372,17 +364,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 if (currentSoalIndex > 0) navigateToSoal(currentSoalIndex - 1);
             }
-        } else if (activeTab === 'essay') {
-            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                // Prevent shifting when typing inside textarea
-                if (document.activeElement.tagName === 'TEXTAREA') return;
-                e.preventDefault();
-                if (currentEssayIndex < totalEssay - 1) navigateToEssaySoal(currentEssayIndex + 1);
-            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                if (document.activeElement.tagName === 'TEXTAREA') return;
-                e.preventDefault();
-                if (currentEssayIndex > 0) navigateToEssaySoal(currentEssayIndex - 1);
-            }
         }
     });
 
@@ -391,102 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderSoal();
 
     // =============================================
-    // 4. ESSAY TAB (SLIDER INTERACTIVE)
-    // =============================================
-    const totalEssay = kuisEssay.length;
-    let currentEssayIndex = 0;
-    let userEssayAnswers = new Array(totalEssay).fill('');
-
-    // DOM refs for Essay
-    const essayNumberGrid = document.getElementById('essay-number-grid');
-    const essaySoalNumber = document.getElementById('essay-soal-number');
-    const essaySoalText = document.getElementById('essay-soal-text');
-    const essayInput = document.getElementById('essay-input');
-    const btnEssayReveal = document.getElementById('btn-essay-reveal');
-    const essayKeyContainer = document.getElementById('essay-key-container');
-    const essayKeyText = document.getElementById('essay-key-text');
-
-    // Build Essay number grid
-    const buildEssayNumberGrid = () => {
-        essayNumberGrid.innerHTML = '';
-        for (let i = 0; i < totalEssay; i++) {
-            const btn = document.createElement('button');
-            btn.className = 'pg-num-btn'; // Shared styling with PG buttons
-            btn.textContent = i + 1;
-            btn.id = `essay-num-${i}`;
-            btn.setAttribute('aria-label', `Essay nomor ${i + 1}`);
-            btn.addEventListener('click', () => navigateToEssaySoal(i));
-            essayNumberGrid.appendChild(btn);
-        }
-    };
-
-    // Update Essay number grid states
-    const updateEssayNumberGrid = () => {
-        for (let i = 0; i < totalEssay; i++) {
-            const btn = document.getElementById(`essay-num-${i}`);
-            btn.classList.remove('num-active');
-            if (i === currentEssayIndex) {
-                btn.classList.add('num-active');
-            }
-        }
-    };
-
-    // Render current Essay soal
-    const renderEssaySoal = () => {
-        const soal = kuisEssay[currentEssayIndex];
-
-        essaySoalNumber.textContent = `PERTANYAAN ${currentEssayIndex + 1} DARI ${totalEssay}`;
-        essaySoalText.textContent = soal.soal;
-        essayInput.value = userEssayAnswers[currentEssayIndex] || '';
-
-        // Hide key answer by default when changing question
-        essayKeyContainer.classList.remove('show');
-        btnEssayReveal.classList.remove('open');
-        btnEssayReveal.setAttribute('aria-expanded', 'false');
-        btnEssayReveal.textContent = 'Lihat Kunci Jawaban';
-        essayKeyText.textContent = soal.kpiJawaban;
-
-        updateEssayNumberGrid();
-        updateNavButtons();
-    };
-
-    // Navigate to specific Essay soal
-    const navigateToEssaySoal = (index) => {
-        if (index < 0 || index >= totalEssay) return;
-
-        // Save current input value
-        userEssayAnswers[currentEssayIndex] = essayInput.value;
-        currentEssayIndex = index;
-
-        // Apply slide animation
-        const essayCard = document.getElementById('essay-card');
-        essayCard.style.animation = 'none';
-        essayCard.offsetHeight; // reflow
-        essayCard.style.animation = 'fadeInPanel 0.3s ease-out';
-
-        renderEssaySoal();
-    };
-
-    // Save essay input on type
-    essayInput.addEventListener('input', (e) => {
-        userEssayAnswers[currentEssayIndex] = e.target.value;
-    });
-
-    // Reveal Essay answer key toggle
-    btnEssayReveal.addEventListener('click', () => {
-        const isOpen = essayKeyContainer.classList.contains('show');
-        essayKeyContainer.classList.toggle('show');
-        btnEssayReveal.classList.toggle('open');
-        btnEssayReveal.setAttribute('aria-expanded', !isOpen);
-        btnEssayReveal.textContent = isOpen ? 'Lihat Kunci Jawaban' : 'Tutup Kunci Jawaban';
-    });
-
-    // Initialize Essay
-    buildEssayNumberGrid();
-    renderEssaySoal();
-
-    // =============================================
-    // 5. PRAKTIK TAB
+    // 4. PRAKTIK TAB
     // =============================================
     const renderPraktik = () => {
         document.getElementById('praktik-instruksi').textContent = praktikInfo.instruksi;
@@ -536,12 +422,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 navigateToSoal(currentSoalIndex + 1);
             } else if (diff < -threshold && currentSoalIndex > 0) {
                 navigateToSoal(currentSoalIndex - 1);
-            }
-        } else if (activeTab === 'essay') {
-            if (diff > threshold && currentEssayIndex < totalEssay - 1) {
-                navigateToEssaySoal(currentEssayIndex + 1);
-            } else if (diff < -threshold && currentEssayIndex > 0) {
-                navigateToEssaySoal(currentEssayIndex - 1);
             }
         }
     };
