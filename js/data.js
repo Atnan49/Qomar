@@ -57,8 +57,8 @@ const kosaKataMateri = {
   tema2: [
     {
       id: 1,
-      arab: "يَعْمَلُ",
-      transliterasi: "Ya‘malu",
+      arab: "عَمِلَ - يَعْمَلُ",
+      transliterasi: "‘Amila - Ya‘malu",
       arti: "Bekerja",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 2/Bekerja.webp",
       audio: "../../MEDIA KOMIK/KOMIK TEMA 2/bekerja.mp3"
@@ -123,8 +123,8 @@ const kosaKataMateri = {
   tema3: [
     {
       id: 1,
-      arab: "تَعَلَّمَ",
-      transliterasi: "Ta‘allama",
+      arab: "دَرَسَ - يَدْرُسُ",
+      transliterasi: "Darasa - Yadrusu",
       arti: "Belajar",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/belajar.webp",
       audio: ""
@@ -139,72 +139,72 @@ const kosaKataMateri = {
     },
     {
       id: 3,
-      arab: "مُدَرِّسٌ",
-      transliterasi: "Mudarrisun",
-      arti: "Guru",
+      arab: "مُدَرِّسَةٌ",
+      transliterasi: "Mudarrisatun",
+      arti: "Guru Perempuan",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/guru.webp",
       audio: ""
     },
     {
       id: 4,
-      arab: "طَبَّاخٌ",
-      transliterasi: "Thabbākhun",
-      arti: "Koki",
+      arab: "طَبَّاخَةٌ",
+      transliterasi: "Thabbākhatun",
+      arti: "Koki Perempuan",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/koki.webp",
       audio: ""
     },
     {
       id: 5,
-      arab: "طَبْخٌ",
-      transliterasi: "Tabkhun",
+      arab: "طَبَخَ - يَطْبُخُ",
+      transliterasi: "Tabakha - Yatbukhu",
       arti: "Memasak",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/memasak.webp",
       audio: ""
     },
     {
       id: 6,
-      arab: "مُسَاعَدَةٌ",
-      transliterasi: "Musā‘adatun",
+      arab: "سَاعَدَ - يُسَاعِدُ",
+      transliterasi: "Sā‘ada - Yusā‘idu",
       arti: "Membantu",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/membantu.webp",
       audio: ""
     },
     {
       id: 7,
-      arab: "زِرَاعَةٌ",
-      transliterasi: "Zirā‘atun",
+      arab: "زَرَعَ - يَزْرَعُ",
+      transliterasi: "Zara‘a - Yazra‘u",
       arti: "Menanam",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/menanam.webp",
       audio: ""
     },
     {
       id: 8,
-      arab: "تَعْلِيْمٌ",
-      transliterasi: "Ta‘līmun",
+      arab: "عَلَّمَ - يُعَلِّمُ",
+      transliterasi: "‘Allama - Yu‘allimu",
       arti: "Mengajar",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/mengajar.webp",
       audio: ""
     },
     {
       id: 9,
-      arab: "مُعَالَجَةٌ",
-      transliterasi: "Mu‘ālajatun",
+      arab: "عَالَجَ - يُعَالِجُ",
+      transliterasi: "‘Ālaja - Yu‘āliju",
       arti: "Mengobati",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/mengobati.webp",
       audio: ""
     },
     {
       id: 10,
-      arab: "خِيَاطَةٌ",
-      transliterasi: "Khiyāthatun",
+      arab: "خَيَّطَ - يُخَيِّطُ",
+      transliterasi: "Khayyatha - Yukhayyithu",
       arti: "Menjahit",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/menjahit.webp",
       audio: ""
     },
     {
       id: 11,
-      arab: "بَيْعٌ",
-      transliterasi: "Bai‘un",
+      arab: "بَاعَ - يَبِيْعُ",
+      transliterasi: "Bā‘a - Yabī‘u",
       arti: "Menjual",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/menjual.webp",
       audio: ""
@@ -219,9 +219,9 @@ const kosaKataMateri = {
     },
     {
       id: 13,
-      arab: "خَيَّاطٌ",
-      transliterasi: "Khayyāthun",
-      arti: "Penjahit",
+      arab: "خَيَّاطَةٌ",
+      transliterasi: "Khayyāthatun",
+      arti: "Penjahit Perempuan",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/penjahit.webp",
       audio: ""
     },
@@ -229,7 +229,7 @@ const kosaKataMateri = {
       id: 14,
       arab: "مُمَرِّضَةٌ",
       transliterasi: "Mumarridhatun",
-      arti: "Perawat",
+      arti: "Perawat Perempuan",
       gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/perawat.webp",
       audio: ""
     },
