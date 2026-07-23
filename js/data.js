@@ -10,7 +10,7 @@ const kosaKataMateri = {
       arab: "عُنْوَانٌ",
       transliterasi: "‘Unwānun",
       arti: "Alamat",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gmbr alamat.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gmbr alamat.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice alamat.mp3"
     },
     {
@@ -18,7 +18,7 @@ const kosaKataMateri = {
       arab: "بَيْتٌ",
       transliterasi: "Baitun",
       arti: "Rumah",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar rumah.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar rumah.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice rumah.mp3"
     },
     {
@@ -26,7 +26,7 @@ const kosaKataMateri = {
       arab: "شَارِعٌ",
       transliterasi: "Syāri‘un",
       arti: "Jalan",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar jalan.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar jalan.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/Voice jalan.mp3"
     },
     {
@@ -34,7 +34,7 @@ const kosaKataMateri = {
       arab: "قَرْيَةٌ",
       transliterasi: "Qaryatun",
       arti: "Desa",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar desa.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar desa.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice desa.mp3"
     },
     {
@@ -42,7 +42,7 @@ const kosaKataMateri = {
       arab: "مَسْجِدٌ",
       transliterasi: "Masjidun",
       arti: "Masjid",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar masjid.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar masjid.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/Voice masjid.mp3"
     },
     {
@@ -50,7 +50,7 @@ const kosaKataMateri = {
       arab: "مَدْرَسَةٌ",
       transliterasi: "Madrasatun",
       arti: "Sekolah",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar sekolah.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar sekolah.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice sekolah.mp3"
     },
     {
@@ -58,7 +58,7 @@ const kosaKataMateri = {
       arab: "دُكَّانٌ",
       transliterasi: "Dukkānun",
       arti: "Toko",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar toko.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar toko.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice toko.mp3"
     },
     {
@@ -66,7 +66,7 @@ const kosaKataMateri = {
       arab: "جَدٌّ",
       transliterasi: "Jaddun",
       arti: "Kakek",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar kakek.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar kakek.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/Voice kakek.mp3"
     },
     {
@@ -74,7 +74,7 @@ const kosaKataMateri = {
       arab: "مَزْرَعَةٌ",
       transliterasi: "Mazra‘atun",
       arti: "Sawah",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar sawah.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar sawah.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice sawah.mp3"
     },
     {
@@ -108,7 +108,7 @@ const kosaKataMateri = {
       arab: "طَبِيْبٌ",
       transliterasi: "Thabībun",
       arti: "Dokter",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/dokter.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/dokter.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice dokter.mp3"
     },
     {
@@ -156,7 +156,7 @@ const kosaKataMateri = {
       arab: "عَلَّمَ - يُعَلِّمُ",
       transliterasi: "‘Allama - Yu‘allimu",
       arti: "Mengajar",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/mengajar.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/mengajar.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice mengajar.mp3"
     },
     {
@@ -204,7 +204,7 @@ const kosaKataMateri = {
       arab: "مُمَرِّضَةٌ",
       transliterasi: "Mumarridhatun",
       arti: "Perawat Perempuan",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/perawat.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/perawat.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice perawat pr.mp3"
     },
     {
@@ -222,7 +222,7 @@ const kosaKataMateri = {
       arab: "أَمَلٌ",
       transliterasi: "Amalun",
       arti: "Cita-cita",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/cita cita.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/cita cita.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 3/voice cita-cita.mp3"
     },
     {
@@ -230,7 +230,7 @@ const kosaKataMateri = {
       arab: "مُهَنْدِسٌ",
       transliterasi: "Muhandisun",
       arti: "Arsitek / Insinyur",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/arsitek.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/arsitek.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 3/voice arsitek.mp3"
     },
     {
@@ -238,7 +238,7 @@ const kosaKataMateri = {
       arab: "جُنْدِيٌّ",
       transliterasi: "Jundiyyun",
       arti: "Tentara",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/tentara.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/tentara.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 3/voice tentara.mp3"
     },
     {
@@ -246,7 +246,7 @@ const kosaKataMateri = {
       arab: "كَاتِبٌ",
       transliterasi: "Kātibun",
       arti: "Penulis",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/penulis.png",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/penulis.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 3/voice penulis.mp3"
     }
   ]
@@ -258,8 +258,8 @@ const komikMateri = {
     judulArab: "الْعُنْوَانُ",
     judulIndo: "Alamat",
     halaman: [
-      "../../MEDIA KOMIK/KOMIK BAB 1/Komik bab 1. p1.png",
-      "../../MEDIA KOMIK/KOMIK BAB 1/komik bab 1. p2.png"
+      "../../MEDIA KOMIK/KOMIK BAB 1/Komik bab 1. p1.webp",
+      "../../MEDIA KOMIK/KOMIK BAB 1/komik bab 1. p2.webp"
     ],
     dialog: [
       { pembicara: "Najib", arab: "هٰذَا نَجِيْبٌ. لَهُ بَيْتٌ. لِبَيْتِهِ عُنْوَانٌ.", arti: "Ini Najib. Dia memiliki rumah. Rumahnya memiliki alamat." },
@@ -273,9 +273,9 @@ const komikMateri = {
     judulArab: "مِهْنَةُ أُسْرَةِ نَجِيْبَةِ",
     judulIndo: "Profesi Keluarga Najibah",
     halaman: [
-      "../../MEDIA KOMIK/KOMIK BAB 2/0.Komik bab 2 . p 1.png",
-      "../../MEDIA KOMIK/KOMIK BAB 2/0.Komik bab 2. p2.png",
-      "../../MEDIA KOMIK/KOMIK BAB 2/0.Komik bab 3. p3.png"
+      "../../MEDIA KOMIK/KOMIK BAB 2/0.Komik bab 2 . p 1.webp",
+      "../../MEDIA KOMIK/KOMIK BAB 2/0.Komik bab 2. p2.webp",
+      "../../MEDIA KOMIK/KOMIK BAB 2/0.Komik bab 3. p3.webp"
     ],
     dialog: [
       { pembicara: "Najibah", arab: "اِسْمِيْ نَجِيْبَةُ. أَنَا تِلْمِيْذَةٌ. أَدْرُسُ فِيْ الْفَصْلِ الرَّابِعِ بِالْمَدْرِسَةِ الإِبْتِدَائِيَّةِ.", arti: "Namaku Najibah. Aku adalah seorang siswi. Aku belajar di kelas empat Sekolah Dasar." },
@@ -292,7 +292,7 @@ const komikMateri = {
     judulArab: "الْأَمَلُ فِيْ الْمُسْتَقْبَلِ",
     judulIndo: "Cita-cita di Masa Depan",
     halaman: [
-      "../../MEDIA KOMIK/KOMIK BAB 3/komik bab 3.png"
+      "../../MEDIA KOMIK/KOMIK BAB 3/komik bab 3.webp"
     ],
     dialog: [
       { pembicara: "حَنِيْفٌ", arab: "مَسَاءَ الْخَيْرِ", arti: "Selamat sore." },
