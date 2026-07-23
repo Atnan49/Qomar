@@ -10,236 +10,244 @@ const kosaKataMateri = {
       arab: "عُنْوَانٌ",
       transliterasi: "‘Unwānun",
       arti: "Alamat",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 1/Alamat.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 1/Alamat.mp3"
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gmbr alamat.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice alamat.mp3"
     },
     {
       id: 2,
-      arab: "مَشْيٌ عَلَى الْأَقْدَامِ",
-      transliterasi: "Masyun ‘alal Aqdāmi",
-      arti: "Berjalan Kaki",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 1/Berjalan Kaki.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 1/Berjalan kaki.mp3"
+      arab: "بَيْتٌ",
+      transliterasi: "Baitun",
+      arti: "Rumah",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar rumah.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice rumah.mp3"
     },
     {
       id: 3,
-      arab: "قَرِيْبٌ",
-      transliterasi: "Qarībun",
-      arti: "Dekat",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 1/Dekat.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 1/Dekat.mp3"
+      arab: "شَارِعٌ",
+      transliterasi: "Syāri‘un",
+      arti: "Jalan",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar jalan.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 1/Voice jalan.mp3"
     },
     {
       id: 4,
       arab: "قَرْيَةٌ",
       transliterasi: "Qaryatun",
       arti: "Desa",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 1/Desa.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 1/Desa.mp3"
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar desa.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice desa.mp3"
     },
     {
       id: 5,
-      arab: "جِدَارٌ",
-      transliterasi: "Jidārun",
-      arti: "Dinding",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 1/Dinding.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 1/Dinding.mp3"
+      arab: "مَسْجِدٌ",
+      transliterasi: "Masjidun",
+      arti: "Masjid",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar masjid.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 1/Voice masjid.mp3"
     },
     {
       id: 6,
-      arab: "بَيْتٌ",
-      transliterasi: "Baitun",
-      arti: "Rumah",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 1/Rumah.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 1/Rumah.mp3"
+      arab: "مَدْرَسَةٌ",
+      transliterasi: "Madrasatun",
+      arti: "Sekolah",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar sekolah.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice sekolah.mp3"
+    },
+    {
+      id: 7,
+      arab: "دُكَّانٌ",
+      transliterasi: "Dukkānun",
+      arti: "Toko",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar toko.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice toko.mp3"
+    },
+    {
+      id: 8,
+      arab: "جَدٌّ",
+      transliterasi: "Jaddun",
+      arti: "Kakek",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar kakek.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 1/Voice kakek.mp3"
+    },
+    {
+      id: 9,
+      arab: "مَزْرَعَةٌ",
+      transliterasi: "Mazra‘atun",
+      arti: "Sawah",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/gambar sawah.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice sawah.mp3"
+    },
+    {
+      id: 10,
+      arab: "قَرِيْبٌ",
+      transliterasi: "Qarībun",
+      arti: "Dekat",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/dekattt.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice dekat.mp3"
     }
   ],
   tema2: [
     {
       id: 1,
-      arab: "يَعْمَلُ",
-      transliterasi: "Ya‘malu",
-      arti: "Bekerja",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 2/Bekerja.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 2/bekerja.mp3"
-    },
-    {
-      id: 2,
-      arab: "طَبِيْبَةُ الْأَسْنَانِ",
-      transliterasi: "Thabībatul Asnāni",
-      arti: "Dokter Gigi",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 2/Dokter Gigi.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 2/dokter gigi.mp3"
-    },
-    {
-      id: 3,
-      arab: "رَبَّةُ الْبَيْتِ",
-      transliterasi: "Rabbatul Baiti",
-      arti: "Ibu Rumah Tangga",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 2/Ibu Rumah Tangga.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 2/ibu rumah tangga.mp3"
-    },
-    {
-      id: 4,
-      arab: "طَرِيْقٌ",
-      transliterasi: "Tharīqun",
-      arti: "Jalan",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 2/Jalan.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 2/jalan.mp3"
-    },
-    {
-      id: 5,
-      arab: "مُرُوْرٌ",
-      transliterasi: "Murūrun",
-      arti: "Lalu Lintas",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 2/Lalu Lintas.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 2/lalu lintas.mp3"
-    },
-    {
-      id: 6,
-      arab: "شُرْطِيٌّ",
-      transliterasi: "Syurthiyyun",
-      arti: "Polisi",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 2/Polisi.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 2/Polisi.mp3"
-    },
-    {
-      id: 7,
       arab: "مِهْنَةٌ",
       transliterasi: "Mihnatun",
       arti: "Profesi",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 2/Profesi.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 2/Profesi.mp3"
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/gambar profesi.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice profesi.mp3"
+    },
+    {
+      id: 2,
+      arab: "دَرَسَ - يَدْرُسُ",
+      transliterasi: "Darasa - Yadrusu",
+      arti: "Belajar",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/belajar.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice belajar.mp3"
+    },
+    {
+      id: 3,
+      arab: "طَبِيْبٌ",
+      transliterasi: "Thabībun",
+      arti: "Dokter",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/dokter.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice dokter.mp3"
+    },
+    {
+      id: 4,
+      arab: "مُدَرِّسَةٌ",
+      transliterasi: "Mudarrisatun",
+      arti: "Guru Perempuan",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/guru.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice guru perempuan.mp3"
+    },
+    {
+      id: 5,
+      arab: "طَبَّاخَةٌ",
+      transliterasi: "Thabbākhatun",
+      arti: "Koki Perempuan",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/koki.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice koki perempuan.mp3"
+    },
+    {
+      id: 6,
+      arab: "طَبَخَ - يَطْبُخُ",
+      transliterasi: "Tabakha - Yatbukhu",
+      arti: "Memasak",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/memasak.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice memasak.mp3"
+    },
+    {
+      id: 7,
+      arab: "سَاعَدَ - يُسَاعِدُ",
+      transliterasi: "Sā‘ada - Yusā‘idu",
+      arti: "Membantu",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/membantu.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice membantu.mp3"
     },
     {
       id: 8,
-      arab: "مُسْتَشْفَى",
-      transliterasi: "Mustasyfā",
-      arti: "Rumah Sakit",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 2/Rumah Sakit.webp",
-      audio: "../../MEDIA KOMIK/KOMIK TEMA 2/rumah sakit.mp3"
+      arab: "زَرَعَ - يَزْرَعُ",
+      transliterasi: "Zara‘a - Yazra‘u",
+      arti: "Menanam",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menanam.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice menanam.mp3"
+    },
+    {
+      id: 9,
+      arab: "عَلَّمَ - يُعَلِّمُ",
+      transliterasi: "‘Allama - Yu‘allimu",
+      arti: "Mengajar",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/mengajar.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice mengajar.mp3"
+    },
+    {
+      id: 10,
+      arab: "عَالَجَ - يُعَالِجُ",
+      transliterasi: "‘Ālaja - Yu‘āliju",
+      arti: "Mengobati",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/mengobati.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice mengobati.mp3"
+    },
+    {
+      id: 11,
+      arab: "خَيَّطَ - يُخَيِّطُ",
+      transliterasi: "Khayyatha - Yukhayyithu",
+      arti: "Menjahit",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menjahit.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice menjahit.mp3"
+    },
+    {
+      id: 12,
+      arab: "بَاعَ - يَبِيْعُ",
+      transliterasi: "Bā‘a - Yabī‘u",
+      arti: "Menjual",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menjual.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice menjual.mp3"
+    },
+    {
+      id: 13,
+      arab: "تَاجِرٌ",
+      transliterasi: "Tājirun",
+      arti: "Pedagang",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/pedagang.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice pedagang.mp3"
+    },
+    {
+      id: 14,
+      arab: "خَيَّاطَةٌ",
+      transliterasi: "Khayyāthatun",
+      arti: "Penjahit Perempuan",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/penjahit.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice penjahit pr.mp3"
+    },
+    {
+      id: 15,
+      arab: "مُمَرِّضَةٌ",
+      transliterasi: "Mumarridhatun",
+      arti: "Perawat Perempuan",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/perawat.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice perawat pr.mp3"
+    },
+    {
+      id: 16,
+      arab: "فَلَّاحٌ",
+      transliterasi: "Fallāhun",
+      arti: "Petani",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/petani.jpg",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice petani.mp3"
     }
   ],
   tema3: [
     {
       id: 1,
-      arab: "تَعَلَّمَ",
-      transliterasi: "Ta‘allama",
-      arti: "Belajar",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/belajar.webp",
-      audio: ""
+      arab: "أَمَلٌ",
+      transliterasi: "Amalun",
+      arti: "Cita-cita",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/cita cita.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 3/voice cita-cita.mp3"
     },
     {
       id: 2,
-      arab: "طَبِيْبٌ",
-      transliterasi: "Thabībun",
-      arti: "Dokter",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/dokter.webp",
-      audio: ""
+      arab: "مُهَنْدِسٌ",
+      transliterasi: "Muhandisun",
+      arti: "Arsitek / Insinyur",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/arsitek.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 3/voice arsitek.mp3"
     },
     {
       id: 3,
-      arab: "مُدَرِّسٌ",
-      transliterasi: "Mudarrisun",
-      arti: "Guru",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/guru.webp",
-      audio: ""
+      arab: "جُنْدِيٌّ",
+      transliterasi: "Jundiyyun",
+      arti: "Tentara",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/tentara.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 3/voice tentara.mp3"
     },
     {
       id: 4,
-      arab: "طَبَّاخٌ",
-      transliterasi: "Thabbākhun",
-      arti: "Koki",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/koki.webp",
-      audio: ""
-    },
-    {
-      id: 5,
-      arab: "طَبْخٌ",
-      transliterasi: "Tabkhun",
-      arti: "Memasak",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/memasak.webp",
-      audio: ""
-    },
-    {
-      id: 6,
-      arab: "مُسَاعَدَةٌ",
-      transliterasi: "Musā‘adatun",
-      arti: "Membantu",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/membantu.webp",
-      audio: ""
-    },
-    {
-      id: 7,
-      arab: "زِرَاعَةٌ",
-      transliterasi: "Zirā‘atun",
-      arti: "Menanam",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/menanam.webp",
-      audio: ""
-    },
-    {
-      id: 8,
-      arab: "تَعْلِيْمٌ",
-      transliterasi: "Ta‘līmun",
-      arti: "Mengajar",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/mengajar.webp",
-      audio: ""
-    },
-    {
-      id: 9,
-      arab: "مُعَالَجَةٌ",
-      transliterasi: "Mu‘ālajatun",
-      arti: "Mengobati",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/mengobati.webp",
-      audio: ""
-    },
-    {
-      id: 10,
-      arab: "خِيَاطَةٌ",
-      transliterasi: "Khiyāthatun",
-      arti: "Menjahit",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/menjahit.webp",
-      audio: ""
-    },
-    {
-      id: 11,
-      arab: "بَيْعٌ",
-      transliterasi: "Bai‘un",
-      arti: "Menjual",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/menjual.webp",
-      audio: ""
-    },
-    {
-      id: 12,
-      arab: "تَاجِرٌ",
-      transliterasi: "Tājirun",
-      arti: "Pedagang",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/pedagang.webp",
-      audio: ""
-    },
-    {
-      id: 13,
-      arab: "خَيَّاطٌ",
-      transliterasi: "Khayyāthun",
-      arti: "Penjahit",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/penjahit.webp",
-      audio: ""
-    },
-    {
-      id: 14,
-      arab: "مُمَرِّضَةٌ",
-      transliterasi: "Mumarridhatun",
-      arti: "Perawat",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/perawat.webp",
-      audio: ""
-    },
-    {
-      id: 15,
-      arab: "فَلَّاحٌ",
-      transliterasi: "Fallāhun",
-      arti: "Petani",
-      gambar: "../../MEDIA KOMIK/KOMIK TEMA 3/petani.webp",
-      audio: ""
+      arab: "كَاتِبٌ",
+      transliterasi: "Kātibun",
+      arti: "Penulis",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 3/penulis.png",
+      audio: "../../MEDIA KOMIK/KOMIK BAB 3/voice penulis.mp3"
     }
   ]
 };
@@ -247,52 +255,44 @@ const kosaKataMateri = {
 // 1.5. Data Komik dan Transkrip Dialogue
 const komikMateri = {
   tema1: {
-    judulArab: "عُنْوَانُ بَيْتِ طَاهِرٍ",
-    judulIndo: "Alamat Rumah Tahir",
+    judulArab: "الْعُنْوَانُ",
+    judulIndo: "Alamat",
     halaman: [
-      "../../MEDIA KOMIK/KOMIK TEMA 1/Komik tema 1..webp"
+      "../../MEDIA KOMIK/KOMIK BAB 1/Komik bab 1. p1.png",
+      "../../MEDIA KOMIK/KOMIK BAB 1/komik bab 1. p2.png"
     ],
     dialog: [
-      { pembicara: "إبراهيم", arab: "أَيْنَ عُنْوَانُ بَيْتِكَ، يَا طَاهِرٍ؟", arti: "Di mana alamat rumahmu, wahai Tahir?" },
-      { pembicara: "طَاهِرٌ", arab: "عُنْوَانُ بَيْتِيْ فِيْ قَرْيَةِ كَايُوْ مَانِيْسْ (kayu manis)", arti: "Alamat rumahku di desa Kayu Manis." },
-      { pembicara: "إبراهيم", arab: "مَا لَوْنُ الْجِدَارِ فِيْ بَيْتِكَ؟", arti: "Apa warna dinding di rumahmu?" },
-      { pembicara: "طَاهِرٌ", arab: "لَوْنُ الْجِدَارِ فِيْ بَيْتِيْ أَخْضَرُ", arti: "Warna dinding di rumahku hijau." },
-      { pembicara: "إبراهيم", arab: "هَلْ بَيْتُكَ قَرِيْبٌ مِنَ الْمَسْجِدِ؟", arti: "Apakah rumahmu dekat dari masjid?" },
-      { pembicara: "طَاهِرٌ", arab: "نَعَمْ، بَيْتِيْ قَرِيْبٌ مِنَ الْمَسْجِدِ", arti: "Ya, rumahku dekat dari masjid." },
-      { pembicara: "إبراهيم", arab: "هَلْ تُصَلِّيْ فِيْ الْمَسْجِدِ جَمَاعَةً كُلَّ يَوْمٍ؟", arti: "Apakah kamu shalat berjamaah di masjid setiap hari?" },
-      { pembicara: "طَاهِرٌ", arab: "نَعَمْ، أُصَلِّيْ فِيْ الْمَسْجِدِ جَمَاعَةً كُلَّ يَوْمٍ.", arti: "Ya, saya shalat berjamaah di masjid setiap hari." },
-      { pembicara: "إبراهيم", arab: "كَيْفَ تَذْهَبُ إِلَى الْمَسْجِدِ؟", arti: "Bagaimana kamu pergi ke masjid?" },
-      { pembicara: "إبراهيم", arab: "أَذْهَبُ إِلَىْ الْمَسْجِدِ بِالْمَشْيِ عَلَى الأَقْدَامِ.", arti: "Saya pergi ke masjid dengan berjalan kaki." }
+      { pembicara: "Najib", arab: "هٰذَا نَجِيْبٌ. لَهُ بَيْتٌ. لِبَيْتِهِ عُنْوَانٌ.", arti: "Ini Najib. Dia memiliki rumah. Rumahnya memiliki alamat." },
+      { pembicara: "Najib", arab: "عُنْوَانُ بَيْتِهِ فِيْ شَارِعِ وِجَايَا كُسُوْمَا (Wijaya Kusuma) وَسَطَ الْقَرْيَةِ. اِسْمُ قَرْيَتِهِ جَاتِيْ سُوْبُوْ (Jati Sobo).", arti: "Alamat rumahnya di Jalan Wijaya Kusuma di tengah desa. Nama desanya Jati Sobo." },
+      { pembicara: "Najib", arab: "جَانِبَ بَيْتِهِ مَسْجِدٌ كَبِيْرٌ. أَمَامَ بَيْتِهِ مَدْرَسَةٌ إِبْتِدَائِيَّةٌ. بَيْتُهُ قَرِيْبٌ مِنَ الدُّكَّانِ.", arti: "Di samping rumahnya ada masjid yang besar. Di depan rumahnya ada Sekolah Dasar (Madrasah Ibtidaiyah). Rumahnya dekat dari toko." },
+      { pembicara: "Najib", arab: "عُنْوَانُ الدُّكَّانِ فِي شَارِعِ وِجَايَنْتُوْ (Wijayanto). أَمَّا عُنْوَانُ بَيْتِ جَدِّ نَجِيْبٍ فِيْ شَارِعِ سُوْدِرْمَانُ (Sudirman).", arti: "Alamat toko di Jalan Wijayanto. Adapun alamat rumah kakek Najib di Jalan Sudirman." },
+      { pembicara: "Najib", arab: "حَوْلَ بَيْتِ جَدِّهِ مَزْرَعَةٌ وَاسِعَةٌ. فِيْ قَرْيَةِ جَدِّهِ نَهْرٌ طَوِيْلٌ.", arti: "Di sekitar rumah kakeknya ada sawah yang luas. Di desa kakeknya ada sungai yang panjang." }
     ]
   },
   tema2: {
-    judulArab: "اَلْمِهْنَةُ",
-    judulIndo: "Profesi",
+    judulArab: "مِهْنَةُ أُسْرَةِ نَجِيْبَةِ",
+    judulIndo: "Profesi Keluarga Najibah",
     halaman: [
-      "../../MEDIA KOMIK/KOMIK TEMA 2/Komik tema 2 . page 1 revisi.webp",
-      "../../MEDIA KOMIK/KOMIK TEMA 2/komik tema 2. page 2.webp"
+      "../../MEDIA KOMIK/KOMIK BAB 2/0.Komik bab 2 . p 1.png",
+      "../../MEDIA KOMIK/KOMIK BAB 2/0.Komik bab 2. p2.png",
+      "../../MEDIA KOMIK/KOMIK BAB 2/0.Komik bab 3. p3.png"
     ],
     dialog: [
-      { pembicara: "فَوْزِيَّةُ", arab: "صَبَاحُ الْخَيْرِ، يَا فِطْرِيَا", arti: "Selamat pagi, wahai Fitriya." },
-      { pembicara: "فِطْرِيَا", arab: "صَبَاحَ الْنُّوْرِ. مَنْ هٰذَا، يَا فَوْزِيَّةُ؟", arti: "Selamat pagi juga. Siapa ini, wahai Fauziyah?" },
-      { pembicara: "فَوْزِيَّةُ", arab: "هٰذَا أَبِيْ. هُوَ شُرْطِيٌّ.", arti: "Ini ayahku. Beliau adalah seorang polisi." },
-      { pembicara: "فِطْرِيَا", arab: "مَاذَا يَعْمَلُ الشُّرْطِيُّ؟", arti: "Apa yang dilakukan polisi?" },
-      { pembicara: "فَوْزِيَّةُ", arab: "الشُّرْطِيُّ يُنَظِّمُ الْمُرُوْرَ فِى الطَّرِيْقِ.", arti: "Polisi mengatur lalu lintas di jalan." },
-      { pembicara: "فِطْرِيَا", arab: "مَنْ جَانِبَ أَبِيْكِ، يَا فَوْزِيَّةُ؟", arti: "Siapa di samping ayahmu, wahai Fauziyah?" },
-      { pembicara: "فَوْزِيَّةُ", arab: "تِلْكَ عَمَّتِيْ. هِيَ طَبِيْبَةُ الأَسْنَانِ.", arti: "Itu bibiku. Beliau adalah seorang dokter gigi." },
-      { pembicara: "فِطْرِيَا", arab: "أَيْنَ تَعْمَلُ طَبِيْبَةُ الأَسْنَانِ؟", arti: "Di mana dokter gigi bekerja?" },
-      { pembicara: "فَوْزِيَّةُ", arab: "طَبِيْبَةُ الأَسْنَانِ تَعْمَلُ فِيْ الْمُسْتَشْفَى", arti: "Dokter gigi bekerja di rumah sakit." },
-      { pembicara: "فِطْرِيَا", arab: "هَلْ أُمُّكِ شُرْطِيَّةٌ؟", arti: "Apakah ibumu seorang polisi?" },
-      { pembicara: "فَوْزِيَّةُ", arab: "لاَ، بَلْ أَمِّيْ رَبَّةُ الْبَيْتِ.", arti: "Tidak, melainkan ibuku seorang ibu rumah tangga." },
-      { pembicara: "فِطْرِيَا", arab: "شُكْرًا عَلَى إِجَابَتِكِ.", arti: "Terima kasih atas jawabanmu." },
-      { pembicara: "فَوْزِيَّةُ", arab: "عَفْوًا", arti: "Sama-sama." }
+      { pembicara: "Najibah", arab: "اِسْمِيْ نَجِيْبَةُ. أَنَا تِلْمِيْذَةٌ. أَدْرُسُ فِيْ الْفَصْلِ الرَّابِعِ بِالْمَدْرِسَةِ الإِبْتِدَائِيَّةِ.", arti: "Namaku Najibah. Aku adalah seorang siswi. Aku belajar di kelas empat Sekolah Dasar." },
+      { pembicara: "Najibah", arab: "هٰذَا أَبِيْ. هُوَ طَبِيْبٌ. هُوَ يُعَالِجُ الْمَرْضَى فِيْ الْمُسْتَشْفَى.", arti: "Ini ayahku. Beliau adalah seorang dokter. Beliau mengobati orang sakit di rumah sakit." },
+      { pembicara: "Najibah", arab: "وَهٰذِهِ أُمِّيْ. هِيَ طَبَّاخَةٌ. هِيَ تَطْبَخُ الأَطْعِمَةَ فِي الْمَطْعَمِ.", arti: "Dan ini ibuku. Beliau adalah seorang koki. Beliau memasak makanan di restoran." },
+      { pembicara: "Najibah", arab: "وَهٰذِهِ أُخْتِيْ الْكَبِيْرَةُ. هِيَ مُمَرِّضَةٌ. هِيَ تُسَاعِدُ الطَّبِيْبَ فِي الْمُسْتَشْفَى.", arti: "Dan ini kakak perempuanku. Beliau adalah seorang perawat. Beliau membantu dokter di rumah sakit." },
+      { pembicara: "Najibah", arab: "وَهٰذَا عَمِّيْ. هُوَ تَاجِرٌ. هُوَ يَبِيْعُ السِّلْعَةَ فِي السُّوْقِ.", arti: "Dan ini pamanku. Beliau adalah seorang pedagang. Beliau menjual barang dagangan di pasar." },
+      { pembicara: "Najibah", arab: "وهٰذِهِ عَمَّتِيْ. هِيَ مُدَرِّسَةٌ. هِيَ تُعَلِّمُ اللُّغَةَ الْعَرَبِيَّةَ إِلَى التَّلاَمِيْذِ فِي الْمَدْرَسَةِ.", arti: "Dan ini bibiku. Beliau adalah seorang guru. Beliau mengajar Bahasa Arab kepada murid-murid di sekolah." },
+      { pembicara: "Najibah", arab: "وَهٰذَا جَدِّيْ. هُوَ فَلاَّحٌ. هُوَ يَزْرَعُ الأَرُزَّ فِي الْمَZْرَعَةِ.", arti: "Dan ini kakekku. Beliau adalah seorang petani. Beliau menanam padi di sawah." },
+      { pembicara: "Najibah", arab: "وهٰذِهِ جَدّتِيْ. هِيَ خَيَّاطَةٌ. هِيَ تُخَيِّطُ الْمَلاَبِسَ فِي الْبَيْتِ.", arti: "Dan ini nenekku. Beliau adalah seorang penjahit. Beliau menjahit pakaian di rumah." }
     ]
   },
   tema3: {
     judulArab: "الْأَمَلُ فِيْ الْمُسْتَقْبَلِ",
     judulIndo: "Cita-cita di Masa Depan",
     halaman: [
-      "../../MEDIA KOMIK/KOMIK TEMA 4/ChatGPT Image Jun 27, 2026, 05_22_42 PM.webp"
+      "../../MEDIA KOMIK/KOMIK BAB 3/komik bab 3.png"
     ],
     dialog: [
       { pembicara: "حَنِيْفٌ", arab: "مَسَاءَ الْخَيْرِ", arti: "Selamat sore." },
@@ -300,9 +300,9 @@ const komikMateri = {
       { pembicara: "حَنِيْفٌ", arab: "مَاذَا تَعَلَّمْتَ فِيْ الْفَصْلِ، يَا فَوْزَانُ؟", arti: "Apa yang kamu pelajari di kelas, wahai Fauzan?" },
       { pembicara: "فَوْزَانُ", arab: "فِيْ الْفَصْلِ تَعَلَّمْتُ أَنْوَاعَ الْأَمَلِ فِيْ الْمُسْتَقْبَلِ، يَا حَنِيْفُ.", arti: "Di kelas saya mempelajari macam-macam cita-cita di masa depan, wahai Hanif." },
       { pembicara: "حَنِيْفٌ", arab: "مَا أَنْوَاعُ الْأَمَلِ؟", arti: "Apa saja macam-macam cita-cita itu?" },
-      { pembicara: "فَوْزَانُ", arab: "أَنْوَاعُ الْأَمَلِ هُوَ مُهَنْدِسٌ وَشُرْطِيٌّ وَجُنْدِيٌّ وغَيْرُهَا.", arti: "Macam-macam cita-cita itu adalah insinyur, polisi, tentara, dan lainnya." },
-      { pembicara: "حَنِيْفٌ", arab: "هَلْ لَكَ أَمَلٌ فِيْ الْمُسْتَقْبَلِ؟", arti: "Apakah kamu memiliki cita-cita di masa depan?" },
-      { pembicara: "فَوْزَانُ", arab: "نَعَمْ، لِيْ أَمَلٌ فِيْ الْمُسْتَقْبَلِ", arti: "Ya, saya memiliki cita-cita di masa depan." },
+      { pembicara: "فَوْزَانُ", arab: "أَنْوَاعُ الْأَمَلِ هِيَ مُهَنْدِسٌ وَشُرْطِيٌّ وَجُنْدِيٌّ وَغَيْرُهَا.", arti: "Macam-macam cita-cita itu adalah insinyur, polisi, tentara, dan lainnya." },
+      { pembicara: "حَنِيْفٌ", arab: "هَلْ لَكَ أَمَلٌ فِيْ الْمُسْتَقْبَلِ، يَا فَوْزَانُ؟", arti: "Apakah kamu memiliki cita-cita di masa depan, wahai Fauzan?" },
+      { pembicara: "فَوْزَانُ", arab: "نَعَمْ، لِيْ أَمَلٌ فِيْ الْمُسْتَقْبَلِ.", arti: "Ya, saya memiliki cita-cita di masa depan." },
       { pembicara: "حَنِيْفٌ", arab: "مَا أَمَلُكَ فِي الْمُسْتَقْبَلِ؟", arti: "Apa cita-citamu di masa depan?" },
       { pembicara: "فَوْزَانُ", arab: "أُرِيْدُ أَنْ أَكُوْنَ طَبِيْبًا. وَمَا أَمَلُكَ، يَا حَنِيْفُ؟", arti: "Aku ingin menjadi seorang dokter. Dan apa cita-citamu, wahai Hanif?" },
       { pembicara: "حَنِيْفٌ", arab: "أُرِيْدُ أَنْ أَكُوْنَ كَاتِبًا.", arti: "Aku ingin menjadi seorang penulis." }
@@ -310,25 +310,24 @@ const komikMateri = {
   }
 };
 
-
 // 2. Data Playlist Video
 const videoMateri = [
   {
     id: 1,
     judul: "Bab 1 : الْعُنْوَانُ",
-    deskripsi: "Pelajari cara menyebutkan alamat rumah, nomor telepon, dan nama jalan dalam Bahasa Arab melalui cerita komik interaktif Ahmad dan Fatimah.",
+    deskripsi: "Pelajari cara menyebutkan alamat rumah, nama jalan, desa, sawah, dan masjid dalam Bahasa Arab melalui cerita Najib.",
     videoUrl: "../Video/video_komik_bab1.mp4"
   },
   {
     id: 2,
-    judul: "Bab 2 : الْمِهْنَةُ",
-    deskripsi: "Tonton cerita komik menarik tentang pengenalan berbagai jenis profesi dan pekerjaan dalam Bahasa Arab.",
+    judul: "Bab 2 : مِهْنَةُ أُسْرَةِ نَجِيْبَةِ",
+    deskripsi: "Pelajari kosakata berbagai jenis profesi dan pekerjaan anggota keluarga dalam Bahasa Arab melalui cerita Najibah.",
     videoUrl: "../Video/video_komik_bab2.mp4"
   },
   {
     id: 3,
-    judul: "Bab 3 : أَمَلِيْ",
-    deskripsi: "Temukan cara mengungkapkan impian, harapan, dan cita-cita masa depan dalam Bahasa Arab.",
+    judul: "Bab 3 : الْأَمَلُ فِيْ الْمُسْتَقْبَلِ",
+    deskripsi: "Temukan cara mengungkapkan impian, harapan, dan cita-cita masa depan dalam Bahasa Arab melalui percakapan Hanif dan Fauzan.",
     videoUrl: "../Video/video_komik_bab3.mp4"
   }
 ];
@@ -483,7 +482,7 @@ const kuisPG = [
             "مُسْتَشْفًى"
         ],
         correctIndex: 1,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>هٰذَا نَجِيْبٌ. لَهُ بَيْتٌ. عُنْوَانُ بَيْتِهِ فِي شَارِعِ وِجَايَا كُسُوْمَا. جَانِبَ بَيْتِهِ مَسْجِدٌ كَبِيْرٌ، وَأَمَامَ بَيْتِهِ مَدْرَسَةٌ إِبْتِدَائِيَّةٌ. بَيْتُهُ قَرِيْبٌ مِنَ الدُّكَّان.</span>"
+        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>هٰذَا نَجِيْبٌ. لَهُ بَيْتٌ. عُنْوَانُ بَيْتِهِ فِي شَارِعِ وِجَايَا كُسُوْمَا. جَانِبَ بَيْتِهِ مَسْجِدٌ كَبِيْرٌ، وَأَمَامَ بَيْتِهِ مَدْرَسَةٌ إِبْتِدَائِيَّةٌ. بَيْتُهُ قَرِيْبٌ مِنَ الدُّكَّانِ.</span>"
     },
     {
         id: 14,
@@ -570,8 +569,6 @@ const kuisPG = [
         contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>قَالَ حَنِيْفٌ: مَاذَا تَعَلَّمْتَ فِي الْفَصْلِ؟ قَالَ فَوْزَانُ: تَعَلَّمْتُ أَنْوَاعَ الْأَمَلِ فِي الْمُسْتَقْبَلِ. أُرِيْدُ أَنْ أَكُوْنَ طَبِيْبًا. فَقَالَ حَنِيْفٌ: أَمَّا أَنَا فَأُرِيْدُ أَنْ أَكُوْنَ كَاتِبًا.</span>"
     }
 ];
-
-
 
 // 5. Informasi Kontak & Pengiriman Tugas Praktik
 const praktikInfo = {
