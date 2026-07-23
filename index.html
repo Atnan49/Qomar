@@ -15,6 +15,20 @@
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- Inline script to prevent FOUC for UDL accessibility preferences -->
+    <script>
+        (function() {
+            try {
+                var scale = localStorage.getItem('fontScale') || '100';
+                var savedDyslexia = localStorage.getItem('dyslexiaMode');
+                document.documentElement.classList.add('font-scale-' + scale);
+                if (savedDyslexia === 'true') {
+                    document.documentElement.classList.add('dyslexia-mode');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <!-- Link CSS Utama -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/welcome.css">
@@ -38,7 +52,7 @@
             <!-- Floating Logo Ring -->
             <div id="logo-outer" class="welcome-logo-outer">
                 <div class="welcome-logo-inner">
-                    <img src="Public/Image/logo.webp" alt="Logo QOMAR" class="welcome-logo-img">
+                    <img src="Public/Image/logo.webp" alt="Logo QOMAR" class="welcome-logo-img" fetchpriority="high" decoding="async">
                 </div>
             </div>
 
@@ -69,10 +83,9 @@
         </header>
     </main>
 
-    <!-- UDL Settings persistence synchronizer -->
+    <!-- UDL Settings sync script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Sinkronisasi UDL preference secara global agar halaman pembuka menyesuaikan pilihan user
             const scale = localStorage.getItem('fontScale') || '100';
             const savedDyslexia = localStorage.getItem('dyslexiaMode');
 

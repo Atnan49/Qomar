@@ -260,11 +260,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Feed vocabulary contents to card
+        vocabImage.decoding = 'async';
         vocabImage.src = data.gambar;
         vocabImage.alt = `Ilustrasi ${data.arti}`;
         vocabArabic.textContent = data.arab;
         vocabTranslit.textContent = data.transliterasi;
         vocabTrans.textContent = data.arti;
+
+        // Preload adjacent items (next and prev cards) for 0-delay transitions
+        preloadAdjacentAssets();
 
         // Toggle audio play buttons based on availability (disable/hide for Tema 3)
         if (data.audio) {
@@ -311,6 +315,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 dot.classList.add('active');
             } else {
                 dot.classList.remove('active');
+            }
+        });
+    }
+
+    // Cache map for preloaded assets
+    const preloadedImages = {};
+    const preloadedAudios = {};
+
+    function preloadAdjacentAssets() {
+        const themeVocab = kosaKataMateri[selectedTheme];
+        if (!themeVocab) return;
+
+        const indicesToPreload = [vocabIndex + 1, vocabIndex - 1];
+        indicesToPreload.forEach(idx => {
+            if (idx >= 0 && idx < themeVocab.length) {
+                const item = themeVocab[idx];
+                if (item.gambar && !preloadedImages[item.gambar]) {
+                    const img = new Image();
+                    img.src = item.gambar;
+                    preloadedImages[item.gambar] = img;
+                }
+                if (item.audio && !preloadedAudios[item.audio]) {
+                    const aud = new Audio();
+                    aud.src = item.audio;
+                    aud.preload = 'auto';
+                    preloadedAudios[item.audio] = aud;
+                }
             }
         });
     }

@@ -275,10 +275,12 @@
 
 /* Animation utilities for slider updates */
 .vocab-card.slide-in-right {
+  will-change: transform, opacity;
   animation: slideInRight 0.4s var(--ease-spring) forwards;
 }
 
 .vocab-card.slide-in-left {
+  will-change: transform, opacity;
   animation: slideInLeft 0.4s var(--ease-spring) forwards;
 }
 

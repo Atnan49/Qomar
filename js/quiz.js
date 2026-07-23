@@ -164,11 +164,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const imageContainer = document.getElementById('pg-image-container');
         const soalImg = document.getElementById('pg-soal-image');
         if (soal.gambar) {
+            soalImg.decoding = 'async';
             soalImg.src = soal.gambar;
             imageContainer.style.display = 'block';
         } else {
             soalImg.src = '';
             imageContainer.style.display = 'none';
+        }
+
+        // Preload next question image if available
+        const nextSoal = kuisPG[currentSoalIndex + 1];
+        if (nextSoal && nextSoal.gambar) {
+            const nextImg = new Image();
+            nextImg.src = nextSoal.gambar;
         }
 
         pgOptionsList.innerHTML = '';

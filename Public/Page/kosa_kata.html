@@ -12,6 +12,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Inline script to prevent FOUC for UDL preferences -->
+    <script>
+        (function() {
+            try {
+                var scale = localStorage.getItem('fontScale') || '100';
+                var savedDyslexia = localStorage.getItem('dyslexiaMode');
+                document.documentElement.classList.add('font-scale-' + scale);
+                if (savedDyslexia === 'true') {
+                    document.documentElement.classList.add('dyslexia-mode');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/kosa_kata.css">
@@ -229,8 +243,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="../../js/data.js"></script>
-    <script src="../../js/kosa_kata.js"></script>
+    <script src="../../js/data.js" defer></script>
+    <script src="../../js/kosa_kata.js" defer></script>
 </body>
 
 </html>

@@ -65,6 +65,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===== Base Styles ===== */
 [lang="ar"], .arabic-text {
   font-family: var(--font-arabic);
@@ -107,6 +111,7 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border: 2.5px solid rgba(2, 38, 128, 0.15);
   box-shadow: var(--shadow-card);
+  transform: translateZ(0);
 }
 
 .glass-card-strong {
@@ -115,6 +120,7 @@ body {
   -webkit-backdrop-filter: blur(30px);
   border: 2.5px solid rgba(2, 38, 128, 0.25);
   box-shadow: var(--shadow-elevated);
+  transform: translateZ(0);
 }
 
 /* ===== Accessibility Font Zoom Helpers ===== */

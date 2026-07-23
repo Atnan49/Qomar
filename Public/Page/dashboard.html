@@ -15,6 +15,20 @@
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- Inline script to prevent FOUC for UDL preferences -->
+    <script>
+        (function() {
+            try {
+                var scale = localStorage.getItem('fontScale') || '100';
+                var savedDyslexia = localStorage.getItem('dyslexiaMode');
+                document.documentElement.classList.add('font-scale-' + scale);
+                if (savedDyslexia === 'true') {
+                    document.documentElement.classList.add('dyslexia-mode');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/index.css">
@@ -129,7 +143,7 @@
             <div class="synopsis-card glass-card">
                 <div class="synopsis-header">
                     <div class="synopsis-avatar">
-                        <img src="../Image/logo.webp" alt="Avatar QOMAR" class="synopsis-avatar-img">
+                        <img src="../Image/logo.webp" alt="Avatar QOMAR" class="synopsis-avatar-img" loading="lazy" decoding="async">
                     </div>
                     <div class="synopsis-header-text">
                         <h3 class="synopsis-main-title">Tentang QOMAR</h3>
