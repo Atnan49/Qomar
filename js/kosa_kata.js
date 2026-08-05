@@ -257,11 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset any playing audio when loading a new card
         stopAudio();
 
-        // Feed typography text elements
-        if (vocabArabic) vocabArabic.textContent = data.arab || '';
-        if (vocabTranslit) vocabTranslit.textContent = data.transliterasi || '';
-        if (vocabTrans) vocabTrans.textContent = data.arti || '';
-
         // Trigger reflow to restart slide animations
         vocabCard.classList.remove('slide-in-right', 'slide-in-left');
         void vocabCard.offsetWidth; // Trigger reflow
@@ -432,9 +427,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${data.gambar}" alt="Ilustrasi ${data.arti}" class="vocab-grid-image" loading="lazy" decoding="async">
                 </div>
                 <div class="vocab-grid-content">
-                    ${data.arab ? `<span class="vocab-grid-arabic" lang="ar">${data.arab}</span>` : ''}
-                    ${data.transliterasi ? `<span class="vocab-grid-translit">${data.transliterasi}</span>` : ''}
-                    ${data.arti ? `<span class="vocab-grid-arti">${data.arti}</span>` : ''}
                     ${data.audio ? `
                     <button class="grid-audio-btn" data-audio="${data.audio}" aria-label="Putar audio ${data.arti}">
                         <svg class="grid-audio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
