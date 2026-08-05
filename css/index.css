@@ -121,7 +121,7 @@
 /* Bab Selection Section */
 .bab-selection-section {
   width: 100%;
-  max-width: 1020px;
+  max-width: 660px;
   margin-bottom: 3.5rem;
 }
 
@@ -137,92 +137,76 @@
 
 .bab-list {
   display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1.25rem;
-  padding-bottom: 0.85rem;
-  align-items: stretch;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-blue-400) rgba(2, 38, 128, 0.05);
-}
-
-.bab-list::-webkit-scrollbar {
-  height: 6px;
-}
-
-.bab-list::-webkit-scrollbar-track {
-  background: rgba(2, 38, 128, 0.05);
-  border-radius: 10px;
-}
-
-.bab-list::-webkit-scrollbar-thumb {
-  background: var(--color-blue-400);
-  border-radius: 10px;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
 }
 
 .bab-card {
-  flex: 1 1 0;
-  min-width: 240px;
-  scroll-snap-align: start;
+  width: 100%;
   border-radius: 24px;
-  border: 2px solid rgba(2, 38, 128, 0.15);
+  border: 2px solid rgba(2, 38, 128, 0.14);
   overflow: hidden;
-  transition: all 0.3s var(--ease-spring);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.85);
+  transition: all 0.35s var(--ease-spring);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 24px rgba(2, 38, 128, 0.06);
 }
 
 .bab-card:hover {
   border-color: var(--color-blue-400);
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 16px 36px rgba(2, 38, 128, 0.12);
   transform: translateY(-4px);
 }
 
-.bab-card.active {
-  border-color: var(--color-blue-600);
-  box-shadow: var(--shadow-elevated);
-  background: rgba(255, 255, 255, 0.98);
+.bab-card-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.25rem;
+  gap: 1.25rem;
 }
 
-/* Cover Image for Bab Cards */
-.bab-card-image-container {
-  width: 100%;
-  height: 210px;
+.bab-card-media {
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+  border-radius: 18px;
   overflow: hidden;
-  position: relative;
-  background: rgba(2, 38, 128, 0.04);
-  border-bottom: 2px solid rgba(2, 38, 128, 0.1);
+  background: linear-gradient(135deg, #f0f4ff 0%, #e4ecfc 100%);
+  border: 1.5px solid rgba(2, 38, 128, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  box-shadow: inset 0 2px 6px rgba(2, 38, 128, 0.03);
 }
 
 .bab-card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  border-radius: 14px;
+  overflow: hidden;
+  display: block;
   transition: transform 0.4s ease;
 }
 
 .bab-card:hover .bab-card-image {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
-.bab-card-header {
-  width: 100%;
+.bab-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.bab-card-badge-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.15rem 1.25rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  outline: none;
-  font-family: inherit;
-  gap: 0.85rem;
 }
 
 .bab-badge {
@@ -232,159 +216,79 @@
   font-weight: 800;
   color: #ffffff;
   flex-shrink: 0;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
   letter-spacing: 0.5px;
 }
 
-.bg-blue { background-color: var(--color-blue-600); }
-.bg-pink { background-color: var(--color-pink-500); }
-.bg-teal { background-color: var(--color-teal-500); }
-
-.bab-header-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.bab-arabic-title {
-  font-family: var(--font-arabic);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--color-blue-600);
-  line-height: 1.2;
-}
-
-.bab-title {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--color-blue-800);
-  margin: 0;
-  line-height: 1.2;
-}
-
-.bab-chevron {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(2, 38, 128, 0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-blue-700);
-  transition: transform 0.3s var(--ease-spring), background 0.3s;
-  flex-shrink: 0;
-}
-
-.bab-chevron svg {
-  width: 18px;
-  height: 18px;
-  transition: transform 0.3s var(--ease-spring);
-}
-
-.bab-card.active .bab-chevron {
-  background: var(--color-blue-600);
-  color: #ffffff;
-}
-
-.bab-card.active .bab-chevron svg {
-  transform: rotate(180deg);
-}
-
-/* Sub-options inside Bab Card */
-.bab-suboptions-wrapper {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s var(--ease-spring), opacity 0.3s ease;
-  opacity: 0;
-}
-
-.bab-card.active .bab-suboptions-wrapper {
-  grid-template-rows: 1fr;
-  opacity: 1;
-}
+.bg-blue { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+.bg-pink { background: linear-gradient(135deg, #ec4899, #db2777); }
+.bg-teal { background: linear-gradient(135deg, #14b8a6, #0d9488); }
 
 .bab-suboptions {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 0 0.85rem 0.85rem 0.85rem;
+  gap: 0.55rem;
 }
 
 .suboption-item {
   display: flex;
   align-items: center;
-  padding: 0.65rem 0.75rem;
+  padding: 0.7rem 0.85rem;
   border-radius: 14px;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   border: 1.5px solid rgba(2, 38, 128, 0.08);
   transition: all 0.25s var(--ease-spring);
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
 .suboption-item:hover {
-  transform: translateX(3px);
+  transform: translateX(4px);
   background: #ffffff;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 4px 14px rgba(2, 38, 128, 0.08);
   border-color: var(--color-blue-500);
 }
 
 .icon-teal-soft { border-left: 3.5px solid var(--color-teal-500); }
 .icon-pink-soft { border-left: 3.5px solid var(--color-pink-500); }
+.icon-amber-soft { border-left: 3.5px solid var(--color-gold-400); }
 .icon-yellow-soft { border-left: 3.5px solid var(--color-gold-400); }
 
-.suboption-left {
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
-  background: rgba(2, 38, 128, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-
 .suboption-emoji {
+  font-size: 1.15rem;
   line-height: 1;
 }
 
-.suboption-details {
-  flex: 1;
-  text-align: left;
-  min-width: 0;
-}
-
 .suboption-title {
+  flex: 1;
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--color-blue-800);
+  color: var(--color-blue-900);
   margin: 0;
-  line-height: 1.2;
-}
-
-.suboption-desc {
-  display: none; /* Hide multi-line descriptions inside compact bab cards for ultra-clean minimalist look */
 }
 
 .suboption-arrow {
-  color: var(--color-blue-500);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(2, 38, 128, 0.05);
+  color: var(--color-blue-600);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.25s;
+  transition: all 0.25s var(--ease-spring);
   flex-shrink: 0;
 }
 
 .suboption-arrow svg {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 
 .suboption-item:hover .suboption-arrow {
-  transform: translateX(3px);
-  color: var(--color-blue-700);
+  background: var(--color-blue-600);
+  color: #ffffff;
+  transform: translateX(2px);
 }
 
 /* Sinopsis Section */
@@ -598,24 +502,25 @@
 }
 
 
-/* FAQ Section Styles (Single Accordion Toggle) */
+/* FAQ Section Styles (Single Accordion Wrapper with Minimalist Inner Grid) */
 .faq-section {
   width: 100%;
-  max-width: 760px;
+  max-width: 660px;
   margin-bottom: 3.5rem;
 }
 
 .faq-main-card {
   border-radius: 24px;
-  border: 2px solid rgba(2, 38, 128, 0.15);
+  border: 2px solid rgba(2, 38, 128, 0.14);
   overflow: hidden;
   transition: all 0.35s var(--ease-spring);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 24px rgba(2, 38, 128, 0.06);
 }
 
 .faq-main-card:hover {
   border-color: var(--color-blue-400);
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 12px 28px rgba(2, 38, 128, 0.09);
 }
 
 .faq-main-card.active {
@@ -629,31 +534,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.15rem 1.5rem;
+  padding: 1.15rem 1.4rem;
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
   font-family: inherit;
-}
-
-.faq-main-title-group {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.faq-main-icon {
-  font-size: 1.25rem;
+  gap: 1rem;
 }
 
 .faq-main-card .faq-section-title {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--color-blue-800);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .faq-main-chevron {
@@ -665,7 +561,7 @@
   align-items: center;
   justify-content: center;
   color: var(--color-blue-700);
-  transition: transform 0.3s var(--ease-spring), background 0.3s;
+  transition: transform 0.3s var(--ease-spring), background 0.3s, color 0.3s;
   flex-shrink: 0;
 }
 
@@ -704,33 +600,30 @@
 }
 
 .faq-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
   text-align: left;
-  align-items: start;
 }
 
 .faq-item {
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
-  border: 1.5px solid rgba(2, 38, 128, 0.12);
+  border: 1.5px solid rgba(2, 38, 128, 0.09);
   transition: all 0.25s var(--ease-spring);
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 2px 8px rgba(2, 38, 128, 0.03);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .faq-item:hover {
-  border-color: var(--color-blue-500);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-card);
+  border-color: var(--color-blue-400);
+  transform: translateX(3px);
   background: #ffffff;
 }
 
 .faq-item.active {
   border-color: var(--color-blue-600);
   background: #ffffff;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 12px rgba(2, 38, 128, 0.05);
 }
 
 .faq-trigger {
@@ -745,55 +638,48 @@
   cursor: pointer;
   outline: none;
   font-family: inherit;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .faq-question {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  color: var(--color-blue-800);
-  line-height: 1.35;
-  transition: color 0.2s;
-  padding-right: 0.25rem;
-}
-
-.faq-item:hover .faq-question,
-.faq-item.active .faq-question {
-  color: var(--color-blue-600);
+  color: var(--color-blue-900);
+  line-height: 1.3;
 }
 
 .faq-icon-wrapper {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: rgba(2, 38, 128, 0.06);
+  background: rgba(2, 38, 128, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-blue-700);
+  transition: all 0.25s var(--ease-spring);
   flex-shrink: 0;
-  transition: all 0.3s var(--ease-spring);
 }
 
 .faq-icon {
-  width: 0.85rem;
-  height: 0.85rem;
-  color: var(--color-blue-800);
-  transition: transform 0.3s var(--ease-spring), color 0.3s;
+  width: 14px;
+  height: 14px;
+  transition: transform 0.25s var(--ease-spring);
 }
 
 .faq-item.active .faq-icon-wrapper {
   background: var(--color-blue-600);
+  color: #ffffff;
 }
 
 .faq-item.active .faq-icon {
   transform: rotate(180deg);
-  color: #ffffff;
 }
 
 .faq-answer-wrapper {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease-out, opacity 0.3s;
+  transition: grid-template-rows 0.3s ease, opacity 0.25s ease;
   opacity: 0;
 }
 
@@ -804,39 +690,26 @@
 
 .faq-answer-content {
   overflow: hidden;
-  min-height: 0;
 }
 
 .faq-answer-inner {
   padding: 0 1rem 0.85rem 1rem;
   border-top: 1px dashed rgba(2, 38, 128, 0.08);
-  margin-top: 0.1rem;
   padding-top: 0.65rem;
 }
 
 .faq-answer-inner p {
-  font-size: 0.825rem;
-  line-height: 1.5;
-  color: var(--color-blue-900);
   margin: 0;
-}
-
-.faq-answer-inner p strong {
+  font-size: 0.85rem;
   color: var(--color-blue-800);
+  line-height: 1.45;
+  font-weight: 500;
 }
 
 /* Responsive FAQ & Bab Grid */
 @media (max-width: 900px) {
   .bab-list {
-    gap: 1rem;
-    padding-bottom: 1rem;
-  }
-  .bab-card {
-    flex: 0 0 250px;
-    min-width: 230px;
-  }
-  .bab-card-image-container {
-    height: 160px;
+    gap: 1.25rem;
   }
 }
 
@@ -848,6 +721,18 @@
 
 /* Responsive Media Queries */
 @media (max-width: 600px) {
+  .bab-card-inner {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .bab-card-media {
+    width: 100%;
+    height: 180px;
+  }
+  .bab-card-content {
+    width: 100%;
+  }
   .landing-title {
     font-size: 2.5rem;
   }

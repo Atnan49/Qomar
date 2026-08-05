@@ -86,7 +86,7 @@ Modul ini menyajikan visualisasi cerita komik dalam bentuk video:
 - **Memutar Video**: Klik tombol **Play** pada pemutar video layar lebar (16:9).
 - **Memilih Bab / Playlist**: Di samping/bawah pemutar video, terdapat daftar putar (*playlist*). Klik pada bab yang ingin ditonton:
   - **Bab 1**: *الْعُنْوَانُ* (Alamat)
-  - **Bab 2**: *مِهْنَةُ أُسْرَةِ نَجِيْبَةِ* (Profesi Keluarga Najibah)
+  - **Bab 2**: *مِهْنَةُ أُسْرَةِ نَجِيْبَةَ* (Profesi Keluarga Najibah)
   - **Bab 3**: *الْأَمَلُ فِيْ الْمُسْتَقْبَلِ* (Cita-cita Masa Depan)
 - **Membaca Deskripsi**: Di bawah pemutar video terdapat ringkasan penjelasan isi cerita.
 - **Lanjut ke Kuis**: Setelah selesai menonton, klik tombol **"Mulai Kuis 📝"** di bagian bawah halaman.

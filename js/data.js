@@ -270,7 +270,7 @@ const komikMateri = {
     ]
   },
   tema2: {
-    judulArab: "مِهْنَةُ أُسْرَةِ نَجِيْبَةِ",
+    judulArab: "مِهْنَةُ أُسْرَةِ نَجِيْبَةَ",
     judulIndo: "Profesi Keluarga Najibah",
     halaman: [
       "../../MEDIA KOMIK/KOMIK BAB 2/0.Komik bab 2 . p 1.webp",
@@ -320,7 +320,7 @@ const videoMateri = [
   },
   {
     id: 2,
-    judul: "Bab 2 : مِهْنَةُ أُسْرَةِ نَجِيْبَةِ",
+    judul: "Bab 2 : مِهْنَةُ أُسْرَةِ نَجِيْبَةَ",
     deskripsi: "Pelajari kosakata berbagai jenis profesi dan pekerjaan anggota keluarga dalam Bahasa Arab melalui cerita Najibah.",
     videoUrl: "../Video/video_komik_bab2.mp4"
   },
