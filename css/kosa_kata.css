@@ -54,27 +54,31 @@
 /* Image container */
 .vocab-image-container {
   width: 100%;
-  max-width: 280px;
-  height: 200px;
+  max-width: calc(380px * var(--udl-img-scale, 1));
+  height: calc(320px * var(--udl-img-scale, 1));
   border-radius: 20px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   border: 2px solid rgba(2, 38, 128, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-soft);
+  padding: 0.5rem;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
 }
 
 .vocab-image {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  border-radius: 14px;
   transition: transform 0.3s ease;
 }
 
 .vocab-card:hover .vocab-image {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 /* Typography contents */
@@ -764,7 +768,7 @@
 
 /* 3. Audio Player Button Styles */
 .audio-player-wrapper {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -871,10 +875,188 @@
   .bubble-translation {
     font-size: 0.85rem;
   }
-  
-  .finish-reading-btn {
-    padding: 0.9rem 1.5rem;
-    font-size: 0.95rem;
-  }
+}
+
+/* View Mode Toolbar Styles */
+.view-mode-bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.view-mode-pill {
+  display: inline-flex;
+  padding: 0.35rem;
+  border-radius: 50px;
+  border: 1.5px solid rgba(2, 38, 128, 0.15);
+  background: rgba(255, 255, 255, 0.85);
+  gap: 0.35rem;
+}
+
+.view-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 50px;
+  border: none;
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-blue-800);
+  cursor: pointer;
+  transition: all 0.25s var(--ease-spring);
+  outline: none;
+}
+
+.view-mode-btn.active {
+  background: var(--color-blue-600);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(2, 38, 128, 0.2);
+}
+
+.view-mode-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+/* Vocab Grid Galeri Styles */
+.vocab-grid-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 1.25rem auto 4rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.vocab-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.vocab-grid-card {
+  border-radius: 20px;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1.5px solid rgba(2, 38, 128, 0.12);
+  transition: all 0.3s var(--ease-spring);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.vocab-grid-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-blue-500);
+  box-shadow: var(--shadow-card);
+}
+
+.vocab-grid-image-container {
+  width: 100%;
+  height: calc(145px * var(--udl-img-scale, 1));
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(2, 38, 128, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  padding: 0.4rem;
+  box-sizing: border-box;
+  transition: height 0.25s ease;
+}
+
+.vocab-grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.vocab-grid-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.vocab-grid-arabic {
+  font-family: var(--font-arabic);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-blue-800);
+  line-height: 1.2;
+  margin-top: 0.2rem;
+  direction: rtl;
+}
+
+.vocab-grid-translit {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-pink-500);
+  font-style: italic;
+  margin: 0;
+}
+
+.vocab-grid-arti {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-blue-900);
+  margin-bottom: 0.35rem;
+}
+
+.grid-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  border: none;
+  background: var(--color-blue-500);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-spring);
+  box-shadow: 0 2px 8px rgba(25, 103, 222, 0.2);
+}
+
+.grid-audio-btn:hover {
+  background: var(--color-blue-600);
+  transform: scale(1.05);
+}
+
+.grid-audio-btn.playing {
+  background: var(--color-pink-500);
+}
+
+.grid-audio-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.vocab-grid-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(2.5rem * var(--udl-scale, 1));
+  margin-bottom: 2rem;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  clear: both;
+}
+
+.grid-finish-btn {
+  text-decoration: none;
+  padding: 0.95rem 2.2rem;
+  font-size: 1.05rem;
 }
 

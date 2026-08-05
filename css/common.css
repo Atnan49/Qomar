@@ -65,8 +65,30 @@
   font-style: normal;
 }
 
+/* ===== Global UDL Scalability Engine ===== */
 html {
   scroll-behavior: smooth;
+}
+
+/* ===== Global UDL Scalability Engine ===== */
+html.font-scale-100 { --udl-scale: 1; --udl-img-scale: 1; }
+html.font-scale-110 { --udl-scale: 1.1; --udl-img-scale: 1.08; }
+html.font-scale-120 { --udl-scale: 1.2; --udl-img-scale: 1.16; }
+html.font-scale-130 { --udl-scale: 1.3; --udl-img-scale: 1.24; }
+html.font-scale-140 { --udl-scale: 1.4; --udl-img-scale: 1.32; }
+html.font-scale-150 { --udl-scale: 1.5; --udl-img-scale: 1.40; }
+html.font-scale-160 { --udl-scale: 1.6; --udl-img-scale: 1.48; }
+
+/* Apply Fluid Zoom Scaling ONLY to Main Content Areas (Excluding Header Navbar & Bottom Footer Navigation) */
+.landing-container,
+.vocab-container,
+.vocab-grid-wrapper,
+.comic-viewer-card,
+.video-container,
+.quiz-main-content {
+  font-size: calc(1rem * var(--udl-scale, 1));
+  padding-top: calc(0.5rem * var(--udl-scale, 1));
+  transition: font-size 0.25s cubic-bezier(0.4, 0, 0.2, 1), padding 0.25s ease;
 }
 
 /* ===== Base Styles ===== */
@@ -106,7 +128,7 @@ body {
 
 /* ===== Glassmorphism Cards ===== */
 .glass-card {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 2.5px solid rgba(2, 38, 128, 0.15);
@@ -115,70 +137,12 @@ body {
 }
 
 .glass-card-strong {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   border: 2.5px solid rgba(2, 38, 128, 0.25);
   box-shadow: var(--shadow-elevated);
   transform: translateZ(0);
-}
-
-/* ===== Accessibility Font Zoom Helpers ===== */
-.font-scale-100 .slide-card-container {
-  font-size: 100% !important;
-}
-
-.font-scale-110 .slide-card-container {
-  font-size: 110% !important;
-}
-
-.font-scale-120 .slide-card-container {
-  font-size: 120% !important;
-}
-
-.font-scale-130 .slide-card-container {
-  font-size: 130% !important;
-}
-
-.font-scale-140 .slide-card-container {
-  font-size: 140% !important;
-}
-
-.font-scale-150 .slide-card-container {
-  font-size: 150% !important;
-}
-
-.font-scale-160 .slide-card-container {
-  font-size: 160% !important;
-}
-
-/* Font size overrides for arabic text when scaled */
-.font-scale-100 .block-arabic {
-  font-size: 1.5em;
-}
-
-.font-scale-110 .block-arabic {
-  font-size: 1.55em;
-}
-
-.font-scale-120 .block-arabic {
-  font-size: 1.6em;
-}
-
-.font-scale-130 .block-arabic {
-  font-size: 1.65em;
-}
-
-.font-scale-140 .block-arabic {
-  font-size: 1.7em;
-}
-
-.font-scale-150 .block-arabic {
-  font-size: 1.75em;
-}
-
-.font-scale-160 .block-arabic {
-  font-size: 1.8em;
 }
 
 /* ===== Dyslexia Mode Overrides ===== */

@@ -65,37 +65,22 @@
 
     <!-- Main Container -->
     <main class="video-container container">
-        <div class="video-layout-grid">
+        <div class="video-single-section">
             
-            <!-- Left Side: Metadata & Video Player -->
-            <div class="video-main-section">
-                <!-- Active Video Details Card (Materi) -->
-                <!-- <div class="video-info-card glass-card-strong">
-                    <div class="video-info-header">
-                        <span class="video-badge">Materi Aktif</span>
-                        <h2 id="video-title" class="video-title">Memuat judul video...</h2>
-                    </div>
-                </div> -->
-
-                <!-- Video Player Container with 16:9 widescreen ratio -->
-                <div class="video-player-wrapper glass-card-strong">
-                    <video id="video-player" controls preload="metadata">
-                        <source id="video-source" src="" type="video/mp4">
-                        Browser Anda tidak mendukung pemutar video HTML5. Silakan perbarui browser Anda.
-                    </video>
-                </div>
+            <!-- Video Player Container with 16:9 widescreen ratio -->
+            <div class="video-player-wrapper glass-card-strong">
+                <video id="video-player" controls preload="metadata">
+                    <source id="video-source" src="" type="video/mp4">
+                    Browser Anda tidak mendukung pemutar video HTML5. Silakan perbarui browser Anda.
+                </video>
             </div>
 
-            <!-- Right Side: Playlist Panel -->
-            <div class="video-sidebar-section">
-                <div class="playlist-panel glass-card-strong">
-                    <div class="playlist-header">
-                        <span class="playlist-header-emoji">🎬</span>
-                        <h3 class="playlist-header-title">Daftar Cerita</h3>
-                    </div>
-                    <div id="playlist-list" class="playlist-list" role="listbox" aria-label="Daftar putar video materi">
-                        <!-- Playlist items generated dynamically by video.js -->
-                    </div>
+            <!-- Video Info Header Card -->
+            <div class="video-info-card glass-card-strong">
+                <div class="video-info-header">
+                    <span class="video-badge" id="video-bab-badge">BAB 1</span>
+                    <h2 id="video-title" class="video-title">Memuat video...</h2>
+                    <p id="video-desc" class="video-desc"></p>
                 </div>
             </div>
 

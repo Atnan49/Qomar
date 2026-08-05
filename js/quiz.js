@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const scale = localStorage.getItem('fontScale') || '100';
         const dyslexia = localStorage.getItem('dyslexiaMode') === 'true';
 
-        document.documentElement.className = `font-scale-${scale}`;
+        document.documentElement.className = document.documentElement.className.replace(/\bfont-scale-\d+\b/g, '');
+        document.documentElement.classList.add(`font-scale-${scale}`);
         document.getElementById('zoom-level-display').textContent = `${scale}%`;
 
         if (dyslexia) {
@@ -377,7 +378,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize PG
     buildNumberGrid();
-    renderSoal();
+
+    // Auto jump to Bab starting question if bab parameter present
+    const urlParams = new URLSearchParams(window.location.search);
+    const babParam = urlParams.get('bab') || urlParams.get('tema');
+    let startQuestionIndex = 0;
+    if (babParam) {
+        let babNum = parseInt(babParam, 10);
+        if (isNaN(babNum) && babParam.startsWith('tema')) {
+            babNum = parseInt(babParam.replace('tema', ''), 10);
+        }
+        if (babNum === 1) startQuestionIndex = 0;
+        else if (babNum === 2) startQuestionIndex = 13;
+        else if (babNum === 3) startQuestionIndex = 16;
+    }
+
+    navigateToSoal(startQuestionIndex);
 
     // =============================================
     // 4. PRAKTIK TAB
