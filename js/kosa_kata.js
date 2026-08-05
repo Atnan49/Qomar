@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnDyslexia = document.getElementById('btn-dyslexia-toggle');
 
     // DOM Elements - Screens
-    const themeSelectScreen = document.getElementById('theme-select-screen');
     const comicReadingScreen = document.getElementById('comic-reading-screen');
     const vocabFlashcardScreen = document.getElementById('vocab-flashcard-screen');
 
@@ -35,16 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnComicPrevPage = document.getElementById('btn-comic-prev-page');
     const btnComicNextPage = document.getElementById('btn-comic-next-page');
     const comicPageIndicator = document.getElementById('comic-page-indicator');
-    const comicDialogueList = document.getElementById('comic-dialogue-list');
+
     const btnFinishReading = document.getElementById('btn-finish-reading');
     const btnBackToMenu1 = document.getElementById('btn-back-to-menu-1');
 
     // DOM Elements - Vocab Flashcard Screen
     const vocabCard = document.getElementById('slide-card');
     const vocabImage = document.getElementById('vocab-image');
-    const vocabArabic = document.getElementById('vocab-arabic');
-    const vocabTranslit = document.getElementById('vocab-transliteration');
-    const vocabTrans = document.getElementById('vocab-translation');
+
     const btnPlayAudio = document.getElementById('btn-play-audio');
     const audioUnavailableMsg = document.getElementById('audio-unavailable-msg');
     
@@ -150,12 +147,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 5. Theme Selection Action
-    window.selectTheme = function(themeId) {
+    function selectTheme(themeId) {
         selectedTheme = themeId;
         comicPageIndex = 0;
         renderComic();
         showScreen('comic');
-    };
+    }
+    window.selectTheme = selectTheme;
 
     // 6. Comic Reader Rendering Logic
     function renderComic() {
@@ -179,35 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             comicPageControls.style.display = 'none';
         }
 
-        // Render dynamic transcript chat-bubbles if element exists
-        if (comicDialogueList) {
-            comicDialogueList.innerHTML = '';
-            
-            // Track unique speakers list to assign different bubble colors dynamically (char-1 and char-2)
-            const speakers = [];
-            comicData.dialog.forEach(d => {
-                if (!speakers.includes(d.pembicara)) {
-                    speakers.push(d.pembicara);
-                }
-            });
 
-            comicData.dialog.forEach(d => {
-                const speakerIndex = speakers.indexOf(d.pembicara);
-                const bubbleClass = (speakerIndex === 1) ? 'char-2' : 'char-1';
-
-                const bubble = document.createElement('div');
-                bubble.className = `chat-bubble ${bubbleClass}`;
-                bubble.innerHTML = `
-                    <span class="bubble-sender">${d.pembicara}</span>
-                    <span class="bubble-arabic" lang="ar">${d.arab}</span>
-                    <span class="bubble-translation">${d.arti}</span>
-                `;
-                comicDialogueList.appendChild(bubble);
-            });
-
-            // Reset scroll position of transcript window
-            comicDialogueList.scrollTop = 0;
-        }
     }
 
     // Comic Navigation Button Events
@@ -267,12 +237,13 @@ document.addEventListener('DOMContentLoaded', () => {
             vocabCard.classList.add('slide-in-left');
         }
 
-        // Feed vocabulary contents to card image
+        // Feed vocabulary contents to card image & text
         if (vocabImage) {
             vocabImage.decoding = 'async';
             vocabImage.src = data.gambar;
             vocabImage.alt = `Ilustrasi ${data.arti}`;
         }
+
 
         // Preload adjacent items (next and prev cards) for 0-delay transitions
         preloadAdjacentAssets();

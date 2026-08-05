@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoBabBadge = document.getElementById('video-bab-badge');
     const btnPrevPage = document.getElementById('btn-prev-page');
     const btnNextPage = document.getElementById('btn-next-page');
-    const playlistList = document.getElementById('playlist-list');
 
     // 2. State Variables
     let currentScale = parseInt(localStorage.getItem('fontScale')) || 100;

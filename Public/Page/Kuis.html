@@ -87,10 +87,17 @@
         <!-- ======== TAB 1: PILIHAN GANDA ======== -->
         <section class="tab-panel active" id="panel-pg" role="tabpanel" aria-labelledby="tab-pilihan-ganda">
 
+            <!-- Selector Bab Kuis -->
+            <div class="bab-selector-container" id="bab-selector">
+                <button class="bab-btn active" data-bab="1" id="btn-bab-1">Bab 1: الْعُنْوَانُ</button>
+                <button class="bab-btn" data-bab="2" id="btn-bab-2">Bab 2: الْمِهْنَةُ</button>
+                <button class="bab-btn" data-bab="3" id="btn-bab-3">Bab 3: أَمَلِيْ</button>
+            </div>
+
             <!-- Petunjuk Kuis PG -->
             <div class="quiz-instruction-banner">
                 <span class="instruction-icon">📌</span>
-                <span class="instruction-text">Pilihlah salah satu jawaban yang benar!</span>
+                <span class="instruction-text" id="quiz-instruction-text">Pilihlah salah satu jawaban yang benar!</span>
             </div>
 
             <!-- Grid Nomor Navigasi Soal -->
