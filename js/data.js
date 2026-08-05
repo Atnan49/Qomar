@@ -82,7 +82,7 @@ const kosaKataMateri = {
       arab: "قَرِيْبٌ",
       transliterasi: "Qarībun",
       arti: "Dekat",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/dekattt.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/dekattt.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice dekat.mp3"
     }
   ],
@@ -92,7 +92,7 @@ const kosaKataMateri = {
       arab: "مِهْنَةٌ",
       transliterasi: "Mihnatun",
       arti: "Profesi",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/gambar profesi.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/gambar profesi.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice profesi.mp3"
     },
     {
@@ -100,7 +100,7 @@ const kosaKataMateri = {
       arab: "دَرَسَ - يَدْرُسُ",
       transliterasi: "Darasa - Yadrusu",
       arti: "Belajar",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/belajar.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/belajar.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice belajar.mp3"
     },
     {
@@ -116,7 +116,7 @@ const kosaKataMateri = {
       arab: "مُدَرِّسَةٌ",
       transliterasi: "Mudarrisatun",
       arti: "Guru Perempuan",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/guru.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/guru.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice guru perempuan.mp3"
     },
     {
@@ -124,7 +124,7 @@ const kosaKataMateri = {
       arab: "طَبَّاخَةٌ",
       transliterasi: "Thabbākhatun",
       arti: "Koki Perempuan",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/koki.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/koki.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice koki perempuan.mp3"
     },
     {
@@ -132,7 +132,7 @@ const kosaKataMateri = {
       arab: "طَبَخَ - يَطْبُخُ",
       transliterasi: "Tabakha - Yatbukhu",
       arti: "Memasak",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/memasak.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/memasak.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice memasak.mp3"
     },
     {
@@ -140,7 +140,7 @@ const kosaKataMateri = {
       arab: "سَاعَدَ - يُسَاعِدُ",
       transliterasi: "Sā‘ada - Yusā‘idu",
       arti: "Membantu",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/membantu.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/membantu.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice membantu.mp3"
     },
     {
@@ -148,7 +148,7 @@ const kosaKataMateri = {
       arab: "زَرَعَ - يَزْرَعُ",
       transliterasi: "Zara‘a - Yazra‘u",
       arti: "Menanam",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menanam.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menanam.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice menanam.mp3"
     },
     {
@@ -164,7 +164,7 @@ const kosaKataMateri = {
       arab: "عَالَجَ - يُعَالِجُ",
       transliterasi: "‘Ālaja - Yu‘āliju",
       arti: "Mengobati",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/mengobati.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/mengobati.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice mengobati.mp3"
     },
     {
@@ -172,7 +172,7 @@ const kosaKataMateri = {
       arab: "خَيَّطَ - يُخَيِّطُ",
       transliterasi: "Khayyatha - Yukhayyithu",
       arti: "Menjahit",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menjahit.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menjahit.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice menjahit.mp3"
     },
     {
@@ -180,7 +180,7 @@ const kosaKataMateri = {
       arab: "بَاعَ - يَبِيْعُ",
       transliterasi: "Bā‘a - Yabī‘u",
       arti: "Menjual",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menjual.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menjual.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice menjual.mp3"
     },
     {
@@ -188,7 +188,7 @@ const kosaKataMateri = {
       arab: "تَاجِرٌ",
       transliterasi: "Tājirun",
       arti: "Pedagang",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/pedagang.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/pedagang.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice pedagang.mp3"
     },
     {
@@ -196,7 +196,7 @@ const kosaKataMateri = {
       arab: "خَيَّاطَةٌ",
       transliterasi: "Khayyāthatun",
       arti: "Penjahit Perempuan",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/penjahit.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/penjahit.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice penjahit pr.mp3"
     },
     {
@@ -212,7 +212,7 @@ const kosaKataMateri = {
       arab: "فَلَّاحٌ",
       transliterasi: "Fallāhun",
       arti: "Petani",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/petani.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/petani.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice petani.mp3"
     }
   ],
