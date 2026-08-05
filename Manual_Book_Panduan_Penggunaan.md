@@ -93,7 +93,7 @@ Modul ini menyajikan visualisasi cerita komik dalam bentuk video:
 
 ---
 
-### 5. Modul 3: Kuis Interaktif 3-Tab (`Kuis.html`)
+### 5. Modul 3: Kuis Interaktif 3-Tab (`kuis.html`)
 Modul evaluasi terbagi dalam 3 Tab utama:
 
 #### 📌 Tab 1: Pilihan Ganda (PG)

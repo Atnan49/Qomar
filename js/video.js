@@ -103,6 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update bottom navigation links dedicated for this Bab
         if (btnPrevPage) btnPrevPage.href = `kosa_kata.html?bab=${babNum}`;
-        if (btnNextPage) btnNextPage.href = `Kuis.html?bab=${babNum}`;
+        if (btnNextPage) btnNextPage.href = `kuis.html?bab=${babNum}`;
     }
 });
