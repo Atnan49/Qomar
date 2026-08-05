@@ -193,6 +193,45 @@
   }
 }
 
+/* ===== Bab Selector Bar ===== */
+.bab-selector-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.bab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.15rem;
+  border: 1.5px solid rgba(2, 38, 128, 0.12);
+  border-radius: 50px;
+  background: #ffffff;
+  color: #022680;
+  font-size: 0.88em;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(2, 38, 128, 0.03);
+}
+
+.bab-btn:hover {
+  border-color: #1C75FF;
+  color: #1C75FF;
+  background: rgba(28, 117, 255, 0.04);
+}
+
+.bab-btn.active {
+  background: linear-gradient(135deg, #1C75FF, #022680);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(28, 117, 255, 0.25);
+}
+
 /* ===== Quiz Instruction Banner ===== */
 .quiz-instruction-banner {
   display: flex;
@@ -934,15 +973,6 @@
   border-color: #1C75FF;
   color: #1C75FF;
 }
-
-/* ===== UDL Zoom Scaling for Quiz Content ===== */
-.font-scale-100 .quiz-main-content, .font-scale-100 .quiz-nav-section { font-size: 100%; }
-.font-scale-110 .quiz-main-content, .font-scale-110 .quiz-nav-section { font-size: 110%; }
-.font-scale-120 .quiz-main-content, .font-scale-120 .quiz-nav-section { font-size: 120%; }
-.font-scale-130 .quiz-main-content, .font-scale-130 .quiz-nav-section { font-size: 130%; }
-.font-scale-140 .quiz-main-content, .font-scale-140 .quiz-nav-section { font-size: 140%; }
-.font-scale-150 .quiz-main-content, .font-scale-150 .quiz-nav-section { font-size: 150%; }
-.font-scale-160 .quiz-main-content, .font-scale-160 .quiz-nav-section { font-size: 160%; }
 
 /* ===== PG Context Passage Box & Question Image ===== */
 .pg-context-box {

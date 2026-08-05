@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoPlayer = document.getElementById('video-player');
     const videoTitle = document.getElementById('video-title');
     const videoDesc = document.getElementById('video-desc');
-    const playlistList = document.getElementById('playlist-list');
+    const videoBabBadge = document.getElementById('video-bab-badge');
+    const btnPrevPage = document.getElementById('btn-prev-page');
+    const btnNextPage = document.getElementById('btn-next-page');
 
     // 2. State Variables
-    let currentVideoIndex = 0;
-    const totalVideos = videoMateri.length;
     let currentScale = parseInt(localStorage.getItem('fontScale')) || 100;
     let isDyslexia = localStorage.getItem('dyslexiaMode') === 'true';
 
@@ -73,89 +73,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Load & Play Video Function
-    function loadAndPlayVideo(index, autoPlay = false) {
-        if (totalVideos === 0) return;
-        if (index < 0 || index >= totalVideos) return;
+    // 4. Initialize Dedicated Video for Selected Bab
+    const urlParams = new URLSearchParams(window.location.search);
+    const babParam = urlParams.get('bab') || urlParams.get('tema');
+    let babNum = 1;
 
-        currentVideoIndex = index;
-        const currentVideo = videoMateri[currentVideoIndex];
-
-        // Update Video Player Source
-        videoPlayer.src = currentVideo.videoUrl;
-        videoPlayer.load();
-
-        // Update Info Card Metadata
-        if (videoTitle) {
-            videoTitle.textContent = currentVideo.judul;
+    if (babParam) {
+        let parsed = parseInt(babParam, 10);
+        if (isNaN(parsed) && babParam.startsWith('tema')) {
+            parsed = parseInt(babParam.replace('tema', ''), 10);
         }
-        if (videoDesc) {
-            videoDesc.textContent = currentVideo.deskripsi;
-        }
-
-        // Highlight Active Playlist Item
-        const playlistItems = playlistList.querySelectorAll('.playlist-item');
-        playlistItems.forEach((item, idx) => {
-            if (idx === currentVideoIndex) {
-                item.classList.add('active');
-                item.setAttribute('aria-selected', 'true');
-            } else {
-                item.classList.remove('active');
-                item.setAttribute('aria-selected', 'false');
-            }
-        });
-
-        // Trigger autoplay if requested (and supported by browser/user interaction state)
-        if (autoPlay) {
-            const playPromise = videoPlayer.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.log("Autoplay prevented: ", error);
-                });
-            }
+        if (!isNaN(parsed) && parsed >= 1 && typeof videoMateri !== 'undefined' && parsed <= videoMateri.length) {
+            babNum = parsed;
         }
     }
 
-    // 5. Render Playlist Items Dynamically
-    function renderPlaylist() {
-        if (totalVideos === 0) {
-            playlistList.innerHTML = `<div class="playlist-empty">Tidak ada video materi.</div>`;
-            if (videoTitle) {
-                videoTitle.textContent = "Tidak ada video";
-            }
-            if (videoDesc) {
-                videoDesc.textContent = "";
-            }
-            return;
+    const videoIndex = babNum - 1;
+    const currentVideo = typeof videoMateri !== 'undefined' ? videoMateri[videoIndex] : null;
+
+    if (currentVideo) {
+        if (videoBabBadge) videoBabBadge.textContent = `BAB ${babNum}`;
+        if (videoTitle) videoTitle.textContent = currentVideo.judul;
+        if (videoDesc) videoDesc.textContent = currentVideo.deskripsi;
+        
+        if (videoPlayer) {
+            videoPlayer.src = currentVideo.videoUrl;
+            videoPlayer.load();
         }
 
-        playlistList.innerHTML = '';
-        videoMateri.forEach((video, index) => {
-            // Create playlist item element
-            const button = document.createElement('button');
-            button.className = `playlist-item ${index === currentVideoIndex ? 'active' : ''}`;
-            button.setAttribute('role', 'option');
-            button.setAttribute('aria-selected', index === currentVideoIndex ? 'true' : 'false');
-            button.setAttribute('aria-label', `Putar video ${index + 1}: ${video.judul}`);
-
-            // Inner structure
-            button.innerHTML = `
-                <span class="playlist-item-number">${index + 1}</span>
-                <span class="playlist-item-title">${video.judul}</span>
-            `;
-
-            // Click action to load video
-            button.addEventListener('click', () => {
-                if (index !== currentVideoIndex) {
-                    loadAndPlayVideo(index, true);
-                }
-            });
-
-            playlistList.appendChild(button);
-        });
+        // Update bottom navigation links dedicated for this Bab
+        if (btnPrevPage) btnPrevPage.href = `kosa_kata.html?bab=${babNum}`;
+        if (btnNextPage) btnNextPage.href = `Kuis.html?bab=${babNum}`;
     }
-
-    // 6. Initialize Page
-    renderPlaylist();
-    loadAndPlayVideo(0, false); // Load first video on start, do not autoplay yet to prevent browser blocks
 });

@@ -22,7 +22,16 @@
     transition: font-size 0.3s ease;
 }
 
-/* 3. Layout Grid: Responsive 2-Column Columns */
+/* 3. Layout Single Section (Dedicated Bab Video) */
+.video-single-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
 .video-layout-grid {
     display: grid;
     grid-template-columns: 1.6fr 1fr;
@@ -281,23 +290,6 @@
     width: 1.25rem;
     height: 1.25rem;
 }
-
-/* 9. Accessibility Font Scale helpers */
-.font-scale-100 .video-container { font-size: 100%; }
-.font-scale-110 .video-container { font-size: 110%; }
-.font-scale-120 .video-container { font-size: 120%; }
-.font-scale-130 .video-container { font-size: 130%; }
-.font-scale-140 .video-container { font-size: 140%; }
-.font-scale-150 .video-container { font-size: 150%; }
-.font-scale-160 .video-container { font-size: 160%; }
-
-.font-scale-100 .video-title { font-size: 1.6rem; }
-.font-scale-110 .video-title { font-size: 1.7rem; }
-.font-scale-120 .video-title { font-size: 1.8rem; }
-.font-scale-130 .video-title { font-size: 1.9rem; }
-.font-scale-140 .video-title { font-size: 2.0rem; }
-.font-scale-150 .video-title { font-size: 2.1rem; }
-.font-scale-160 .video-title { font-size: 2.2rem; }
 
 /* 10. Animations */
 .animate-fade-in-up {

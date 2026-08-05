@@ -82,7 +82,7 @@ const kosaKataMateri = {
       arab: "قَرِيْبٌ",
       transliterasi: "Qarībun",
       arti: "Dekat",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/dekattt.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 1/dekattt.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 1/voice dekat.mp3"
     }
   ],
@@ -92,7 +92,7 @@ const kosaKataMateri = {
       arab: "مِهْنَةٌ",
       transliterasi: "Mihnatun",
       arti: "Profesi",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/gambar profesi.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/gambar profesi.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice profesi.mp3"
     },
     {
@@ -100,7 +100,7 @@ const kosaKataMateri = {
       arab: "دَرَسَ - يَدْرُسُ",
       transliterasi: "Darasa - Yadrusu",
       arti: "Belajar",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/belajar.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/belajar.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice belajar.mp3"
     },
     {
@@ -116,7 +116,7 @@ const kosaKataMateri = {
       arab: "مُدَرِّسَةٌ",
       transliterasi: "Mudarrisatun",
       arti: "Guru Perempuan",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/guru.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/guru.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice guru perempuan.mp3"
     },
     {
@@ -124,7 +124,7 @@ const kosaKataMateri = {
       arab: "طَبَّاخَةٌ",
       transliterasi: "Thabbākhatun",
       arti: "Koki Perempuan",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/koki.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/koki.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice koki perempuan.mp3"
     },
     {
@@ -132,7 +132,7 @@ const kosaKataMateri = {
       arab: "طَبَخَ - يَطْبُخُ",
       transliterasi: "Tabakha - Yatbukhu",
       arti: "Memasak",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/memasak.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/memasak.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice memasak.mp3"
     },
     {
@@ -140,7 +140,7 @@ const kosaKataMateri = {
       arab: "سَاعَدَ - يُسَاعِدُ",
       transliterasi: "Sā‘ada - Yusā‘idu",
       arti: "Membantu",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/membantu.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/membantu.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice membantu.mp3"
     },
     {
@@ -148,7 +148,7 @@ const kosaKataMateri = {
       arab: "زَرَعَ - يَزْرَعُ",
       transliterasi: "Zara‘a - Yazra‘u",
       arti: "Menanam",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menanam.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menanam.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice menanam.mp3"
     },
     {
@@ -164,7 +164,7 @@ const kosaKataMateri = {
       arab: "عَالَجَ - يُعَالِجُ",
       transliterasi: "‘Ālaja - Yu‘āliju",
       arti: "Mengobati",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/mengobati.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/mengobati.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice mengobati.mp3"
     },
     {
@@ -172,7 +172,7 @@ const kosaKataMateri = {
       arab: "خَيَّطَ - يُخَيِّطُ",
       transliterasi: "Khayyatha - Yukhayyithu",
       arti: "Menjahit",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menjahit.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menjahit.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice menjahit.mp3"
     },
     {
@@ -180,7 +180,7 @@ const kosaKataMateri = {
       arab: "بَاعَ - يَبِيْعُ",
       transliterasi: "Bā‘a - Yabī‘u",
       arti: "Menjual",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menjual.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/menjual.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice menjual.mp3"
     },
     {
@@ -188,7 +188,7 @@ const kosaKataMateri = {
       arab: "تَاجِرٌ",
       transliterasi: "Tājirun",
       arti: "Pedagang",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/pedagang.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/pedagang.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice pedagang.mp3"
     },
     {
@@ -196,7 +196,7 @@ const kosaKataMateri = {
       arab: "خَيَّاطَةٌ",
       transliterasi: "Khayyāthatun",
       arti: "Penjahit Perempuan",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/penjahit.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/penjahit.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice penjahit pr.mp3"
     },
     {
@@ -212,7 +212,7 @@ const kosaKataMateri = {
       arab: "فَلَّاحٌ",
       transliterasi: "Fallāhun",
       arti: "Petani",
-      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/petani.jpg",
+      gambar: "../../MEDIA KOMIK/KOMIK BAB 2/petani.webp",
       audio: "../../MEDIA KOMIK/KOMIK BAB 2/voice petani.mp3"
     }
   ],
@@ -332,241 +332,394 @@ const videoMateri = [
   }
 ];
 
-// 3. Soal Kuis Pilihan Ganda (PG)
+// 3. Soal Kuis Pilihan Ganda (PG) - Per Bab (Bab 1: 10 Soal, Bab 2: 10 Soal, Bab 3: 10 Soal)
 const kuisPG = [
+    // =============================================
+    // BAB 1: الْعُنْوَانُ (Soal 1 - 10)
+    // =============================================
     {
         id: 1,
-        soal: "مَا عُنْوَانُ بَيْتِ نَجِيْبٍ؟",
+        bab: 1,
+        soal: "مَا مَعْنَى كَلِمَةِ \"العُنْوَانُ\"؟",
         pilihan: [
-            "فِي شَارِعِ سُوْدِرْمَانَ (Jl. Sudirman)",
-            "فِي شَارِعِ وِجَايَا كُسُوْمَا (Jl. Wijaya Kusuma)",
-            "فِي شَارِعِ وِجَايَنْتُوْ (Jl. Wijayanto)",
-            "فِي شَارِعِ أَحْمَدَ يَانِي (Jl. Ahmad Yani)"
-        ],
-        correctIndex: 1
-    },
-    {
-        id: 2,
-        soal: "أَيْنَ يَعْمَلُ الطَّبِيْبُ؟",
-        pilihan: [
-            "فِي الْمُسْتَشْفَى",
-            "فِي السُّوْقِ",
-            "فِي الْمَدْرَسَةِ",
-            "فِي الْمَطْعَمِ"
+            "Alamat",
+            "Profesi",
+            "Pedagang",
+            "Rumah"
         ],
         correctIndex: 0
     },
     {
-        id: 3,
-        soal: "مَنْ يَبِيْعُ السِّلَعَ فِي السُّوْقِ؟",
+        id: 2,
+        bab: 1,
+        soal: "أَيْنَ عُنْوَانُ بَيْتِ نَجِيْبٍ؟",
         pilihan: [
-            "الطَّبِيْبُ",
-            "الْفَلَّاحُ",
-            "التَّاجِرُ",
-            "الْمُدَرِّسُ"
-        ],
-        correctIndex: 2
-    },
-    {
-        id: 4,
-        soal: "مَا مَعْنَى هٰذِهِ الصُّورَةِ؟",
-        pilihan: [
-            "الْمَدْرَسَةُ",
-            "السُّوْقُ",
-            "الْمُسْتَشْفَى",
-            "الْمَسْجِدُ"
-        ],
-        correctIndex: 3,
-        gambar: "../../Public/Image/image1.webp"
-    },
-    {
-        id: 5,
-        soal: "مَا مِهْنَةُ هٰذِهِ الصُّورَة ؟",
-        pilihan: [
-            "طَبِيْبٌ",
-            "تَاجِرٌ",
-            "فَلَّاحٌ",
-            "شُرْطِيٌّ"
-        ],
-        correctIndex: 0,
-        gambar: "../../Public/Image/image2.webp"
-    },
-    {
-        id: 6,
-        soal: "مَاذَا تُعَلِّمُ الْمُدَرِّسَةُ؟",
-        pilihan: [
-            "اللُّغَةَ الإِنْدُونِيْسِيَّةَ",
-            "اللُّغَةَ الْعَرَبِيَّةَ",
-            "الرِّيَاضِيَّاتِ",
-            "الْعُلُومَ"
-        ],
-        correctIndex: 1
-    },
-    {
-        id: 7,
-        soal: "مَا أَمَلُ فَوْزَانَ فِي الْمُسْتَقْبَلِ؟",
-        pilihan: [
-            "مُهَنْدِسًا",
-            "كَاتِبًا",
-            "شُرْطِيًّا",
-            "طَبِيْبًا"
+            "فِيْ شَارِعِ سُوْدِرْمَانَ",
+            "فِيْ شَارِعِ وِجَايَنْتُوْ",
+            "فِيْ شَارِعِ أَحْمَدْ يَانِي",
+            "فِيْ شَارِعِ وِجَايَا كُسُوْمَا"
         ],
         correctIndex: 3
     },
     {
-        id: 8,
-        soal: "مَا أَمَلُ حَنِيْفٍ فِي الْمُسْتَقْبَلِ؟",
+        id: 3,
+        bab: 1,
+        soal: "مَا اسْمُ قَرْيَةِ نَجِيْبٍ؟",
         pilihan: [
-            "كَاتِبًا",
-            "طَبِيْبًا",
-            "مُهَنْدِسًا",
-            "جُنْدِيًّا"
+            "جَاتِيْ سُوْبُوْ",
+            "سُوْدِرْمَانَ",
+            "نَحجَاوِي",
+            "أَحْمَدْ يَانِي"
         ],
         correctIndex: 0
     },
     {
-        id: 9,
-        soal: "مَا مِهْنَةُ هٰذَا الرَّجُلِ؟",
+        id: 4,
+        bab: 1,
+        soal: "مَا أَمَامَ بَيْتِ نَجِيْبِِ؟",
         pilihan: [
-            "فَلَّاحٌ",
-            "تَاجِرٌ",
-            "مُهَنْدِسٌ",
-            "جُنْدِيٌّ"
+            "مُسْتَشْفَى",
+            "مَدْرَسَةٌ اِبْتِدَائِيَّةٌ",
+            "سُوْقٌ",
+            "مَسْجِدٌ"
         ],
-        correctIndex: 0,
-        gambar: "../../Public/Image/image3.webp"
+        correctIndex: 1,
+        gambar: "../../Public/Image/quiz/bab1/img_bab1_rId5.jpeg"
+    },
+    {
+        id: 5,
+        bab: 1,
+        soal: "أَيْنَ عُنْوَانُ بَيْتِ جَدِّ نَجِيْبٍ؟",
+        pilihan: [
+            "شَارِعِ وِجَايَا كُسُوْمَا",
+            "شَارِعِ وِجَايَنْتُوْ",
+            "شَارِعِ سُوْدِرْمَانَ",
+            "شَارِعِ مَالِيُوْبُوْرُوْ"
+        ],
+        correctIndex: 2
+    },
+    {
+        id: 6,
+        bab: 1,
+        soal: "مَا حَوْلَ بَيْتِ جَدِّ نَجِيْبِِ؟",
+        pilihan: [
+            "مَدْرَسَةٌ وَاسِعَةٌ",
+            "دُكَّانٌ وَاسِعٌ",
+            "مَسْجِدٌ كَبِيْرٌ",
+            "مَزْرَعَةٌ وَاسِعَةٌ"
+        ],
+        correctIndex: 3,
+        gambar: "../../Public/Image/quiz/bab1/img_bab1_rId6.jpeg"
+    },
+    {
+        id: 7,
+        bab: 1,
+        soal: "Apa Arti Dari Kalimat di Bawah ini?\nفِيْ قَرْيَةِ جَدِّهِ نَهْرٌ طَوِيْلٌ",
+        pilihan: [
+            "Di desa kakeknya terdapat sungai yang panjang",
+            "Di desa kakeknya terdapat gunung yang tinggi",
+            "Di desa ibunya terdapat warung yang luas",
+            "Di desa ayahnya ada Sungai yang panjang"
+        ],
+        correctIndex: 0
+    },
+    {
+        id: 8,
+        bab: 1,
+        soal: "مَا هٰذَا؟ هٰذَا.......",
+        pilihan: [
+            "مَزْرَعَةٌ وَاسِعَةٌ",
+            "نَهْرٌ طَوِيْلٌ",
+            "بُسْتَانٌ طَوِيْلٌ",
+            "بَيْتٌ كَبِيْرٌ"
+        ],
+        correctIndex: 1,
+        gambar: "../../Public/Image/quiz/bab1/img_bab1_rId7.jpeg"
+    },
+    {
+        id: 9,
+        bab: 1,
+        soal: "مَا جَانِبَ بَيْتِ نَجِيْبِِ؟",
+        pilihan: [
+            "بُسْتَانٌ كَبِيْرٌ",
+            "مَسْجِدٌ كَبِيْرٌ",
+            "قَرْيَةٌ صَغِيْرَةٌ",
+            "مَدْرَسَةٌ وَاسِعَةٌ"
+        ],
+        correctIndex: 1,
+        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks di bawah ini, kemudian jawablah pertanyaan nomor 9 & 10 dengan tepat sesuai isi teks!</i><br><br><span class='arabic-context-text'>هٰذَا نَجِيْبٌ. لَهُ بَيْتٌ. لِبَيْتِهِ عُنْوَانٌ. عُنْوَانُ بَيْتِهِ فِيْ شَارِعِ وِجَايَا كُسُوْمَا (Wijaya Kusuma) وَسَطَ الْقَرْيَةِ. اِسْمُ قَرْيَتِهِ جَاتِيْ سُوْبُوْ (Jati Sobo). جَانِبَ بَيْتِهِ مَسْجِدٌ كَبِيْرٌ. أَمَامَ بَيْتِهِ مَدْرَسَةٌ إِبْتِدَائِيَّةٌ. بَيْتُهُ قَرِيْبٌ مِنَ الدُّكَّانِ.</span>"
     },
     {
         id: 10,
-        soal: "مَا مَعْنَى هٰذِهِ الصُّورَةِ؟",
+        bab: 1,
+        soal: "بَيْتُ نَجِيْبِِ قَرِيْبٌ مِنَ .......",
         pilihan: [
-            "مُهَنْدِسٌ",
-            "طَبِيْبٌ",
-            "شُرْطِيٌّ",
-            "كَاتِبٌ"
+            "الْفَصْلِ",
+            "الْمَسْجِدِ",
+            "الدُّكَّانِ",
+            "النَّهْرِ"
         ],
         correctIndex: 2,
-        gambar: "../../Public/Image/image4.webp"
+        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks di bawah ini, kemudian jawablah pertanyaan nomor 9 & 10 dengan tepat sesuai isi teks!</i><br><br><span class='arabic-context-text'>هٰذَا نَجِيْبٌ. لَهُ بَيْتٌ. لِبَيْتِهِ عُنْوَانٌ. عُنْوَانُ بَيْتِهِ فِيْ شَارِعِ وِجَايَا كُسُوْمَا (Wijaya Kusuma) وَسَطَ الْقَرْيَةِ. اِسْمُ قَرْيَتِهِ جَاتِيْ سُوْبُوْ (Jati Sobo). جَانِبَ بَيْتِهِ مَسْجِدٌ كَبِيْرٌ. أَمَامَ بَيْتِهِ مَدْرَسَةٌ إِبْتِدَائِيَّةٌ. بَيْتُهُ قَرِيْبٌ مِنَ الدُّكَّانِ.</span>"
     },
+
+    // =============================================
+    // BAB 2: الْمِهْنَةُ (Soal 11 - 20)
+    // =============================================
     {
         id: 11,
-        soal: "أَيْنَ عُنْوَانُ بَيْتِ نَجِيْبٍ؟",
+        bab: 2,
+        soal: "مَا مَعْنَى كَلِمَةِ \"الْمِهْنَةُ\"؟",
         pilihan: [
-            "فِي شَارِعِ وِجَايَا كُسُوْمَا",
-            "فِي شَارِعِ وِجَايَنْتُوْ",
-            "فِي شَارِعِ سُوْدِرْمَانَ",
-            "فِي شَارِعِ أَحْمَدَ يَانِي"
+            "Alamat",
+            "Profesi",
+            "Pedagang",
+            "Rumah"
         ],
-        correctIndex: 0,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>هٰذَا نَجِيْبٌ. لَهُ بَيْتٌ. عُنْوَانُ بَيْتِهِ فِي شَارِعِ وِجَايَا كُسُوْمَا. جَانِبَ بَيْتِهِ مَسْجِدٌ كَبِيْرٌ، وَأَمَامَ بَيْتِهِ مَدْرَسَةٌ إِبْتِدَائِيَّةٌ. بَيْتُهُ قَرِيْبٌ مِنَ الدُّكَّانِ.</span>"
+        correctIndex: 1
     },
     {
         id: 12,
-        soal: "مَاذَا يُوْجَدُ جَانِبَ بَيْتِ نَجِيْبٍ؟",
+        bab: 2,
+        soal: "مَنْ يُعَالِجُ الْمَرْضَى فِي الْمُسْتَشْفَى؟",
         pilihan: [
-            "سُوْقٌ",
-            "مَدْرَسَةٌ",
-            "نَهْرٌ",
-            "مَسْجِدٌ كَبِيْرٌ"
+            "الْمُدَرِّسُ",
+            "الطَّبِيْبُ",
+            "التَّاجِرُ",
+            "الشُّرْطِيُّ"
         ],
-        correctIndex: 3,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>هٰذَا نَجِيْبٌ. لَهُ بَيْتٌ. عُنْوَانُ بَيْتِهِ فِي شَارِعِ وِجَايَا كُسُوْمَا. جَانِبَ بَيْتِهِ مَسْجِدٌ كَبِيْرٌ، وَأَمَامَ بَيْتِهِ مَدْرَسَةٌ إِبْتِدَائِيَّةٌ. بَيْتُهُ قَرِيْبٌ مِنَ الدُّكَّانِ.</span>"
+        correctIndex: 1,
+        gambar: "../../Public/Image/quiz/bab2/img_bab2_rId7.jpeg"
     },
     {
         id: 13,
-        soal: "مَاذَا يُوْجَدُ أَمَامَ بَيْتِ نَجِيْبٍ؟",
+        bab: 2,
+        soal: "Apa Arti Dari Kalimat di Bawah ini?\nوَهٰذِهِ أُمِّيْ هِيَ طَبَّاخَةٌ",
         pilihan: [
-            "دُكَّانٌ",
-            "مَدْرَسَةٌ إِبْتِدَائِيَّةٌ",
-            "مَزْرَعَةٌ",
-            "مُسْتَشْفًى"
+            "Halaman Kebunku Sangat Hijau",
+            "Ini ayahku seorang arsitek",
+            "Dan ini ibuku, dia adalah koki",
+            "Ibuku seorang guru"
         ],
-        correctIndex: 1,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>هٰذَا نَجِيْبٌ. لَهُ بَيْتٌ. عُنْوَانُ بَيْتِهِ فِي شَارِعِ وِجَايَا كُسُوْمَا. جَانِبَ بَيْتِهِ مَسْجِدٌ كَبِيْرٌ، وَأَمَامَ بَيْتِهِ مَدْرَسَةٌ إِبْتِدَائِيَّةٌ. بَيْتُهُ قَرِيْبٌ مِنَ الدُّكَّانِ.</span>"
+        correctIndex: 2
     },
     {
         id: 14,
-        soal: "مَا مِهْنَةُ الأَبِ؟",
+        bab: 2,
+        soal: "مَنْ هُوَ؟ هُوَ.......",
         pilihan: [
             "تَاجِرٌ",
-            "طَبِيْبٌ",
             "مُدَرِّسٌ",
-            "فَلَّاحٌ"
+            "مُهَنْدِسٌ",
+            "شُرْطِيٌّ"
         ],
-        correctIndex: 1,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>هٰذَا أَبِيْ. هُوَ طَبِيْبٌ. يُعَالِجُ الْمَرْضَى فِي الْمُسْتَشْفَى. وَهٰذِهِ أُمِّيْ طَبَّاخَةٌ. تَطْبَخُ الأَطْعِمَةَ فِي الْمَطْعَمِ. وَأُخْتِيْ الْكَبِيْرَةُ مُمَرِّضَةٌ، تُسَاعِدُ الطَّبِيْبَ فِي الْمُسْتَشْفَى.</span>"
+        correctIndex: 0,
+        gambar: "../../Public/Image/quiz/bab2/img_bab2_rId8.jpeg"
     },
     {
         id: 15,
-        soal: "أَيْنَ تَعْمَلُ الأُمُّ؟",
+        bab: 2,
+        soal: "مَنْ يُعَلِّمُ التَّلَامِيذَ فِي الْمَدْرَسَةِ؟",
         pilihan: [
-            "فِي الْمَدْرَسَةِ",
-            "فِي السُّوْقِ",
-            "فِي الْمَطْعَمِ",
-            "فِي الْمَزْرَعَةِ"
+            "الطَّبِيبُ",
+            "الْمُعَلِّمُ",
+            "التَّاجِرُ",
+            "الْفَلَّاحُ"
         ],
-        correctIndex: 2,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>هٰذَا أَبِيْ. هُوَ طَبِيْبٌ. يُعَالِجُ الْمَرْضَى فِي الْمُسْتَشْفَى. وَهٰذِهِ أُمِّيْ طَبَّاخَةٌ. تَطْبَخُ الأَطْعِمَةَ فِي الْمَطْعَمِ. وَأُخْتِيْ الْكَبِيْرَةُ مُمَرِّضَةٌ، تُسَاعِدُ الطَّبِيْبَ فِي الْمُسْتَشْفَى.</span>"
+        correctIndex: 1,
+        contextText: "<b>اِقْرَأِ الْجُمْلَةَ الآتِيَةَ ثُمَّ أَجِبْ عَنِ السُّؤَالِ.</b><br><i>Bacalah kalimat berikut, kemudian pilihlah jawaban yang benar!</i><br><br><span class='arabic-context-text'>الْمُعَلِّمُ يُعَلِّمُ التَّلَامِيذَ فِي الْمَدْرَسَةِ.</span>"
     },
     {
         id: 16,
-        soal: "مَنْ تُسَاعِدُ الطَّبِيْبَ؟",
+        bab: 2,
+        soal: "مَاذَا يَعْمَلُ هٰذَا الرَّجُلُ؟",
         pilihan: [
-            "الأُمُّ",
-            "مُمِرِّضَةٌ",
-            "الْجَدَّةُ",
-            "الْعَمَّةُ"
+            "يُعَالِجُ الْمَرْضَى",
+            "يَبِيعُ السِّلَعَ",
+            "يُعَلِّمُ التَّلَامِيذَ",
+            "يَزْرَعُ الأَرُزَّ فِي الْمَزْرَعَةِ"
         ],
-        correctIndex: 1,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>هٰذَا أَبِيْ. هُوَ طَبِيْبٌ. يُعَالِجُ الْمَرْضَى فِي الْمُسْتَشْفَى. وَهٰذِهِ أُمِّيْ طَبَّاخَةٌ. تَطْبَخُ الأَطْعِمَةَ فِي الْمَطْعَمِ. وَأُخْتِيْ الْكَبِيْرَةُ مُمَرِّضَةٌ، تُسَاعِدُ الطَّبِيْبَ فِي الْمُسْتَشْفَى.</span>"
+        correctIndex: 3,
+        gambar: "../../Public/Image/quiz/bab2/img_bab2_rId9.jpg"
     },
     {
         id: 17,
-        soal: "مَاذَا تَعَلَّمَ فَوْزَانُ فِي الْفَصْلِ؟",
+        bab: 2,
+        soal: "وَهٰذَا عَمِّيْ. هُوَ تَاجِرٌ. هُوَ يَبِيْعُ …..... فِي السُّوْقِ",
         pilihan: [
-            "أَنْوَاعَ الْأَمَلِ فِي الْمُسْتَقْبَلِ",
-            "أَنْوَاعَ الْحَيَوَانَاتِ",
-            "أَنْوَاعَ الْفَوَاكِهِ",
-            "أَنْوَاعَ الْمِهَنِ"
+            "بَصَلٌ أَحْمَرُ",
+            "فِلْفِلٌ",
+            "الْأَرُزَّ",
+            "السِّلْعَةَ"
         ],
-        correctIndex: 0,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>قَالَ حَنِيْفٌ: مَاذَا تَعَلَّمْتَ فِي الْفَصْلِ؟ قَالَ فَوْزَانُ: تَعَلَّمْتُ أَنْوَاعَ الْأَمَلِ فِي الْمُسْتَقْبَلِ. أُرِيْدُ أَنْ أَكُوْنَ طَبِيْبًا. فَقَالَ حَنِيْفٌ: أَمَّا أَنَا فَأُرِيْدُ أَنْ أَكُوْنَ كَاتِبًا.</span>"
+        correctIndex: 3,
+        gambar: "../../Public/Image/quiz/bab2/img_bab2_rId10.jpeg"
     },
     {
         id: 18,
-        soal: "مَاذَا أَمَلُ فَوْزَانُ فِيْ الْمُسْتَقْبَلِ؟",
+        bab: 2,
+        soal: "وَهٰذِهِ أُمِّيْ. هِيَ طَبَّاخَةٌ. هِيَ تَطْبَخُ الأَطْعِمَةَ فِي……..",
         pilihan: [
-            "مُهَنْدِسًا",
-            "طَبِيْبًا",
-            "جُنْدِيًّا",
-            "تَاجِرًا"
+            "السُّوْقِ",
+            "الْمَطْعَمِ",
+            "الْمُسْتَشْفَى",
+            "الْمَدْرَسَةِ"
         ],
-        correctIndex: 1,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>قَالَ حَنِيْفٌ: مَاذَا تَعَلَّمْتَ فِي الْفَصْلِ؟ قَالَ فَوْزَانُ: تَعَلَّمْتُ أَنْوَاعَ الْأَمَلِ فِي الْمُسْتَقْبَلِ. أُرِيْدُ أَنْ أَكُوْنَ طَبِيْبًا. فَقَالَ حَنِيْفٌ: أَمَّا أَنَا فَأُرِيْدُ أَنْ أَكُوْنَ كَاتِبًا.</span>"
+        correctIndex: 1
     },
     {
         id: 19,
-        soal: "مَاذَا يُرِيْدُ حَنِيْفٌ أَنْ يَكُوْنَ؟",
+        bab: 2,
+        soal: "فِي أَيِّ فَصْلٍ تَدْرُسُ نَجِيْبَةُ؟",
         pilihan: [
-            "طَبِيْبًا",
-            "شُرْطِيًّا",
-            "مُهَنْدِسًا",
-            "كَاتِبًا"
+            "فِيْ الْفَصْلِ الْخَامِسِ",
+            "فِيْ الْفَصْلِ الثَّالِثِ",
+            "فِيْ الْفَصْلِ الرَّابِعِ",
+            "فِيْ الْفَصْلِ السَّادِسِ"
         ],
-        correctIndex: 3,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>قَالَ حَنِيْفٌ: مَاذَا تَعَلَّمْتَ فِي الْفَصْلِ؟ قَالَ فَوْزَانُ: تَعَلَّمْتُ أَنْوَاعَ الْأَمَلِ فِي الْمُسْتَقْبَلِ. أُرِيْدُ أَنْ أَكُوْنَ طَبِيْبًا. فَقَالَ حَنِيْفٌ: أَمَّا أَنَا فَأُرِيْدُ أَنْ أَكُوْنَ كَاتِبًا.</span>"
+        correctIndex: 2,
+        contextText: "<b>اِقْرَأِ الْجُمْلَةَ الآتِيَةَ ثُمَّ أَجِبْ عَنِ السُّؤَالِ.</b><br><i>Bacalah Kalimat dibawah ini, kemudian jawablah pertanyaan dengan tepat!</i><br><br><span class='arabic-context-text'>اِسْمِيْ نَجِيْبَةُ. أَنَا تِلْمِيْذَةٌ. أَدْرُسُ فِيْ الْفَصْلِ الرَّابِعِ بِالْمَدْرَسَةِ الإِبْتِدَائِيَّةِ.</span>"
     },
     {
         id: 20,
-        soal: "مَنْ يُرِيْدُ أَنْ يَكُوْنَ طَبِيْبًا؟",
+        bab: 2,
+        soal: "مَاذَا تَعْمَلُ مُمَرِّضَةٌ؟",
         pilihan: [
-            "فَوْزَانُ",
-            "نَجِيْبٌ",
-            "الطَّبِيْبُ",
-            "حَنِيْفٌ"
+            "تَبِيْعُ السِّلْعَةَ فِي السُّوْقِ",
+            "تُسَاعِدُ الطَّبِيْبَ فِي الْمُسْتَشْفَى",
+            "تَدْرُسُ فِي الْمَدْرَسَةِ",
+            "تَطْبَخُ الأَطْعِمَةَ فِي الْمَطْبَخِ"
+        ],
+        correctIndex: 1
+    },
+
+    // =============================================
+    // BAB 3: أَمَلِيْ (Soal 21 - 30)
+    // =============================================
+    {
+        id: 21,
+        bab: 3,
+        soal: "مَا مَعْنَى كَلِمَةِ \"أَمَلِيْ\"؟",
+        pilihan: [
+            "Alamat",
+            "Profesi",
+            "Cita-citaku",
+            "Sekolahku"
+        ],
+        correctIndex: 2
+    },
+    {
+        id: 22,
+        bab: 3,
+        soal: "مَاذَا تَعَلَّمَ فَوْزَانُ فِي الْفَصْلِ؟",
+        pilihan: [
+            "أَنْوَاعَ الْأَمَلِ",
+            "أَنْوَاعَ الْحَيَوَانِ",
+            "أَنْوَاعَ النَّبَاتَاتِ",
+            "أَنْوَاعَ الْأَلْوَانِ"
+        ],
+        correctIndex: 0
+    },
+    {
+        id: 23,
+        bab: 3,
+        soal: "Apa Arti Dari Kalimat di Bawah ini?\nهَلْ لَكَ أَمَلٌ فِيْ الْمُسْتَقْبَلِ، يَا فَوْزَانُ؟",
+        pilihan: [
+            "Apakah kamu mempunyai cita-cita di masa depan Fauzan?",
+            "Apakah ibumu seorang dokter gigi, Fauzan?",
+            "Dimanakah Alamat rumah mu, hanif?",
+            "Apakah kamu mempunyai kakak Perempuan, Fauzan?"
+        ],
+        correctIndex: 0
+    },
+    {
+        id: 24,
+        bab: 3,
+        soal: "مَنْ هُوَ؟ هُوَ.......",
+        pilihan: [
+            "تَاجِرٌ",
+            "مُدَرِّسٌ",
+            "مُهَنْدِسٌ",
+            "شُرْطِيٌّ"
+        ],
+        correctIndex: 2,
+        gambar: "../../Public/Image/quiz/bab3/img_bab3_rId7.jpeg"
+    },
+    {
+        id: 25,
+        bab: 3,
+        soal: "مَا أَمَلُ فَوْزَانَ فِي الْمُسْتَقْبَلِ؟",
+        pilihan: [
+            "تَاجِرٌ",
+            "مُدَرِّسٌ",
+            "فَلاَّحٌ",
+            "طَبِيْبٌ"
+        ],
+        correctIndex: 3,
+        contextText: "<b>اِقْرَأِ الْحِوَارَ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ (25-26).</b><br><i>Bacalah percakapan berikut untuk soal nomor 25 & 26, kemudian pilihlah jawaban yang benar!</i><br><br><span class='arabic-context-text'>حَنِيْفٌ: مَا أَمَلُكَ فِيْ الْمُسْتَقْبَلِ؟<br>فَوْزَانُ: أُرِيْدُ أَنْ أَكُوْنَ طَبِيْبًا. وَمَا أَمَلُكَ، يَا حَنِيْفُ؟<br>حَنِيْفٌ: أُرِيْدُ أَنْ أَكُوْنَ كَاتِبًا</span>"
+    },
+    {
+        id: 26,
+        bab: 3,
+        soal: "مَا أَمَلُ حَنِيْفٍ فِي الْمُسْتَقْبَلِ؟",
+        pilihan: [
+            "جُنْدِيٌّ",
+            "كَاتِبٌ",
+            "طَبِيْبٌ",
+            "فَلاَّحٌ"
+        ],
+        correctIndex: 1,
+        contextText: "<b>اِقْرَأِ الْحِوَارَ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ (25-26).</b><br><i>Bacalah percakapan berikut untuk soal nomor 25 & 26, kemudian pilihlah jawaban yang benar!</i><br><br><span class='arabic-context-text'>حَنِيْفٌ: مَا أَمَلُكَ فِيْ الْمُسْتَقْبَلِ؟<br>فَوْزَانُ: أُرِيْدُ أَنْ أَكُوْنَ طَبِيْبًا. وَمَا أَمَلُكَ، يَا حَنِيْفُ؟<br>حَنِيْفٌ: أُرِيْدُ أَنْ أَكُوْنَ كَاتِبًا</span>"
+    },
+    {
+        id: 27,
+        bab: 3,
+        soal: "مَا أَمَلُ هٰذِهِ الصُّوْرَةِ؟",
+        pilihan: [
+            "مُهَنْدِسٌ",
+            "شُرْطِيٌّ",
+            "طَبِيْبٌ",
+            "كَاتِبٌ"
+        ],
+        correctIndex: 1,
+        gambar: "../../Public/Image/quiz/bab3/img_bab3_rId8.png"
+    },
+    {
+        id: 28,
+        bab: 3,
+        soal: "أَنْوَاعُ الْأَمَلِ هِيَ ……. وَغَيْرُهَا",
+        pilihan: [
+            "قَلَمٌ كِتَابٌ كُرْسِيٌّ",
+            "أَحْمَرٌ أَسْفَرٌ أَخْضَرٌ",
+            "مُهَنْدِسٌ وَشُرْطِيٌّ وَجُنْدِيٌّ",
+            "عِنَبٌ تُفَّاحَةٌ بُرْتُقَالٌ"
+        ],
+        correctIndex: 2
+    },
+    {
+        id: 29,
+        bab: 3,
+        soal: "مَا أَمَلُ هٰذِهِ الصُّوْرَةِ؟",
+        pilihan: [
+            "جُنْدِيٌّ",
+            "مُدَرِّسٌ",
+            "تَاجِرٌ",
+            "شُرْطِيٌّ"
         ],
         correctIndex: 0,
-        contextText: "<b>اِقْرَأِ النَّصَّ الآتِيَ ثُمَّ أَجِبْ عَنِ الأَسْئِلَةِ.</b><br><i>Bacalah Teks Di bawah ini kemudian jawablah soal dengan tepat!</i><br><br><span class='arabic-context-text'>قَالَ حَنِيْفٌ: مَاذَا تَعَلَّمْتَ فِي الْفَصْلِ؟ قَالَ فَوْزَانُ: تَعَلَّمْتُ أَنْوَاعَ الْأَمَلِ فِي الْمُسْتَقْبَلِ. أُرِيْدُ أَنْ أَكُوْنَ طَبِيْبًا. فَقَالَ حَنِيْفٌ: أَمَّا أَنَا فَأُرِيْدُ أَنْ أَكُوْنَ كَاتِبًا.</span>"
+        gambar: "../../Public/Image/quiz/bab3/img_bab3_rId9.jpeg"
+    },
+    {
+        id: 30,
+        bab: 3,
+        soal: "مَنْ يَتَحَدَّثُ فِي الْحِوَارِ؟",
+        pilihan: [
+            "نَجِيْبٌ وَخَدِيْجَةُ",
+            "حَنِيْفٌ وَفَوْزَانُ",
+            "مُحَمَّدٌ وَعَلِيٌّ",
+            "خَالِدٌ وَعُمَرُ"
+        ],
+        correctIndex: 1
     }
 ];
 

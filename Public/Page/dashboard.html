@@ -70,10 +70,7 @@
     <!-- Main Container -->
     <main class="landing-container">
 
-        <!-- Top Badge -->
-        <div class="top-badge-container">
-            <span class="top-badge">Kelas IV MI • Hub Utama</span>
-        </div>
+
 
         <!-- Hero Header -->
         <div class="hero-header">
@@ -83,57 +80,163 @@
                     Digital</span>!</p>
         </div>
 
-        <!-- Navigation Menu Section -->
-        <div class="menu-vertical-section">
-            <div class="menu-vertical-list">
+        <!-- Bab Selection Section -->
+        <div class="bab-selection-section">
+            <h2 class="bab-section-title">Pilih Bab Pembelajaran</h2>
+            <div class="bab-list">
 
-                <a href="kosa_kata.html" class="menu-vertical-item glass-card">
-                    <div class="item-left-icon icon-teal">
-                        <span class="menu-icon-emoji">📖</span>
+                <!-- BAB 1 -->
+                <div class="bab-card glass-card active" id="bab-card-1">
+                    <div class="bab-card-image-container">
+                        <img src="../Image/ICON BAB 1.webp" alt="Ilustrasi Bab 1 - Alamat" class="bab-card-image" loading="lazy" decoding="async">
                     </div>
-                    <div class="item-details">
-                        <h3 class="item-title">Kosa Kata</h3>
-                        <p class="item-desc">Pelajari kosakata Bahasa Arab dengan kartu kata interaktif.</p>
+                    <button class="bab-card-header" aria-expanded="true" onclick="toggleBab('bab-card-1')">
+                        <div class="bab-badge bg-blue">BAB 1</div>
+                        <div class="bab-chevron">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="bab-suboptions-wrapper">
+                        <div class="bab-suboptions">
+                            <a href="kosa_kata.html?tema=tema1" class="suboption-item icon-teal-soft">
+                                <div class="suboption-left">
+                                    <span class="suboption-emoji">📖</span>
+                                </div>
+                                <div class="suboption-details">
+                                    <h4 class="suboption-title">Kosa Kata & Komik</h4>
+                                    <p class="suboption-desc">Pelajari kosakata dan cerita komik Alamat</p>
+                                </div>
+                                <span class="suboption-arrow">→</span>
+                            </a>
+                            <a href="video.html?bab=1" class="suboption-item icon-pink-soft">
+                                <div class="suboption-left">
+                                    <span class="suboption-emoji">🎬</span>
+                                </div>
+                                <div class="suboption-details">
+                                    <h4 class="suboption-title">Video Animasi</h4>
+                                    <p class="suboption-desc">Tonton video cerita komik bergambar</p>
+                                </div>
+                                <span class="suboption-arrow">→</span>
+                            </a>
+                            <a href="Kuis.html?bab=1" class="suboption-item icon-amber-soft">
+                                <div class="suboption-left">
+                                    <span class="suboption-emoji">✏️</span>
+                                </div>
+                                <div class="suboption-details">
+                                    <h4 class="suboption-title">Kuis & Praktik</h4>
+                                    <p class="suboption-desc">Uji pemahaman & latihan tugas</p>
+                                </div>
+                                <span class="suboption-arrow">→</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="item-chevron">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </div>
-                </a>
+                </div>
 
-                <a href="video.html" class="menu-vertical-item glass-card">
-                    <div class="item-left-icon icon-pink">
-                        <span class="menu-icon-emoji">🎬</span>
+                <!-- BAB 2 -->
+                <div class="bab-card glass-card" id="bab-card-2">
+                    <div class="bab-card-image-container">
+                        <img src="../Image/ICON BAB 2.webp" alt="Ilustrasi Bab 2 - Profesi" class="bab-card-image" loading="lazy" decoding="async">
                     </div>
-                    <div class="item-details">
-                        <h3 class="item-title">Tonton Video</h3>
-                        <p class="item-desc">Tonton video pembelajaran cerita komik Bahasa Arab.</p>
+                    <button class="bab-card-header" aria-expanded="false" onclick="toggleBab('bab-card-2')">
+                        <div class="bab-badge bg-blue">BAB 2</div>
+                        <div class="bab-chevron">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="bab-suboptions-wrapper">
+                        <div class="bab-suboptions">
+                            <a href="kosa_kata.html?tema=tema2" class="suboption-item icon-teal-soft">
+                                <div class="suboption-left">
+                                    <span class="suboption-emoji">📖</span>
+                                </div>
+                                <div class="suboption-details">
+                                    <h4 class="suboption-title">Kosa Kata & Komik</h4>
+                                    <p class="suboption-desc">Pelajari kosakata dan cerita komik Profesi</p>
+                                </div>
+                                <span class="suboption-arrow">→</span>
+                            </a>
+                            <a href="video.html?bab=2" class="suboption-item icon-pink-soft">
+                                <div class="suboption-left">
+                                    <span class="suboption-emoji">🎬</span>
+                                </div>
+                                <div class="suboption-details">
+                                    <h4 class="suboption-title">Video Animasi</h4>
+                                    <p class="suboption-desc">Tonton video cerita komik bergambar</p>
+                                </div>
+                                <span class="suboption-arrow">→</span>
+                            </a>
+                            <a href="Kuis.html?bab=2" class="suboption-item icon-amber-soft">
+                                <div class="suboption-left">
+                                    <span class="suboption-emoji">✏️</span>
+                                </div>
+                                <div class="suboption-details">
+                                    <h4 class="suboption-title">Kuis & Praktik</h4>
+                                    <p class="suboption-desc">Uji pemahaman & latihan tugas</p>
+                                </div>
+                                <span class="suboption-arrow">→</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="item-chevron">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </div>
-                </a>
+                </div>
 
-                <a href="Kuis.html" class="menu-vertical-item glass-card">
-                    <div class="item-left-icon icon-yellow">
-                        <span class="menu-icon-emoji">📝</span>
+                <!-- BAB 3 -->
+                <div class="bab-card glass-card" id="bab-card-3">
+                    <div class="bab-card-image-container">
+                        <img src="../Image/ICON BAB 3.webp" alt="Ilustrasi Bab 3 - Cita-cita" class="bab-card-image" loading="lazy" decoding="async">
                     </div>
-                    <div class="item-details">
-                        <h3 class="item-title">Uji Kemampuan</h3>
-                        <p class="item-desc">Uji pemahamanmu lewat kuis seru Pilihan Ganda, Essay, dan Praktik.</p>
+                    <button class="bab-card-header" aria-expanded="false" onclick="toggleBab('bab-card-3')">
+                        <div class="bab-badge bg-blue">BAB 3</div>
+                        <div class="bab-chevron">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="bab-suboptions-wrapper">
+                        <div class="bab-suboptions">
+                            <a href="kosa_kata.html?tema=tema3" class="suboption-item icon-teal-soft">
+                                <div class="suboption-left">
+                                    <span class="suboption-emoji">📖</span>
+                                </div>
+                                <div class="suboption-details">
+                                    <h4 class="suboption-title">Kosa Kata & Komik</h4>
+                                    <p class="suboption-desc">Pelajari kosakata dan cerita komik Cita-Cita</p>
+                                </div>
+                                <div class="suboption-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </div>
+                            </a>
+                            <a href="video.html?bab=3" class="suboption-item icon-pink-soft">
+                                <div class="suboption-left">
+                                    <span class="suboption-emoji">🎬</span>
+                                </div>
+                                <div class="suboption-details">
+                                    <h4 class="suboption-title">Tonton Video</h4>
+                                    <p class="suboption-desc">Video animasi cerita komik Cita-Cita</p>
+                                </div>
+                                <div class="suboption-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </div>
+                            </a>
+                            <a href="Kuis.html?bab=3" class="suboption-item icon-yellow-soft">
+                                <div class="suboption-left">
+                                    <span class="suboption-emoji">📝</span>
+                                </div>
+                                <div class="suboption-details">
+                                    <h4 class="suboption-title">Uji Kemampuan</h4>
+                                    <p class="suboption-desc">Latihan & kuis interaktif Bab 3</p>
+                                </div>
+                                <div class="suboption-arrow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="item-chevron">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </div>
-                </a>
+                </div>
 
             </div>
         </div>
@@ -161,139 +264,138 @@
             </div>
         </div>
 
-        <!-- FAQ Section -->
+        <!-- FAQ Section (Single Accordion Button) -->
         <div class="faq-section animate-fade-in-up" style="animation-delay: 0.1s;">
-            <h3 class="faq-section-title">Pertanyaan yang Sering Diajukan (FAQ)</h3>
-            <div class="faq-list">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item glass-card">
-                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-1">
-                        <span class="faq-question">1. Apa itu QOMAR?</span>
-                        <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer-wrapper" id="faq-answer-1" role="region" aria-label="Jawaban FAQ 1">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-inner">
-                                <p><strong>QOMAR</strong> (Qira'atu Komik Lughatul Arabiyah) adalah platform pembelajaran berbasis web yang menggunakan komik digital interaktif untuk membantu siswa meningkatkan keterampilan membaca (<span lang="ar" class="arabic-text">مهارة القراءة</span>) bahasa Arab melalui cerita bergambar, audio, dan kuis interaktif.</p>
-                            </div>
-                        </div>
+            <div class="faq-main-card glass-card" id="faq-main-card">
+                <button class="faq-main-trigger" id="faq-main-trigger" aria-expanded="false" aria-controls="faq-main-content">
+                    <div class="faq-main-title-group">
+                        <span class="faq-main-icon">❓</span>
+                        <h3 class="faq-section-title">Pertanyaan yang Sering Diajukan (FAQ)</h3>
                     </div>
-                </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="faq-item glass-card">
-                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-2">
-                        <span class="faq-question">2. Bagaimana cara menggunakan QOMAR?</span>
-                        <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer-wrapper" id="faq-answer-2" role="region" aria-label="Jawaban FAQ 2">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-inner">
-                                <p>Buka platform melalui browser, pilih materi yang ingin dipelajari, baca komik sesuai urutan panel, dengarkan audio jika diperlukan, kemudian kerjakan latihan atau kuis pada akhir pembelajaran.</p>
-                            </div>
-                        </div>
+                    <div class="faq-main-chevron">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                     </div>
-                </div>
+                </button>
+                <div class="faq-main-content-wrapper" id="faq-main-content" role="region" aria-label="Daftar Pertanyaan FAQ">
+                    <div class="faq-main-content-inner">
+                        <div class="faq-grid">
 
-                <!-- FAQ Item 3 -->
-                <div class="faq-item glass-card">
-                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-3">
-                        <span class="faq-question">3. Apa fungsi tombol audio pada setiap kosakata?</span>
-                        <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer-wrapper" id="faq-answer-3" role="region" aria-label="Jawaban FAQ 3">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-inner">
-                                <p>Tombol audio digunakan untuk membantu siswa mendengarkan pelafalan kosakata, kalimat, dan dialog bahasa Arab yang benar sehingga memudahkan dalam membaca dan memahami materi.</p>
+                            <!-- FAQ Item 1 -->
+                            <div class="faq-item">
+                                <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-1">
+                                    <span class="faq-question">Cara pakai QOMAR?</span>
+                                    <span class="faq-icon-wrapper">
+                                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="faq-answer-wrapper" id="faq-answer-1" role="region" aria-label="Jawaban FAQ 1">
+                                    <div class="faq-answer-content">
+                                        <div class="faq-answer-inner">
+                                            <p>Pilih Bab pembelajaran, pelajari kosakata/komik, tonton video, lalu kerjakan kuis evaluasi.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- FAQ Item 4 -->
-                <div class="faq-item glass-card">
-                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-4">
-                        <span class="faq-question">4. Apakah QOMAR dapat diakses melalui smartphone?</span>
-                        <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer-wrapper" id="faq-answer-4" role="region" aria-label="Jawaban FAQ 4">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-inner">
-                                <p>Ya. QOMAR dapat diakses melalui smartphone, tablet, maupun komputer yang terhubung dengan jaringan internet.</p>
+                            <!-- FAQ Item 2 -->
+                            <div class="faq-item">
+                                <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-2">
+                                    <span class="faq-question">Fungsi tombol audio?</span>
+                                    <span class="faq-icon-wrapper">
+                                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="faq-answer-wrapper" id="faq-answer-2" role="region" aria-label="Jawaban FAQ 2">
+                                    <div class="faq-answer-content">
+                                        <div class="faq-answer-inner">
+                                            <p>Mendengarkan pelafalan kosakata dan dialog bahasa Arab yang fasih dan benar.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- FAQ Item 5 -->
-                <div class="faq-item glass-card">
-                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-5">
-                        <span class="faq-question">5. Bagaimana cara mengerjakan kuis pada QOMAR?</span>
-                        <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer-wrapper" id="faq-answer-5" role="region" aria-label="Jawaban FAQ 5">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-inner">
-                                <p>Setelah selesai mempelajari materi, pilih menu <strong>Kuis</strong>, jawab setiap soal, lalu klik <strong>Kirim</strong>. Hasil kuis akan ditampilkan secara otomatis setelah semua soal selesai dikerjakan.</p>
+                            <!-- FAQ Item 3 -->
+                            <div class="faq-item">
+                                <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-3">
+                                    <span class="faq-question">Akses di HP/Tablet?</span>
+                                    <span class="faq-icon-wrapper">
+                                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="faq-answer-wrapper" id="faq-answer-3" role="region" aria-label="Jawaban FAQ 3">
+                                    <div class="faq-answer-content">
+                                        <div class="faq-answer-inner">
+                                            <p>Ya, dapat diakses dari smartphone, tablet, maupun komputer via web browser.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- FAQ Item 6 -->
-                <div class="faq-item glass-card">
-                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-6">
-                        <span class="faq-question">6. Apakah materi pada QOMAR dapat dipelajari kembali?</span>
-                        <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer-wrapper" id="faq-answer-6" role="region" aria-label="Jawaban FAQ 6">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-inner">
-                                <p>Ya. Seluruh materi, komik, dan audio dapat diakses kembali sehingga siswa dapat mengulang pembelajaran kapan saja untuk memperdalam pemahaman.</p>
+                            <!-- FAQ Item 4 -->
+                            <div class="faq-item">
+                                <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-4">
+                                    <span class="faq-question">Cara kerja kuis?</span>
+                                    <span class="faq-icon-wrapper">
+                                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="faq-answer-wrapper" id="faq-answer-4" role="region" aria-label="Jawaban FAQ 4">
+                                    <div class="faq-answer-content">
+                                        <div class="faq-answer-inner">
+                                            <p>Jawab soal Pilihan Ganda, Essay, atau Praktik lalu klik Kirim untuk melihat nilai otomatis.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- FAQ Item 7 -->
-                <div class="faq-item glass-card">
-                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-7">
-                        <span class="faq-question">7. Bagaimana jika mengalami kendala saat menggunakan QOMAR?</span>
-                        <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="faq-answer-wrapper" id="faq-answer-7" role="region" aria-label="Jawaban FAQ 7">
-                        <div class="faq-answer-content">
-                            <div class="faq-answer-inner">
-                                <p>Jika terdapat kendala seperti halaman tidak terbuka, audio tidak berbunyi, atau kesulitan mengakses fitur tertentu, siswa dapat memuat ulang halaman terlebih dahulu. Apabila masalah masih berlanjut, hubungi guru atau administrator platform untuk mendapatkan bantuan.</p>
+                            <!-- FAQ Item 5 -->
+                            <div class="faq-item">
+                                <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-5">
+                                    <span class="faq-question">Bisa diulang kembali?</span>
+                                    <span class="faq-icon-wrapper">
+                                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="faq-answer-wrapper" id="faq-answer-5" role="region" aria-label="Jawaban FAQ 5">
+                                    <div class="faq-answer-content">
+                                        <div class="faq-answer-inner">
+                                            <p>Tentu, seluruh materi, komik, dan video dapat diulang kapan saja tanpa batas.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- FAQ Item 6 -->
+                            <div class="faq-item">
+                                <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-6">
+                                    <span class="faq-question">Kendala teknis?</span>
+                                    <span class="faq-icon-wrapper">
+                                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="faq-answer-wrapper" id="faq-answer-6" role="region" aria-label="Jawaban FAQ 6">
+                                    <div class="faq-answer-content">
+                                        <div class="faq-answer-inner">
+                                            <p>Refresh halaman web terlebih dahulu, atau hubungi guru/administrator via kontak di bawah.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -437,7 +539,51 @@
                 });
             }
 
-            // FAQ Accordion Toggle Logic
+            // Bab Accordion Toggle Logic
+            window.toggleBab = function(cardId) {
+                const targetCard = document.getElementById(cardId);
+                if (!targetCard) return;
+                
+                const isActive = targetCard.classList.contains('active');
+                
+                // Close all other active Bab cards
+                document.querySelectorAll('.bab-card.active').forEach(card => {
+                    if (card !== targetCard) {
+                        card.classList.remove('active');
+                        const header = card.querySelector('.bab-card-header');
+                        if (header) header.setAttribute('aria-expanded', 'false');
+                    }
+                });
+                
+                // Toggle current Bab card
+                if (isActive) {
+                    targetCard.classList.remove('active');
+                    const header = targetCard.querySelector('.bab-card-header');
+                    if (header) header.setAttribute('aria-expanded', 'false');
+                } else {
+                    targetCard.classList.add('active');
+                    const header = targetCard.querySelector('.bab-card-header');
+                    if (header) header.setAttribute('aria-expanded', 'true');
+                }
+            };
+
+            // FAQ Main Card Accordion Toggle Logic
+            const faqMainTrigger = document.getElementById('faq-main-trigger');
+            const faqMainCard = document.getElementById('faq-main-card');
+            if (faqMainTrigger && faqMainCard) {
+                faqMainTrigger.addEventListener('click', () => {
+                    const isActive = faqMainCard.classList.contains('active');
+                    if (isActive) {
+                        faqMainCard.classList.remove('active');
+                        faqMainTrigger.setAttribute('aria-expanded', 'false');
+                    } else {
+                        faqMainCard.classList.add('active');
+                        faqMainTrigger.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+
+            // FAQ Individual Items Accordion Toggle Logic
             const faqTriggers = document.querySelectorAll('.faq-trigger');
             faqTriggers.forEach(trigger => {
                 trigger.addEventListener('click', () => {
