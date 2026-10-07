@@ -17,6 +17,9 @@
 
             navigator.serviceWorker.register(swPath, { scope: swScope })
                 .then((registration) => {
+                    // Listen for install progress from SW
+                    navigator.serviceWorker.addEventListener('message', handleSWMessage);
+
                     // Check for updates on page load
                     registration.addEventListener('updatefound', () => {
                         const newWorker = registration.installing;
@@ -266,5 +269,62 @@
     window.addEventListener('offline', () => {
         showToast('Mode offline aktif: materi yang tersimpan tetap dapat dibuka.', 'offline');
     });
+
+    // 6. SW Install Progress Handler
+    function handleSWMessage(event) {
+        const data = event.data;
+        if (!data || !data.type) return;
+
+        if (data.type === 'SW_INSTALL_START') {
+            showCachingBanner(0, data.total);
+        } else if (data.type === 'SW_INSTALL_PROGRESS') {
+            updateCachingBanner(data.done, data.total);
+        } else if (data.type === 'SW_INSTALL_DONE') {
+            removeCachingBanner();
+            showToast('Aplikasi siap digunakan secara offline!', 'success');
+        }
+    }
+
+    function showCachingBanner(done, total) {
+        if (document.getElementById('qomar-caching-banner')) return;
+
+        const banner = document.createElement('div');
+        banner.id = 'qomar-caching-banner';
+        banner.className = 'pwa-caching-banner';
+        banner.setAttribute('role', 'status');
+        banner.setAttribute('aria-live', 'polite');
+        banner.innerHTML = `
+            <div class="pwa-caching-inner">
+                <div class="pwa-caching-text">
+                    <strong>Mengunduh aset offline&hellip;</strong>
+                    <span id="pwa-caching-detail">Menyiapkan aplikasi &mdash; harap tunggu</span>
+                </div>
+                <div class="pwa-caching-bar-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div id="pwa-caching-bar" class="pwa-caching-bar" style="width:0%"></div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(banner);
+        requestAnimationFrame(() => banner.classList.add('pwa-caching-visible'));
+    }
+
+    function updateCachingBanner(done, total) {
+        const bar = document.getElementById('pwa-caching-bar');
+        const detail = document.getElementById('pwa-caching-detail');
+        const wrap = bar && bar.parentElement;
+        if (!bar) return;
+
+        const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+        bar.style.width = pct + '%';
+        if (wrap) wrap.setAttribute('aria-valuenow', pct);
+        if (detail) detail.textContent = `${done} / ${total} aset tersimpan (${pct}%)`;
+    }
+
+    function removeCachingBanner() {
+        const banner = document.getElementById('qomar-caching-banner');
+        if (!banner) return;
+        banner.classList.add('pwa-caching-done');
+        setTimeout(() => banner.remove(), 600);
+    }
 
 })();

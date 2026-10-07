@@ -806,4 +806,73 @@ body.dyslexia-mode .arabic-text {
 body:has(.pwa-install-banner) .pwa-fab {
   display: none;
 }
+
+/* ─── Caching Progress Banner ─────────────────────────────────────────────── */
+.pwa-caching-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(1, 30, 98, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  padding: 12px 20px;
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-top: 2px solid var(--color-gold-400);
+}
+
+.pwa-caching-banner.pwa-caching-visible {
+  transform: translateY(0);
+}
+
+.pwa-caching-banner.pwa-caching-done {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.pwa-caching-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pwa-caching-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.82rem;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pwa-caching-text strong {
+  color: var(--color-gold-400);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.pwa-caching-text span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.pwa-caching-bar-wrap {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.pwa-caching-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-blue-400), var(--color-gold-400));
+  border-radius: 99px;
+  transition: width 0.3s ease;
+}
 
