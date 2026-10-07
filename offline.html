@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QOMAR - Mode Luar Jaringan (Offline)</title>
+    <meta name="theme-color" content="#00A8E8">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F0F5FA;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: #1e293b;
+            box-sizing: border-box;
+        }
+        .offline-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            max-width: 440px;
+            width: 90%;
+            margin: 1.5rem auto;
+            text-align: center;
+            box-shadow: 0 12px 36px rgba(2, 38, 128, 0.08);
+            border: 2px solid #e2e8f0;
+        }
+        .offline-icon-wrap {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 1.5rem;
+            background: #eff6ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00A8E8;
+            border: 2px solid #bfdbfe;
+        }
+        .offline-icon-wrap svg {
+            width: 44px;
+            height: 44px;
+        }
+        .offline-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #003466;
+            margin: 0 0 0.5rem;
+        }
+        .offline-desc {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin: 0 0 1.75rem;
+        }
+        .offline-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .btn-offline-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-height: 48px;
+            padding: 0.75rem 1.5rem;
+            background: #00A8E8;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 14px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-offline-primary:hover,
+        .btn-offline-primary:focus-visible {
+            background: #0090c7;
+            transform: translateY(-1px);
+        }
+        .btn-offline-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-height: 48px;
+            padding: 0.75rem 1.5rem;
+            background: #f8fafc;
+            color: #003466;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 14px;
+            text-decoration: none;
+            border: 1.5px solid #cbd5e1;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-offline-secondary:hover,
+        .btn-offline-secondary:focus-visible {
+            background: #edf2f7;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <main class="offline-card" role="main">
+        <div class="offline-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+                <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+                <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+                <path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path>
+                <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+            </svg>
+        </div>
+        <h1 class="offline-title">Koneksi Internet Terputus</h1>
+        <p class="offline-desc">Halaman ini belum tersedia di penyimpanan perangkat Anda. Periksa sambungan internet atau kembali ke halaman yang sudah tersimpan sebelumnya.</p>
+        <div class="offline-actions">
+            <button class="btn-offline-primary" onclick="window.location.reload()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                </svg>
+                <span>Coba Muat Ulang</span>
+            </button>
+            <a href="Public/Page/dashboard.html" class="btn-offline-secondary">
+                <span>Buka Dashboard Tersimpan</span>
+            </a>
+            <a href="index.html" class="btn-offline-secondary" style="border:none; background:transparent; color:#64748b;">
+                <span>Halaman Depan</span>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

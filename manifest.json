@@ -1,0 +1,119 @@
+{
+  "id": "/?source=pwa",
+  "name": "QOMAR - Pembelajaran Bahasa Arab",
+  "short_name": "QOMAR",
+  "description": "Platform Pembelajaran Bahasa Arab Berbasis Komik Digital & UDL untuk Siswa Madrasah Ibtidaiyah",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F0F5FA",
+  "theme_color": "#00A8E8",
+  "lang": "id",
+  "dir": "ltr",
+  "categories": [
+    "education",
+    "books",
+    "kids"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard Pembelajaran",
+      "short_name": "Dashboard",
+      "description": "Buka Dashboard pilihan Bab dan materi",
+      "url": "./Public/Page/dashboard.html",
+      "icons": [
+        {
+          "src": "icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Kosa Kata Arab",
+      "short_name": "Kosa Kata",
+      "description": "Pelajari kosa kata interaktif dengan audio",
+      "url": "./Public/Page/kosa_kata.html",
+      "icons": [
+        {
+          "src": "icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Kuis Interaktif",
+      "short_name": "Kuis",
+      "description": "Uji pemahaman materi dengan kuis bergambar",
+      "url": "./Public/Page/kuis.html",
+      "icons": [
+        {
+          "src": "icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Video Animasi",
+      "short_name": "Video",
+      "description": "Tonton video cerita komik interaktif",
+      "url": "./Public/Page/video.html",
+      "icons": [
+        {
+          "src": "icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

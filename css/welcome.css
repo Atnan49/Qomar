@@ -253,6 +253,33 @@
   transform: translateX(5px);
 }
 
+.btn-install-pwa-welcome {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  padding: 0.65rem 1.25rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(2, 38, 128, 0.2);
+  color: var(--color-blue-800);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-spring);
+  min-height: 44px;
+}
+
+.btn-install-pwa-welcome:hover,
+.btn-install-pwa-welcome:focus-visible {
+  background: #ffffff;
+  color: var(--color-blue-600);
+  border-color: var(--color-blue-500);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(2, 38, 128, 0.1);
+}
+
 /* Footer Section inside welcome container */
 .welcome-footer-info {
   margin-top: 1rem;

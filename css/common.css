@@ -502,3 +502,308 @@ body.dyslexia-mode .arabic-text {
     font-size: 0.75rem;
   }
 }
+
+/* ==========================================================================
+   PWA UI Elements (Install Banner & Notification Toasts)
+   ========================================================================== */
+.pwa-install-banner {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  width: calc(100% - 2rem);
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid #00A8E8;
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(0, 52, 102, 0.16);
+  z-index: 9999;
+  padding: 0.85rem 1rem;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  animation: pwaSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes pwaSlideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.pwa-install-banner.pwa-hiding {
+  opacity: 0;
+  transform: translateX(-50%) translateY(30px);
+  pointer-events: none;
+}
+
+.pwa-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.pwa-banner-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(0, 52, 102, 0.12);
+}
+
+.pwa-banner-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pwa-banner-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #003466;
+  line-height: 1.2;
+}
+
+.pwa-banner-desc {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.3;
+  margin-top: 0.15rem;
+}
+
+.pwa-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.pwa-btn-primary {
+  min-height: 44px;
+  padding: 0 1rem;
+  background: #00A8E8;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pwa-btn-primary:hover,
+.pwa-btn-primary:focus-visible {
+  background: #008ec5;
+  transform: scale(1.02);
+}
+
+.pwa-btn-text {
+  min-height: 44px;
+  padding: 0 0.65rem;
+  background: transparent;
+  color: #64748b;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.pwa-btn-text:hover,
+.pwa-btn-text:focus-visible {
+  color: #003466;
+  background: rgba(0, 52, 102, 0.05);
+}
+
+/* Toasts */
+.pwa-toast-container {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  z-index: 10000;
+  max-width: calc(100vw - 2.5rem);
+  pointer-events: none;
+}
+
+.pwa-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  animation: pwaToastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+@keyframes pwaToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pwa-toast.pwa-toast-exit {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.pwa-toast-info {
+  background: #003466;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pwa-toast-success,
+.pwa-toast-online {
+  background: #065f46;
+  color: #ffffff;
+}
+
+.pwa-toast-offline {
+  background: #991b1b;
+  color: #ffffff;
+}
+
+.pwa-toast-update {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+.pwa-toast-action {
+  min-height: 36px;
+  padding: 0 0.85rem;
+  background: #00A8E8;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.pwa-toast-action:hover,
+.pwa-toast-action:focus-visible {
+  background: #0090c7;
+}
+
+@media (max-width: 600px) {
+  .pwa-install-banner {
+    bottom: 0.85rem;
+    padding: 0.75rem;
+  }
+  .pwa-toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+/* ==========================================================================
+   PWA Floating Install Button (FAB)
+   ========================================================================== */
+.pwa-fab {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.25rem;
+  z-index: 9998;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0 1.1rem;
+  height: 48px;
+  background: #00A8E8;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 22px rgba(0, 168, 232, 0.42);
+  /* Start invisible, slide in via .pwa-fab-visible */
+  opacity: 0;
+  transform: translateY(20px) scale(0.92);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s ease,
+              background-color 0.2s ease;
+  /* Prevent text wrapping */
+  white-space: nowrap;
+}
+
+.pwa-fab.pwa-fab-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.pwa-fab:hover,
+.pwa-fab:focus-visible {
+  background: #008ec5;
+  box-shadow: 0 10px 30px rgba(0, 168, 232, 0.55);
+  transform: translateY(-2px) scale(1.02);
+  outline: none;
+}
+
+.pwa-fab:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 4px 14px rgba(0, 168, 232, 0.3);
+}
+
+.pwa-fab:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.pwa-fab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pwa-fab-label {
+  letter-spacing: 0.01em;
+}
+
+/* Hide label on very small screens, show icon only */
+@media (max-width: 360px) {
+  .pwa-fab {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .pwa-fab-label {
+    display: none;
+  }
+}
+
+/* Don't show FAB when banner is visible to avoid overlap */
+.pwa-install-banner ~ * .pwa-fab,
+body:has(.pwa-install-banner) .pwa-fab {
+  display: none;
+}
+
