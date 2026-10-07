@@ -132,67 +132,73 @@
   margin-bottom: 1.5rem;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 .bab-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
   width: 100%;
 }
 
 .bab-card {
   width: 100%;
   border-radius: 24px;
-  border: 2px solid rgba(2, 38, 128, 0.14);
+  border: 2px solid #e2e8f0;
   overflow: hidden;
-  transition: all 0.35s var(--ease-spring);
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 8px 24px rgba(2, 38, 128, 0.06);
+  transition: all 0.3s var(--ease-spring);
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(2, 38, 128, 0.05);
+  cursor: pointer;
 }
 
-.bab-card:hover {
+.bab-card:hover,
+.bab-card:focus-within {
   border-color: var(--color-blue-400);
-  box-shadow: 0 16px 36px rgba(2, 38, 128, 0.12);
-  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(2, 38, 128, 0.1);
+  transform: translateY(-2px);
+}
+
+.bab-card.active {
+  border-color: #00A8E8;
+  border-width: 2.5px;
+  box-shadow: 0 8px 26px rgba(0, 168, 232, 0.16);
 }
 
 .bab-card-inner {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1.25rem;
-  gap: 1.25rem;
+  padding: 1.15rem;
+  gap: 1.15rem;
 }
 
 .bab-card-media {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   flex-shrink: 0;
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
-  background: linear-gradient(135deg, #f0f4ff 0%, #e4ecfc 100%);
-  border: 1.5px solid rgba(2, 38, 128, 0.1);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem;
-  box-shadow: inset 0 2px 6px rgba(2, 38, 128, 0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .bab-card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 20px;
   overflow: hidden;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.35s ease;
 }
 
 .bab-card:hover .bab-card-image {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .bab-card-content {
@@ -200,7 +206,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
   min-width: 0;
 }
 
@@ -227,36 +233,43 @@
 .bab-suboptions {
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
+  gap: 0.6rem;
+  width: 100%;
 }
 
 .suboption-item {
   display: flex;
   align-items: center;
-  padding: 0.7rem 0.85rem;
+  min-height: 44px;
+  padding: 0.65rem 0.85rem;
   border-radius: 14px;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1.5px solid rgba(2, 38, 128, 0.08);
+  background: #ffffff;
+  border: 1.5px solid #edf2f7;
   transition: all 0.25s var(--ease-spring);
   gap: 0.75rem;
 }
 
-.suboption-item:hover {
-  transform: translateX(4px);
-  background: #ffffff;
-  box-shadow: 0 4px 14px rgba(2, 38, 128, 0.08);
-  border-color: var(--color-blue-500);
+.suboption-item:hover,
+.suboption-item:focus-visible {
+  transform: translateX(3px);
+  background: #f8fafc;
+  box-shadow: 0 4px 14px rgba(2, 38, 128, 0.06);
+  border-color: var(--color-blue-300);
 }
 
-.icon-teal-soft { border-left: 3.5px solid var(--color-teal-500); }
-.icon-pink-soft { border-left: 3.5px solid var(--color-pink-500); }
-.icon-amber-soft { border-left: 3.5px solid var(--color-gold-400); }
-.icon-yellow-soft { border-left: 3.5px solid var(--color-gold-400); }
+.icon-teal-soft { border-left: 4px solid var(--color-teal-500); }
+.icon-pink-soft { border-left: 4px solid var(--color-pink-500); }
+.icon-amber-soft { border-left: 4px solid #f59e0b; }
+.icon-yellow-soft { border-left: 4px solid #f59e0b; }
 
 .suboption-emoji {
   font-size: 1.15rem;
   line-height: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .suboption-title {
@@ -265,19 +278,24 @@
   font-weight: 700;
   color: var(--color-blue-900);
   margin: 0;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .suboption-arrow {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(2, 38, 128, 0.05);
+  background: #f0f7ff;
   color: var(--color-blue-600);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.25s var(--ease-spring);
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .suboption-arrow svg {
@@ -285,7 +303,8 @@
   height: 14px;
 }
 
-.suboption-item:hover .suboption-arrow {
+.suboption-item:hover .suboption-arrow,
+.suboption-item:focus-visible .suboption-arrow {
   background: var(--color-blue-600);
   color: #ffffff;
   transform: translateX(2px);
@@ -721,24 +740,80 @@
 
 /* Responsive Media Queries */
 @media (max-width: 600px) {
-  .bab-card-inner {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
+  .landing-container {
+    padding: 1.5rem 0.85rem 2.5rem;
   }
-  .bab-card-media {
-    width: 100%;
-    height: 180px;
-  }
-  .bab-card-content {
-    width: 100%;
+  .hero-header {
+    margin-bottom: 1.25rem;
   }
   .landing-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   .landing-subtitle-main {
-    font-size: 1.4rem;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
   }
+  .landing-subtext {
+    font-size: 0.85rem;
+  }
+
+  .bab-selection-section {
+    margin-bottom: 2.5rem;
+  }
+  .bab-section-title {
+    font-size: 1.15rem;
+    margin-bottom: 1.15rem;
+    letter-spacing: 0.5px;
+  }
+  .bab-list {
+    gap: 1rem;
+  }
+  .bab-card {
+    border-radius: 20px;
+  }
+  .bab-card-inner {
+    flex-direction: row;
+    padding: 0.75rem;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  .bab-card-media {
+    width: clamp(105px, 31vw, 130px);
+    height: clamp(105px, 31vw, 130px);
+    border-radius: 16px;
+    box-shadow: none;
+  }
+  .bab-card-image {
+    border-radius: 16px;
+  }
+  .bab-card-content {
+    gap: 0.45rem;
+  }
+  .bab-suboptions {
+    gap: 0.45rem;
+  }
+  .suboption-item {
+    min-height: 42px;
+    padding: 0.45rem 0.6rem;
+    border-radius: 11px;
+    gap: 0.45rem;
+  }
+  .suboption-emoji {
+    font-size: 1rem;
+  }
+  .suboption-title {
+    font-size: clamp(0.72rem, 2.5vw, 0.825rem);
+    font-weight: 700;
+  }
+  .suboption-arrow {
+    width: 20px;
+    height: 20px;
+  }
+  .suboption-arrow svg {
+    width: 11px;
+    height: 11px;
+  }
+
   .menu-vertical-section {
     margin-bottom: 2.5rem;
   }
@@ -774,5 +849,35 @@
 @media (max-width: 400px) {
   .contact-card-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .bab-card-inner {
+    padding: 0.55rem;
+    gap: 0.5rem;
+  }
+  .bab-card-media {
+    width: 95px;
+    height: 95px;
+    border-radius: 14px;
+  }
+  .bab-card-image {
+    border-radius: 14px;
+  }
+  .suboption-item {
+    padding: 0.35rem 0.45rem;
+    gap: 0.35rem;
+  }
+  .suboption-title {
+    font-size: 0.7rem;
+  }
+  .suboption-arrow {
+    width: 18px;
+    height: 18px;
+  }
+  .suboption-arrow svg {
+    width: 10px;
+    height: 10px;
   }
 }

@@ -86,7 +86,7 @@
             <div class="bab-list">
 
                 <!-- BAB 1 -->
-                <div class="bab-card glass-card" id="bab-card-1">
+                <div class="bab-card glass-card active" id="bab-card-1">
                     <div class="bab-card-inner">
                         <div class="bab-card-media">
                             <img src="../Image/ICON BAB 1.webp" alt="Ilustrasi Bab 1 - Alamat" class="bab-card-image"
@@ -522,33 +522,15 @@
                 });
             }
 
-            // Bab Accordion Toggle Logic
-            window.toggleBab = function (cardId) {
-                const targetCard = document.getElementById(cardId);
-                if (!targetCard) return;
-
-                const isActive = targetCard.classList.contains('active');
-
-                // Close all other active Bab cards
-                document.querySelectorAll('.bab-card.active').forEach(card => {
-                    if (card !== targetCard) {
-                        card.classList.remove('active');
-                        const header = card.querySelector('.bab-card-header');
-                        if (header) header.setAttribute('aria-expanded', 'false');
-                    }
+            // Bab Card Active Highlight Toggle
+            const babCards = document.querySelectorAll('.bab-card');
+            babCards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    // Do not prevent default so that links in suboptions navigate normally
+                    babCards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
                 });
-
-                // Toggle current Bab card
-                if (isActive) {
-                    targetCard.classList.remove('active');
-                    const header = targetCard.querySelector('.bab-card-header');
-                    if (header) header.setAttribute('aria-expanded', 'false');
-                } else {
-                    targetCard.classList.add('active');
-                    const header = targetCard.querySelector('.bab-card-header');
-                    if (header) header.setAttribute('aria-expanded', 'true');
-                }
-            };
+            });
 
             // FAQ Main Card Accordion Toggle Logic
             const faqMainTrigger = document.getElementById('faq-main-trigger');
